@@ -1,0 +1,36 @@
+
+
+.u-hidden\@from-small {
+    @media (min-width: 700px) {
+        display: none;
+    }
+}
+
+.has-no-gutters\@to-small {
+  @media (max-width: 699px) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  > * {
+    @media (max-width: 699px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+.is-overflow-swipe\@from-small {
+  @media (min-width: 700px) {
+    scrollbar-color: currentColor transparent;  /* Firefox */
+    scrollbar-width: thin;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      height: 2px;
+    }
+    &::-webkit-scrollbar-track {
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: currentColor;
+    }
+  }
+}

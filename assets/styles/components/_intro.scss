@@ -1,0 +1,30 @@
+.c-intro {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.c-intro_container {
+  max-width: rem($container-width / 4 + ($padding * 2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  z-index: 0;
+  position: relative;
+}
+
+.c-intro_paragraph {
+  font-size: 2rem;
+}
+
+.c-intro_circle {
+  background-color: darken($white, 5%);
+  width: rem($padding * 4);
+  height: rem($padding * 4);
+  border-radius: 9999px;
+
+  position: absolute;
+  bottom: rem($padding * 2);
+  right: rem(-$padding * 2);
+  z-index: -1;
+}

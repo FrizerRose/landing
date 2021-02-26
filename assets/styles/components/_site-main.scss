@@ -1,0 +1,9 @@
+
+.c-site-main {
+	@media (max-width: $to-small) {
+		margin-top: 4rem;
+	}
+	@media (min-width: $from-small) {
+		margin-top: 3rem;
+	}
+}

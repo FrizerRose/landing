@@ -1,0 +1,30 @@
+// ==========================================================================
+// Settings / Config / Colors
+// ==========================================================================
+
+// Palette
+// =============================================================================
+$white: #f4f6f2;
+// $black: #0f060a;
+$black: #1f1f1f;
+$transition-primary: darken($white, 3%);
+$transition-secondary: $white;
+
+$theme-main: #f1c800;
+
+// Specific
+// =============================================================================
+// Link
+$link-color:       #027cac;
+$link-focus-color: #027cac;
+$link-hover-color: darken(#027cac, 15%);
+// Selection
+$selection-text-color:       $white;
+$selection-background-color: #027cac;
+
+// Social Colors
+// =============================================================================
+$facebook-color:  #3B5998;
+$instagram-color: #E1306C;
+$youtube-color:   #CD201F;
+$twitter-color:   #1DA1F2;
