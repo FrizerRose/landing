@@ -1,3 +1,179 @@
+/* use these native HTML colors if there is a good match
+
+Pinks								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pink							#FFC0CB			255 192 203
+LightPink						#FFB6C1			255 182 193
+HotPink							#FF69B4			255 105 180
+DeepPink						#FF1493			255  20 147
+PaleVioletRed					#DB7093			219 112 147
+MediumVioletRed					#C71585			199  21 133
+
+Reds								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LightSalmon						#FFA07A			255 160 122
+Salmon							#FA8072			250 128 114
+DarkSalmon						#E9967A			233 150 122
+LightCoral						#F08080			240 128 128
+IndianRed						#CD5C5C			205  92  92
+Crimson							#DC143C			220  20  60
+Firebrick						#B22222			178  34  34
+DarkRed							#8B0000			139   0   0
+Red								#FF0000			255   0   0
+
+Orange								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OrangeRed						#FF4500			255  69   0
+Tomato							#FF6347			255  99  71
+Coral							#FF7F50			255 127  80
+DarkOrange						#FF8C00			255 140   0
+Orange							#FFA500			255 165   0
+
+Yellow								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Yellow							#FFFF00			255 255   0
+LightYellow						#FFFFE0			255 255 224
+LemonChiffon					#FFFACD			255 250 205
+LightGoldenrodYellow		 	#FAFAD2			250 250 210
+PapayaWhip						#FFEFD5			255 239 213
+Moccasin						#FFE4B5			255 228 181
+PeachPuff						#FFDAB9			255 218 185
+PaleGoldenrod					#EEE8AA			238 232 170
+Khaki							#F0E68C			240 230 140
+DarkKhaki						#BDB76B			189 183 107
+Gold							#FFD700			255 215   0
+
+Brown								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Cornsilk						#FFF8DC			255 248 220
+BlanchedAlmond					#FFEBCD			255 235 205
+Bisque							#FFE4C4			255 228 196
+NavajoWhite						#FFDEAD			255 222 173
+Wheat							#F5DEB3			245 222 179
+Burlywood						#DEB887			222 184 135
+Tan								#D2B48C			210 180 140
+RosyBrown						#BC8F8F			188 143 143
+SandyBrown						#F4A460			244 164  96
+Goldenrod						#DAA520			218 165  32
+DarkGoldenrod					#B8860B			184 134  11
+Peru							#CD853F			205 133  63
+Chocolate						#D2691E			210 105  30
+SaddleBrown						#8B4513			139  69  19
+Sienna							#A0522D			160  82  45
+Brown							#A52A2A			165  42  42
+Maroon							#800000			128   0   0
+
+Greens								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DarkOliveGreen					#556B2F			 85 107  47
+Olive							#808000			128 128   0
+OliveDrab						#6B8E23			107 142  35
+YellowGreen						#9ACD32			154 205  50
+LimeGreen						#32CD32			 50 205  50
+Lime							#00FF00			  0 255   0
+LawnGreen						#7CFC00			124 252   0
+Chartreuse						#7FFF00			127 255   0
+GreenYellow						#ADFF2F			173 255  47
+SpringGreen						#00FF7F			  0 255 127
+MediumSpringGreen				#00FA9A			  0 250 154
+LightGreen						#90EE90			144 238 144
+PaleGreen						#98FB98			152 251 152
+DarkSeaGreen					#8FBC8F			143 188 143
+MediumAquamarine				#66CDAA			102 205 170
+MediumSeaGreen					#3CB371			 60 179 113
+SeaGreen						#2E8B57			 46 139  87
+ForestGreen						#228B22			 34 139  34
+Green							#008000			  0 128   0
+DarkGreen						#006400			  0 100   0
+
+Cyans								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Aqua							#00FFFF			  0 255 255
+Cyan							#00FFFF			  0 255 255
+LightCyan						#E0FFFF			224 255 255
+PaleTurquoise					#AFEEEE			175 238 238
+Aquamarine						#7FFFD4			127 255 212
+Turquoise						#40E0D0			 64 224 208
+MediumTurquoise					#48D1CC			 72 209 204
+DarkTurquoise					#00CED1			  0 206 209
+LightSeaGreen					#20B2AA			 32 178 170
+CadetBlue						#5F9EA0			 95 158 160
+DarkCyan						#008B8B			  0 139 139
+Teal							#008080			  0 128 128
+
+Blues								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LightSteelBlue					#B0C4DE			176 196 222
+PowderBlue						#B0E0E6			176 224 230
+LightBlue						#ADD8E6			173 216 230
+SkyBlue							#87CEEB			135 206 235
+LightSkyBlue					#87CEFA			135 206 250
+DeepSkyBlue						#00BFFF			  0 191 255
+DodgerBlue						#1E90FF			 30 144 255
+CornflowerBlue					#6495ED			100 149 237
+SteelBlue						#4682B4			 70 130 180
+RoyalBlue						#4169E1			 65 105 225
+Blue							#0000FF			  0   0 255
+MediumBlue						#0000CD			  0   0 205
+DarkBlue						#00008B			  0   0 139
+Navy							#000080			  0   0 128
+MidnightBlue					#191970			 25  25 112
+
+Purples, violets and magentas		HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lavender						#E6E6FA			230 230 250
+Thistle							#D8BFD8			216 191 216
+Plum							#DDA0DD			221 160 221
+Violet							#EE82EE			238 130 238
+Orchid							#DA70D6			218 112 214
+Fuchsia							#FF00FF			255   0 255
+Magenta							#FF00FF			255   0 255
+MediumOrchid					#BA55D3			186  85 211
+MediumPurple					#9370DB			147 112 219
+BlueViolet						#8A2BE2			138  43 226
+DarkViolet						#9400D3			148   0 211
+DarkOrchid						#9932CC			153  50 204
+DarkMagenta						#8B008B			139   0 139
+Purple							#800080			128   0 128
+Indigo							#4B0082			 75   0 130
+DarkSlateBlue					#483D8B			 72  61 139
+SlateBlue						#6A5ACD			106  90 205
+MediumSlateBlue				 	#7B68EE			123 104 238
+
+Whites								HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+White							#FFFFFF			255 255 255
+Snow							#FFFAFA			255 250 250
+Honeydew						#F0FFF0			240 255 240
+MintCream						#F5FFFA			245 255 250
+Azure							#F0FFFF			240 255 255
+AliceBlue						#F0F8FF			240 248 255
+GhostWhite						#F8F8FF			248 248 255
+WhiteSmoke						#F5F5F5			245 245 245
+Seashell						#FFF5EE			255 245 238
+Beige							#F5F5DC			245 245 220
+OldLace							#FDF5E6			253 245 230
+FloralWhite						#FFFAF0			255 250 240
+Ivory							#FFFFF0			255 255 240
+AntiqueWhite					#FAEBD7			250 235 215
+Linen							#FAF0E6			250 240 230
+LavenderBlush					#FFF0F5			255 240 245
+MistyRose						#FFE4E1			255 228 225
+
+Grays and blacks					HEX					RGB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Gainsboro						#DCDCDC			220 220 220
+LightGray						#D3D3D3			211 211 211
+Silver							#C0C0C0			192 192 192
+DarkGray						#A9A9A9			169 169 169
+Gray							#808080			128 128 128
+DimGray							#696969			105 105 105
+LightSlateGray					#778899			119 136 153
+SlateGray						#708090			112 128 144
+DarkSlateGray					#2F4F4F			 47  79  79
+Black							#000000			  0   0   0
+
+*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -468,7 +644,7 @@ button,
 html {
   min-height: 100%;
   /* [2] */
-  background-color: #f4f6f2;
+  background-color: #fafafa;
   color: #1f1f1f;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -514,12 +690,12 @@ html {
 
 ::-moz-selection {
   background-color: #027cac;
-  color: #f4f6f2;
+  color: #fafafa;
   text-shadow: none; }
 
 ::selection {
   background-color: #027cac;
-  color: #f4f6f2;
+  color: #fafafa;
   text-shadow: none; }
 
 a {
@@ -542,7 +718,7 @@ a {
     .o-container {
       padding-right: 3.75rem;
       padding-left: 3.75rem; } }
-  .o-container.-hero {
+  .o-container.-w-80 {
     max-width: 80%; }
 
 /**
@@ -648,11 +824,94 @@ html.is-loaded .o-transition {
   pointer-events: none;
   opacity: 0; }
 
+.o-background-wrap {
+  position: relative;
+  z-index: 0; }
+  @media (min-width: 700px) {
+    .o-background-wrap.-h-100vh\@from-small {
+      height: 100vh; } }
+
+.o-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: -1; }
+  .o-background.-extra {
+    bottom: -5%;
+    right: -5%;
+    left: -5%;
+    top: -5%; }
+  .o-background.-horizontal {
+    right: -50%;
+    left: -50%; }
+  .o-background.-hero {
+    background: #fafafa;
+    margin: 0 -2rem;
+    transform: translateY(6rem) scale(0.75, 0);
+    transform-origin: bottom;
+    transition: transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-delay: 0.25s; }
+    @media (min-width: 700px) {
+      .o-background.-hero {
+        margin: 0 -4rem; } }
+    @media (min-width: 1200px) {
+      .o-background.-hero {
+        margin: 0 -6rem; } }
+    html.is-loaded .o-background.-hero {
+      transform: none;
+      opacity: 1; }
+
+.o-background_css {
+  height: 100%; }
+  .o-background_css.-polka-dots-v2 {
+    background-image: radial-gradient(#1f1f1f 0.125rem, transparent 0.125rem), radial-gradient(#1f1f1f 0.125rem, #fafafa 0.125rem);
+    background-size: 2rem 2rem;
+    background-position: 0 0, 1rem 1rem; }
+  .o-background_css.-zigzag {
+    background-image: linear-gradient(135deg, #ededed 25%, transparent 25%), linear-gradient(225deg, #ededed 25%, transparent 25%), linear-gradient(45deg, #ededed 25%, transparent 25%), linear-gradient(315deg, #ededed 25%, #fafafa 25%);
+    background-position: 2rem 0, 2rem 0, 0 0, 0 0;
+    background-size: 4rem 4rem;
+    background-repeat: repeat; }
+  .o-background_css.-diagonal {
+    background: repeating-linear-gradient(45deg, #bababa, #bababa 0.25rem, #fafafa 0.25rem, #fafafa 1rem); }
+    .-reverse .o-background_css.-diagonal {
+      background: repeating-linear-gradient(-45deg, #bababa, #bababa 0.25rem, #fafafa 0.25rem, #fafafa 1rem); }
+
+.o-front.-hero {
+  padding: 6rem 0 2rem; }
+
+.o-flex {
+  display: flex; }
+  .o-flex.-flex-wrap {
+    flex-wrap: wrap; }
+  .o-flex.-flex-column {
+    flex-direction: column; }
+  @media (max-width: 499px) {
+    .o-flex.-flex-column\@to-tiny {
+      flex-direction: column; } }
+  @media (max-width: 699px) {
+    .o-flex.-flex-column\@to-small {
+      flex-direction: column; } }
+  @media (max-width: 999px) {
+    .o-flex.-flex-column\@to-medium {
+      flex-direction: column; } }
+  @media (min-width: 1000px) {
+    .o-flex.-flex-column\@from-medium {
+      flex-direction: column; } }
+  .o-flex.-justify-center {
+    justify-content: center; }
+  .o-flex.-align-center {
+    align-items: center; }
+
 .o-icon {
   display: inline-block;
   vertical-align: middle;
   width: 1.5rem;
   height: 1.5rem; }
+  .o-icon.-features {
+    margin-left: 1.5em; }
   .o-icon.-cw90 {
     transform: rotate(90deg); }
   .o-icon.-cw180 {
@@ -669,11 +928,11 @@ html.is-loaded .o-transition {
     .o-icon.-medium-icon {
       width: 3.125rem;
       height: 3.125rem; } }
-  @media (max-width: 999px) {
+  @media (max-width: 699px) {
     .o-icon.-large-icon {
-      width: 3rem;
-      height: 3rem; } }
-  @media (min-width: 1000px) {
+      width: 1.5rem;
+      height: 1.5rem; } }
+  @media (min-width: 700px) {
     .o-icon.-large-icon {
       width: 4rem;
       height: 4rem; } }
@@ -681,6 +940,18 @@ html.is-loaded .o-transition {
     display: block;
     width: 100%;
     height: 100%; }
+
+.o-sticky-wrap {
+  position: relative; }
+
+.o-sticky {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  display: block;
+  pointer-events: none;
+  top: 0;
+  left: 0; }
 
 .c-scrollbar {
   position: absolute;
@@ -706,7 +977,7 @@ html.is-loaded .o-transition {
   cursor: grab; }
   .c-scrollbar_thumb:before {
     content: "";
-    background-color: #f4f6f2;
+    background-color: #fafafa;
     width: 100%;
     height: 100%;
     border-radius: 9999px;
@@ -736,12 +1007,47 @@ html.is-loaded .o-transition {
     font-size: 1rem; }
 
 .c-button {
-  padding: 1em 2em;
   background-color: #1f1f1f;
-  color: #f4f6f2;
+  color: #fafafa;
   transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
   .c-button:focus, .c-button:hover {
-    color: #f4f6f2; }
+    color: #fafafa; }
+  .c-button.-primary {
+    padding: 1em 2em; }
+
+.c-button_label {
+  vertical-align: inherit;
+  display: inline-block;
+  line-height: inherit;
+  pointer-events: none; }
+
+.c-button_inner {
+  padding: 1em 1.5em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle; }
+
+.c-round-button {
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent; }
+  .c-round-button .o-background-wrap {
+    border-radius: 9999px; }
+  .c-round-button .o-background {
+    border-radius: 9999px;
+    background-color: #1f1f1f;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+  .c-round-button:focus .o-background, .c-round-button:hover .o-background {
+    transform: scale(0.88); }
+
+.c-round-button_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .c-form_item {
   position: relative;
@@ -784,7 +1090,7 @@ html.is-loaded .o-transition {
     height: 1.125rem;
     content: ""; }
   .c-form_checkboxLabel::before, .c-form_radioLabel::before {
-    background-color: #f4f6f2;
+    background-color: #fafafa;
     border: 1px solid lightgray; }
   .c-form_checkboxLabel::after, .c-form_radioLabel::after {
     border-color: transparent;
@@ -839,6 +1145,9 @@ html.is-loaded .o-transition {
 .c-form_textarea {
   min-height: 12.5rem; }
 
+.c-section {
+  overflow: hidden; }
+
 .c-site-header {
   position: fixed;
   width: 100%;
@@ -858,10 +1167,10 @@ html.is-loaded .o-transition {
     .c-site-header_main {
       position: relative;
       z-index: 5;
-      background-color: #f4f6f2; } }
+      background-color: #fafafa; } }
   @media (min-width: 700px) {
     .c-site-header_main {
-      background-color: #f4f6f2; } }
+      background-color: #fafafa; } }
 
 @media (max-width: 699px) {
   .c-site-header_main_inner {
@@ -953,50 +1262,10 @@ html.is-loaded .o-transition {
   flex-shrink: 0; }
 
 .c-hero {
-  position: relative;
   padding: 6rem 0 10rem; }
   @media (max-width: 699px) {
     .c-hero {
       padding-top: 20vh; } }
-
-.c-hero_front {
-  position: relative;
-  z-index: 0;
-  padding: 6rem 0 2rem; }
-  .c-hero_front.-background {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #f4f6f2;
-    margin: 0 -2rem;
-    z-index: -1;
-    transform: translateY(6rem) scale(0.75, 0);
-    transform-origin: bottom;
-    transition: transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-delay: 0.25s; }
-    html.is-loaded .c-hero_front.-background {
-      transform: none;
-      opacity: 1; }
-
-.c-hero_back {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0; }
-
-.c-hero_css-wrap {
-  background-image: radial-gradient(#1f1f1f 0.125rem, transparent 0.125rem), radial-gradient(#1f1f1f 0.125rem, #f4f6f2 0.125rem);
-  background-size: 2rem 2rem;
-  background-position: 0 0, 1rem 1rem;
-  background-image: linear-gradient(135deg, #e7ece3 25%, transparent 25%), linear-gradient(225deg, #e7ece3 25%, transparent 25%), linear-gradient(45deg, #e7ece3 25%, transparent 25%), linear-gradient(315deg, #e7ece3 25%, #f4f6f2 25%);
-  background-position: 2rem 0, 2rem 0, 0 0, 0 0;
-  background-size: 4rem 4rem;
-  background-repeat: repeat;
-  height: 100%; }
 
 .c-hero_image-wrap {
   position: absolute;
@@ -1031,16 +1300,94 @@ html.is-loaded .o-transition {
       font-size: 5vw; } }
 
 .c-hero_cta {
-  text-align: center;
   overflow: hidden;
   padding-top: 5rem;
   padding-bottom: 1rem; }
+
+.c-circle {
+  background-color: #ededed;
+  border-radius: 9999px;
+  position: absolute;
+  z-index: -1; }
+  .c-circle.-intro {
+    bottom: 7.5rem; }
+    @media (max-width: 699px) {
+      .c-circle.-intro {
+        left: 7.5rem; } }
+    @media (min-width: 700px) {
+      .c-circle.-intro {
+        right: -7.5rem; } }
+  .c-circle.-large {
+    width: 15rem;
+    height: 15rem; }
+  .c-circle.-small {
+    width: 3.75rem;
+    height: 3.75rem; }
+  .c-circle.-variable.-offset-1 {
+    top: 50%;
+    left: 74.96252%;
+    width: 2rem;
+    height: 2rem; }
+  .c-circle.-variable.-offset-2 {
+    top: 25%;
+    left: 37.48126%;
+    width: 4rem;
+    height: 4rem; }
+  .c-circle.-variable.-offset-3 {
+    top: 16.66667%;
+    left: 24.98751%;
+    width: 6rem;
+    height: 6rem; }
+  .c-circle.-variable.-offset-4 {
+    top: 12.5%;
+    left: 18.74063%;
+    width: 8rem;
+    height: 8rem; }
+  .c-circle.-variable.-offset-5 {
+    top: 10%;
+    left: 14.9925%;
+    width: 10rem;
+    height: 10rem; }
+  .c-circle.-variable.-offset-6 {
+    top: 8.33333%;
+    left: 12.49375%;
+    width: 12rem;
+    height: 12rem; }
+
+.c-intro {
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+
+.c-intro_container {
+  max-width: 38.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  z-index: 0;
+  position: relative; }
+
+@media (max-width: 699px) {
+  .c-intro_paragraph {
+    font-size: 1.75rem; } }
+
+@media (min-width: 700px) {
+  .c-intro_paragraph {
+    font-size: 2rem; } }
+
+.c-intro_cta {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem; }
+  @media (min-width: 500px) {
+    .c-intro_cta {
+      width: 50%; } }
 
 .c-scrollto-wrap_inner {
   display: inline-block;
   transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1); }
   .c-scrollto-wrap_inner.-from-bottom {
-    transform: translateY(100%) scaleY(2);
+    transform: translateY(150%) scaleY(2);
     transform-origin: top; }
   .c-scrollto-wrap_inner.-delay {
     transition-delay: 3s; }
@@ -1051,14 +1398,31 @@ html.is-loaded .o-transition {
 .c-scrollto {
   background-color: transparent;
   color: #1f1f1f;
-  position: relative;
   padding: 0;
-  width: 5.625rem;
-  height: 5.625rem;
-  border-radius: 9999px;
-  transform: scale(0.8);
-  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .c-scrollto:after, .c-scrollto:before {
+  font-size: 1.25rem;
+  font-weight: 500; }
+  @media (min-width: 700px) {
+    .c-scrollto {
+      font-size: 2rem; } }
+  .c-scrollto:hover, .c-scrollto:focus {
+    color: #1f1f1f; }
+
+.c-scrollto:hover .c-scrollto_arrow {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  transition-delay: 0.1s; }
+
+.c-scrollto_inner {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px; }
+  @media (min-width: 700px) {
+    .c-scrollto_inner {
+      width: 6rem;
+      height: 6rem; } }
+  .c-scrollto_inner:after, .c-scrollto_inner:before {
     content: "";
     position: absolute;
     top: 0;
@@ -1067,22 +1431,17 @@ html.is-loaded .o-transition {
     bottom: 0;
     border-radius: 9999px;
     transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .c-scrollto:before {
-    border: 4px solid #1f1f1f; }
-  .c-scrollto:after {
+  .c-scrollto_inner:after {
+    background-color: #ededed;
+    transform: scale(0); }
+  .c-scrollto:hover .c-scrollto_inner {
     transform: scale(1); }
-  .c-scrollto:hover {
-    transform: scale(1); }
-    .c-scrollto:hover:before {
+    .c-scrollto:hover .c-scrollto_inner:before {
       transform: scale(0);
       transition-delay: 0.15s; }
-    .c-scrollto:hover:after {
-      transform: scale(0.8);
+    .c-scrollto:hover .c-scrollto_inner:after {
+      transform: scale(1);
       transition-delay: 0.075s; }
-
-.c-scrollto:hover .c-scrollto_arrow {
-  transform: translateX(-50%) translateY(-50%) scale(1);
-  transition-delay: 0.1s; }
 
 .c-scrollto_arrow {
   position: absolute;
@@ -1109,32 +1468,69 @@ html.is-loaded .o-transition {
   50% {
     transform: translateX(-50%) translateY(-40%); } }
 
-.c-intro {
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+.c-features_item {
+  padding-top: 5rem;
+  padding-bottom: 4rem; }
 
-.c-intro_container {
-  max-width: 38.75rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-  z-index: 0;
-  position: relative; }
+.c-features_pretitle {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem; }
 
-.c-intro_paragraph {
-  font-size: 2rem; }
+.c-features_heading {
+  line-height: 1.25;
+  margin-bottom: 2rem; }
 
-.c-intro_circle {
-  background-color: #e7ece3;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 9999px;
-  position: absolute;
-  bottom: 7.5rem;
-  right: -7.5rem;
-  z-index: -1; }
+.c-features_button {
+  letter-spacing: 0.0625em;
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  transition: color 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+  .c-features_button:hover {
+    color: #1f1f1f; }
+  .c-features_button .o-background {
+    background-color: #ededed;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+  .c-features_button:hover .o-background {
+    transform: scaleY(1);
+    transform-origin: top; }
 
+@media (min-width: 700px) {
+  .c-benefits_heading-wrap {
+    min-height: 200vh; } }
+
+.c-benefits_heading-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+
+.c-benefits_heading {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  padding-bottom: 2rem; }
+
+.c-card-benefit {
+  border: 1px solid #e1e1e1;
+  padding: 2rem;
+  margin-left: -1px;
+  margin-top: -1px; }
+
+.c-card-benefit_heading {
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 2rem; }
+
+/* stylelint-disable */
+.u-2\:1::before {
+  padding-bottom: 50%; }
+
+.u-4\:3::before {
+  padding-bottom: 75%; }
+
+.u-16\:9::before {
+  padding-bottom: 56.25%; }
+
+/* stylelint-enable */
 .u-1\/1 {
   width: 100% !important; }
 
@@ -1179,6 +1575,10 @@ html.is-loaded .o-transition {
 
 .u-5\/5 {
   width: 100% !important; }
+
+@media (min-width: 700px) {
+  .u-1\/2\@from-small {
+    width: 50%; } }
 
 @media (min-width: 700px) {
   .u-4\/5\@from-small {
@@ -1252,7 +1652,7 @@ html.is-loaded .o-transition {
   position: relative; }
 
 .u-bg-white {
-  background-color: #f4f6f2; }
+  background-color: #fafafa; }
 
 .u-anim {
   transition: transform 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95), opacity 0.6s cubic-bezier(0.35, 0.755, 0.42, 0.95);
@@ -1288,3 +1688,27 @@ html.is-loaded .o-transition {
       height: 2px; }
     .is-overflow-swipe\@from-small::-webkit-scrollbar-thumb {
       background-color: currentColor; } }
+
+@media (max-width: 699px) {
+  .u-min-30vh\@to-small {
+    min-height: 30vh; } }
+
+@media (min-width: 700px) {
+  .u-height-100vh\@from-small {
+    height: 100vh; } }
+
+@media (min-width: 700px) {
+  .u-height-100\@from-small {
+    height: 100%; } }
+
+@media (max-width: 1199px) {
+  .u-max-w-75\@to-large {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+@media (min-width: 1200px) {
+  .u-max-w-60\@from-large {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%; } }

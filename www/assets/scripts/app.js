@@ -3991,10 +3991,87 @@
     return _default;
   }(_default);
 
+  var _default$6 = /*#__PURE__*/function (_module) {
+    _inherits(_default, _module);
+
+    var _super = _createSuper(_default);
+
+    function _default(m) {
+      var _this;
+
+      _classCallCheck$1(this, _default);
+
+      _this = _super.call(this, m);
+      _this.events = {
+        click: {
+          'nav-toggle': 'handleSiteNav',
+          'nav-link': 'closeSiteNav'
+        }
+      };
+      return _this;
+    }
+
+    _createClass$1(_default, [{
+      key: "init",
+      value: function init() {
+        console.log("module loaded", this);
+      }
+    }, {
+      key: "handleSiteNav",
+      value: function handleSiteNav() {
+        // console.log("handleSiteNav", this);
+        document.documentElement.classList.toggle("has-mobile-menu-open");
+      }
+    }, {
+      key: "closeSiteNav",
+      value: function closeSiteNav() {
+        document.documentElement.classList.remove("has-mobile-menu-open");
+      }
+    }]);
+
+    return _default;
+  }(_default);
+
+  var _default$7 = /*#__PURE__*/function (_module) {
+    _inherits(_default, _module);
+
+    var _super = _createSuper(_default);
+
+    function _default(m) {
+      var _this;
+
+      _classCallCheck$1(this, _default);
+
+      _this = _super.call(this, m);
+      _this.events = {// click: {
+        // 	'nav-toggle': 'handleSiteNav',
+        // 	'nav-link': 'closeSiteNav',
+        // }
+      };
+      return _this;
+    }
+
+    _createClass$1(_default, [{
+      key: "init",
+      value: function init() {
+        console.log("module loaded", this); // this.el should be '.swiper-container'
+
+        var swiper = new Swiper(this.el, {
+          slidesPerView: "auto",
+          centeredSlides: true
+        });
+      }
+    }]);
+
+    return _default;
+  }(_default);
+
   var modules = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Load: _default$3,
-    Scroll: _default$5
+    Scroll: _default$5,
+    MobileMenu: _default$6,
+    Swiper: _default$7
   });
 
   var html = document.documentElement;

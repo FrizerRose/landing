@@ -1,7 +1,7 @@
 
 
 .u-hidden\@from-small {
-    @media (min-width: 700px) {
+    @media (min-width: $from-small) {
         display: none;
     }
 }
@@ -20,7 +20,7 @@
 }
 
 .is-overflow-swipe\@from-small {
-  @media (min-width: 700px) {
+  @media (min-width: $from-small) {
     scrollbar-color: currentColor transparent;  /* Firefox */
     scrollbar-width: thin;  /* Firefox */
 
@@ -32,5 +32,39 @@
     &::-webkit-scrollbar-thumb {
       background-color: currentColor;
     }
+  }
+}
+
+.u-min-30vh\@to-small {
+  @media (max-width: $to-small) {
+    min-height: 30vh;
+  }
+}
+
+.u-height-100vh\@from-small {
+  @media (min-width: $from-small) {
+    height: 100vh;
+  }
+}
+
+.u-height-100\@from-small {
+  @media (min-width: $from-small) {
+    height: 100%;
+  }
+}
+
+.u-max-w-75\@to-large {
+  @media (max-width: $to-large) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+  }
+}
+
+.u-max-w-60\@from-large {
+  @media (min-width: $from-large) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
   }
 }

@@ -1,0 +1,41 @@
+
+.c-circle {
+	background-color: darken($white, 5%);
+	border-radius: 9999px;
+
+	position: absolute;
+	z-index: -1;
+
+  &.-intro {
+    bottom: rem($padding * 2);
+
+    @media (max-width: $to-small) {
+      left: rem($padding * 2);
+    }
+
+    @media (min-width: $from-small) {
+      right: rem(-$padding * 2);
+    }
+  }
+
+  &.-large {
+    width: rem($padding * 4);
+    height: rem($padding * 4);
+  }
+
+  &.-small {
+    width: rem($padding);
+    height: rem($padding);
+  }
+
+  &.-variable {
+    @for $i from 1 through 6 {
+      &.-offset-#{$i} {
+        top: 100% / $i / 2;
+        left: 50% / $i / 0.667;
+        width: 2rem * $i;
+        height: 2rem * $i;
+      }
+    }
+  }
+}

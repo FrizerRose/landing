@@ -1,0 +1,25 @@
+.c-horizontal {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.c-horizontal_heading {
+  display: block;
+  // font-weight: 400;
+  font-size: 6vw;
+  line-height: 1.25;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+
+  &.-row-1 {
+    @media (min-width: $from-small) {
+      margin-left: 3vw;
+    }
+  }
+
+  &.-row-2 {
+    @media (min-width: $from-small) {
+      margin-left: 6vw;
+    }
+  }
+}

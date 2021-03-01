@@ -52,7 +52,7 @@
       <div class="o-scroll" data-module-scroll="main">
         <header data-scroll-section class="c-site-header">
           <div class="o-container">
-            <div class="c-site-header_inner">
+            <div data-module-mobile-menu class="c-site-header_inner">
               <div class="c-site-header_main || has-no-gutters@to-small">
                 <div class="c-site-header_main_inner">
                   <div role="banner">
@@ -60,7 +60,7 @@
                         <a class="c-site-brand_link" href="#" rel="home">site name</a>
                     </h1>
                   </div>
-                  <button class="c-site-nav_menu-toggle || c-button || js-site-nav-toggle">
+                  <button data-mobile-menu="nav-toggle" class="c-site-nav_menu-toggle || c-button">
                     <span class="c-button_label">Menu</span>
                   </button>
                 </div>
@@ -70,12 +70,12 @@
                 <div class="c-site-header_aside_inner || o-layout -middle">
                   <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
                     <ul class="c-site-nav_list">
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="/">Home</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-intro">Uvod</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-benefits">Benefiti</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-features">Značajke</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-testimonials">Riječ korisnika</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="/">shop</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" href="/">Home</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">Uvod</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">Benefiti</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-features">Značajke</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-testimonials">Riječ korisnika</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" href="/">shop</a></li>
                     </ul>
                   </nav>
                   <div class="o-layout_item u-1/2@to-small || u-hidden@from-small">
@@ -111,57 +111,63 @@
         </header>
 
         <main data-scroll-section class="c-site-main">
-          <section class="c-section c-hero">
-
-            <div class="c-hero_back">
-              <div class="c-hero_css-wrap" data-scroll data-scroll-speed="-3" data-scroll-position="top">
+          <section class="c-section">
+            <div class="o-background-wrap">
+              <div class="o-background">
+                <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-3" data-scroll-position="top">
+                </div>
               </div>
-            </div>
 
-            <div class="o-container -hero">
-              <div class="o-layout">
+              <div class="c-hero">
+                <div class="o-container -w-80">
+                  <div class="o-layout">
 
-                <div class="o-layout_item u-min-30vh@to-medium">
-                  <article class="c-hero_front">
-                    <div class="c-hero_front -background"></div>
-                    <h1 class="c-hero_heading" data-scroll>
-                      <div class="c-hero_heading-row" data-scroll data-scroll-speed="2" data-scroll-delay="0.075">
-                        <div class="c-hero_heading-row_inner -delay-1">Narudžbe telefonom </div>
-                      </div>
-                      <div class="c-hero_heading-row" data-scroll data-scroll-speed="2" data-scroll-delay="0.025">
-                        <div class="c-hero_heading-row_inner -delay-2">šaljemo u prošlost</div>
-                      </div>
-                    </h1>
-                    <div class="c-hero_cta">
-                      <div class="c-scrollto-wrap" data-scroll data-scroll-speed="2" data-scroll-delay="0.16">
-                        <span class="c-scrollto-wrap_inner -from-bottom -delay">
-                          <a href="#goto-intro" data-scroll-to class="c-scrollto || c-button">
-                            <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
-                              <span class="u-screen-reader-text">Vodi me na poglavlje rješenja</span>
-                              <span data-scroll class="c-scrollto_arrow">
-                                <span class="o-icon -large-icon">
-                                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                  </svg>
-                                </span>
+                    <div class="o-layout_item u-min-30vh@to-medium">
+                      <div class="o-background-wrap">
+                        <div class="o-background -hero"></div>
+                        <article class="o-front -hero">
+                          <h1 class="c-hero_heading" data-scroll>
+                            <div class="c-hero_heading-row">
+                              <div class="c-hero_heading-row_inner -delay-1">Narudžbe telefonom </div>
+                            </div>
+                            <div class="c-hero_heading-row">
+                              <div class="c-hero_heading-row_inner -delay-2">šaljemo u prošlost</div>
+                            </div>
+                          </h1>
+                          <div class="c-hero_cta">
+                            <div class="c-scrollto-wrap" data-scroll>
+                              <span class="c-scrollto-wrap_inner -from-bottom -delay">
+                                <a href="#goto-intro" data-scroll-to class="c-scrollto || c-button">
+                                  <span class="c-button_label">Saznajte kako</span>
+                                  <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
+                                    <span class="u-screen-reader-text">Vodi me na poglavlje rješenja</span>
+                                    <span data-scroll class="c-scrollto_arrow">
+                                      <span class="o-icon -large-icon">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                        </svg>
+                                      </span>
+                                    </span>
+                                  </span>
+                                </a>
                               </span>
-                            </span>
-                          </a>
-                        </span>
+                            </div>
+                          </div>
+                        </article>
                       </div>
                     </div>
-                  </article>
-                </div>
 
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           <section class="c-section u-bg-white u-relative">
             <div class="c-intro">
-              <div class="o-container">
+              <div class="o-container -w-80">
                 <div id="goto-intro" class="c-intro_container">
-                  <div class="c-intro_circle" data-scroll data-scroll-speed="3">
+                  <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
                   </div>
                   <p class="c-intro_paragraph">Zakazivanje termina telefonom je naporno. Neki ljudi više vole tipkati. Ako vaš posao uključuje rezervacije termina preko telefona, ljudi koji ne vole telefonirati će radije zaobići vašu poslovnicu. Pozabavili smo se s tim problemom i na ovoj stranici možete pročitati kakvo rješenje nudimo.</p>
                 </div>
@@ -171,79 +177,312 @@
 
           <section class="c-section">
             <div class="c-features">
-              <div class="o-container">
-                <div id="goto-benefits" class="c-features_container">
-                  <h1>Istaknute značajke iz prespektive obrta/firme</h1>
-                  <ul>
-                    <li>
-                      <article>
-                        <h1>Automatizirano naručivanje</h1>
-                        <p>Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Preglednost</h1>
-                        <p>Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Bolje upravljanje vlastitim vremenom</h1>
-                        <p>Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Prilagodljiv izgled</h1>
-                        <p>Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
+              <div id="goto-features" class="c-features_container">
+                <ul>
+
+                  <li class="c-section">
+                    <div class="o-layout || o-flex -flex-column@to-small">
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                          <div class="o-background -extra">
+                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                            <div class="o-background-wrap">
+                              <div class="o-background"></div>
+                              <div class="c-feature_content">
+                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                <h1 class="c-features_heading">Automatizirano naručivanje</h1>
+                                <p class="">Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
+                                <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
+                                  <div class="o-background-wrap">
+                                    <div class="o-background"></div>
+                                    <div class="c-button_inner">
+                                      <span class="c-button_label">Sljedeća značajka</span>
+                                      <span class="o-icon -features">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="c-section" id="goto-feature-2">
+                    <div class="o-layout -reverse || o-flex -flex-column@to-small">
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                          <div class="o-background -extra">
+                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                            <div class="o-background-wrap">
+                              <div class="o-background"></div>
+                              <div class="c-feature_content">
+                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                <h1 class="c-features_heading">Preglednost</h1>
+                                <p class="">Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
+                                <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
+                                  <div class="o-background-wrap">
+                                    <div class="o-background"></div>
+                                    <div class="c-button_inner">
+                                      <span class="c-button_label">Sljedeća značajka</span>
+                                      <span class="o-icon -features">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="c-section" id="goto-feature-3">
+                    <div class="o-layout || o-flex -flex-column@to-small">
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                          <div class="o-background -extra">
+                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                            <div class="o-background-wrap">
+                              <div class="o-background"></div>
+                              <div class="c-feature_content">
+                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                <h1 class="c-features_heading">Bolje upravljanje vlastitim vremenom</h1>
+                                <p class="">Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
+                                <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
+                                  <div class="o-background-wrap">
+                                    <div class="o-background"></div>
+                                    <div class="c-button_inner">
+                                      <span class="c-button_label">Sljedeća značajka</span>
+                                      <span class="o-icon -features">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="c-section" id="goto-feature-4">
+                    <div class="o-layout -reverse || o-flex -flex-column@to-small">
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                          <div class="o-background -extra">
+                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                            <div class="o-background-wrap">
+                              <div class="o-background"></div>
+                              <div class="c-feature_content">
+                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                <h1 class="c-features_heading">Prilagodljiv izgled</h1>
+                                <p class="">Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
+                                <a href="#goto-benefits" class="c-features_button || c-button" data-scroll-to>
+                                  <div class="o-background-wrap">
+                                    <div class="o-background"></div>
+                                    <div class="c-button_inner">
+                                      <span class="c-button_label">Benefiti za vaše<br>klijente/korisnike</span>
+                                      <span class="o-icon -features">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
               </div>
             </div>
           </section>
+
+          <!--
+            <section class="c-section">
+              <div class="o-background-wrap o-ratio u-2:1 u-height-100vh@from-small">
+                <div class="o-background -horizontal">
+                  <div class="o-background_css -zigzag" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="c-section">
+              <div class="c-horizontal">
+                <div class="o-container">
+                  <div class="o-background-wrap">
+                    <div class="o-background"></div>
+                    <article class="c-horizontal_item u-min-30vh@to-medium">
+                      <h1 class="c-horizontal_heading">
+                        <span class="c-horizontal_heading -row-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.5">A kako to izgleda iz perspektive</span>
+                        <span class="c-horizontal_heading -row-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.5">klijenata/korisnika?</span>
+                      </h1>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          -->
+
+          <!--
+            <h1>Istaknute značajke iz prespektive obrta/firme</h1>
+            <ul>
+              <li>
+                <article>
+                  <h1>Automatizirano naručivanje</h1>
+                  <p>Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <h1>Preglednost</h1>
+                  <p>Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <h1>Bolje upravljanje vlastitim vremenom</h1>
+                  <p>Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <h1>Prilagodljiv izgled</h1>
+                  <p>Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
+                </article>
+              </li>
+            </ul>
+          -->
 
           <section class="c-section">
-            <div class="c-features">
+            <div class="c-intro">
+              <div class="o-container -w-80">
+                <div id="goto-intro" class="c-intro_container">
+                  <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
+                  </div>
+                  <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-benefits">
               <div class="o-container">
-                <div id="goto-features" class="c-features_container">
-                  <h1>Istaknute značajke iz prespektive vaših klijenata/korisnika</h1>
-                  <ul>
-                    <li>
-                      <article>
-                        <h1>Brzo i pouzdano</h1>
-                        <p>Naručivanje se provodi na webu u samo nekoliko koraka. Uvid u dostupne termine u stvarnom vremenu.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Jednostavno i pregledno sučelje</h1>
-                        <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Privatnost</h1>
-                        <p>Osim e-mail adrese na koju se šalje potvrda narudžbe ništa drugo nije potrebno. Uneseni podatci neće biti korišteni za druge svrhe.</p>
-                      </article>
-                    </li>
-                    <li>
-                      <article>
-                        <h1>Diskterno</h1>
-                        <p>Na e-mail adresu šaljemo potvrdu narudžbe. Zakazani termin se može poništiti bilo kojem trenutku.</p>
-                      </article>
-                    </li>
-                  </ul>
+                <div class="o-sticky-wrap">
+                  <span class="o-sticky" id="stop-sticky-benefits"></span>
+                  <div id="goto-benefits" class="c-benefits_container">
+                    <div class="o-layout">
+                      <div class="o-layout_item u-1/2@from-small u-min-30vh@to-small XXXXXu-height-100vh@from-small">
+                        <article class="c-benefits_heading-wrap">
+                          <div class="c-benefits_heading-padding" data-scroll data-scroll-sticky data-scroll-target="#stop-sticky-benefits">
+                            <h1 class="c-benefits_heading">
+                              Što još trebate znati?
+                              <br>
+                              Ovo su benefiti za vaše klijente/korisnike
+                            </h1>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="o-layout o-flex -flex-wrap">
+                          <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="0.5">
+                            <article class="c-card-benefit">
+                              <div class="o-background-wrap o-ratio u-2:1">
+                                <div class="o-background">
+                                  <div class="c-circle -variable -offset-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
+                                </div>
+                              </div>
+                              <h1 class="c-card-benefit_heading">Brzo i pouzdano</h1>
+                              <p>Naručivanje se provodi na webu u samo nekoliko koraka. Uvid u dostupne termine u stvarnom vremenu.</p>
+                            </article>
+                            <article class="c-card-benefit">
+                              <div class="o-background-wrap o-ratio u-2:1">
+                                <div class="o-background">
+                                  <div class="c-circle -variable -offset-3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5"></div>
+                                </div>
+                              </div>
+                              <h1 class="c-card-benefit_heading">Jednostavno i pregledno sučelje</h1>
+                              <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
+                            </article>
+                          </div>
+                          <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="1">
+                            <article class="c-card-benefit">
+                              <div class="o-background-wrap o-ratio u-2:1">
+                                <div class="o-background">
+                                  <div class="c-circle -variable -offset-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"></div>
+                                </div>
+                              </div>
+                              <h1 class="c-card-benefit_heading">Diskterno</h1>
+                              <p>Na e-mail adresu šaljemo potvrdu narudžbe. Zakazani termin se može poništiti bilo kojem trenutku.</p>
+                            </article>
+                            <article class="c-card-benefit">
+                              <div class="o-background-wrap o-ratio u-2:1">
+                                <div class="o-background">
+                                  <div class="c-circle -variable -offset-4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2.5"></div>
+                                </div>
+                              </div>
+                              <h1 class="c-card-benefit_heading">Privatnost</h1>
+                              <p>Osim e-mail adrese na koju se šalje potvrda narudžbe ništa drugo nije potrebno. Uneseni podatci neće biti korišteni za druge svrhe.</p>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section id="goto-testimonials" class="c-section">
+          <section id="goto-join" class="c-section">
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div data-module-swiper class="swiper-container">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper || o-layout">
                 <!-- Slides -->
@@ -284,6 +523,25 @@
               <div class="swiper-scrollbar"></div>
             </div>
           </section>
+          <section class="c-section">
+            <div class="c-intro">
+              <div class="o-container -w-80">
+                <div id="goto-intro" class="c-intro_container">
+                  <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
+                  <div class="c-intro_cta">
+                    <button class="c-button c-round-button">
+                      <div class="o-background-wrap o-ratio">
+                        <div class="o-background"></div>
+                        <div class="c-round-button_inner">
+                          <span class="c-button_label">Registracija</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
         </main>
 
@@ -302,32 +560,5 @@
     <script src="assets/scripts/app.js" defer></script>
 
     <script src="sw.js" crossorigin="anonymous"></script>
-
-    <script>
-      function initSlider() {
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: "auto",
-          centeredSlides: true,
-        });
-      }
-
-      window.addEventListener("DOMContentLoaded", function() {
-        initSlider();
-      })
-    </script>
-
-    <script>
-      function toggleSiteNav() {
-        document.documentElement.classList.toggle("has-mobile-menu-open")
-      }
-      function initSiteNavToggle() {
-        var siteNavToggleButton = document.querySelector(".js-site-nav-toggle")
-        siteNavToggleButton.addEventListener("click", toggleSiteNav)
-      }
-
-      window.addEventListener("DOMContentLoaded", function() {
-        initSiteNavToggle();
-      })
-    </script>
   </body>
 </html>

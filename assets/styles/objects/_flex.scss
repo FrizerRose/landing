@@ -1,0 +1,41 @@
+
+.o-flex {
+	// border: 2px dotted black;
+	display: flex;
+
+	&.-flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	&.-flex-column {
+		flex-direction: column;
+	}
+
+	&.-flex-column\@to-tiny {
+		@media (max-width: $to-tiny) {
+		flex-direction: column;
+		}
+	}
+	&.-flex-column\@to-small {
+		@media (max-width: $to-small) {
+		flex-direction: column;
+		}
+	}
+	&.-flex-column\@to-medium {
+		@media (max-width: $to-medium) {
+		flex-direction: column;
+		}
+	}
+	&.-flex-column\@from-medium {
+		@media (min-width: $from-medium) {
+		flex-direction: column;
+		}
+	}
+
+	&.-justify-center {
+		justify-content: center;
+	}
+	&.-align-center {
+		align-items: center;
+	}
+}

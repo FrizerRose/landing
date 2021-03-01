@@ -1,0 +1,98 @@
+
+.o-background-wrap {
+	position: relative;
+  z-index: 0;
+
+  &.-h-100vh\@from-small {
+    @media (min-width: $from-small) {
+      height: 100vh;
+    }
+  }
+}
+
+.o-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  &.-extra {
+    bottom: -5%;
+    right: -5%;
+    left: -5%;
+    top: -5%;
+  }
+
+  &.-horizontal {
+    right: -50%;
+    left: -50%;
+  }
+
+  &.-hero {
+    background: $white;
+    margin: 0 -2rem;
+
+    transform: translateY(6rem) scale(0.75, 0);
+    transform-origin: bottom;
+    // opacity: 0;
+    transition: transform $speed * 3 $easing;
+    transition-delay: $page-transition-duration * 0.25;
+
+    @media (min-width: $from-small) {
+      margin: 0 -4rem;
+    }
+
+    @media (min-width: $from-large) {
+      margin: 0 -6rem;
+    }
+
+    html.is-loaded & {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.o-background_css {
+
+  height: 100%;
+
+  &.-polka-dots-v2 {
+    background-image:  radial-gradient($black 0.125rem, transparent 0.125rem), radial-gradient($black 0.125rem, $white 0.125rem);
+    background-size: 2rem 2rem;
+    background-position: 0 0, 1rem 1rem;
+  }
+
+  &.-zigzag {
+    background-image:  linear-gradient(135deg, darken($white, 5%) 25%, transparent 25%), linear-gradient(225deg, darken($white, 5%) 25%, transparent 25%), linear-gradient(45deg, darken($white, 5%) 25%, transparent 25%), linear-gradient(315deg, darken($white, 5%) 25%, $white 25%);
+    background-position:  2rem 0, 2rem 0, 0 0, 0 0;
+    background-size: 4rem 4rem;
+    background-repeat: repeat;
+  }
+
+  &.-diagonal {
+    background: repeating-linear-gradient( 45deg, darken($white, 25%), darken($white, 25%) 0.25rem, $white 0.25rem, $white 1rem );
+
+    .-reverse & {
+      background: repeating-linear-gradient( -45deg, darken($white, 25%), darken($white, 25%) 0.25rem, $white 0.25rem, $white 1rem );
+    }
+  }
+
+  // @media (min-width: $from-small) {
+  //   position: relative;
+
+  //   &:before {
+  //     content: "";
+  //     background-image: linear-gradient(0deg, transparent -100%, $white);
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //   }
+  // }
+}

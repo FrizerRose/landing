@@ -118,17 +118,14 @@
     }
 }
 
-
 .o-layout {
     &.-gutters {
-
         @media (max-width: $to-small) {
             margin-right: -16px;
             margin-left: -16px;
         }
     }
 }
-
 
 .o-layout.-gutters {
     > .o-layout_item {

@@ -1,10 +1,60 @@
 .c-button {
-    padding: 1em 2em;
-    background-color: $black;
-    color: $white;
-    transition: background-color $speed $easing, color $speed $easing;
+  background-color: $black;
+  color: $white;
+  transition: background-color $speed $easing, color $speed $easing;
 
-    @include u-hocus {
-        color: $white;
+  @include u-hocus {
+    color: $white;
+  }
+
+  &.-primary {
+    padding: 1em 2em;
+  }
+}
+
+.c-button_label {
+  vertical-align: inherit;
+  display: inline-block;
+  line-height: inherit;
+  pointer-events: none;
+  // margin-bottom: 0.125em;
+}
+
+.c-button_inner {
+  padding: 1em 1.5em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+
+.c-round-button {
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+
+  .o-background-wrap {
+    border-radius: 9999px;
+  }
+  .o-background {
+    border-radius: 9999px;
+    background-color: $black;
+    transition: transform $speed $easing-long;
+  }
+
+  @include u-hocus {
+    .o-background {
+      transform: scale(0.88);
     }
+  }
+}
+
+.c-round-button_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

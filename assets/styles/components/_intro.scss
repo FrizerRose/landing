@@ -14,17 +14,22 @@
 }
 
 .c-intro_paragraph {
-  font-size: 2rem;
+
+  @media (max-width: $to-small) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: $from-small) {
+    font-size: 2rem;
+  }
 }
 
-.c-intro_circle {
-  background-color: darken($white, 5%);
-  width: rem($padding * 4);
-  height: rem($padding * 4);
-  border-radius: 9999px;
+.c-intro_cta {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
 
-  position: absolute;
-  bottom: rem($padding * 2);
-  right: rem(-$padding * 2);
-  z-index: -1;
+  @media (min-width: $from-tiny) {
+    width: 50%;
+  }
 }

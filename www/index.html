@@ -63,7 +63,7 @@
       <div class="o-scroll" data-module-scroll="main">
         <header data-scroll-section class="c-site-header">
           <div class="o-container">
-            <div class="c-site-header_inner">
+            <div data-module-mobile-menu class="c-site-header_inner">
               <div class="c-site-header_main || has-no-gutters@to-small">
                 <div class="c-site-header_main_inner">
                   <div role="banner">
@@ -71,7 +71,7 @@
                         <a class="c-site-brand_link" href="#" rel="home">site name</a>
                     </h1>
                   </div>
-                  <button class="c-site-nav_menu-toggle || c-button || js-site-nav-toggle">
+                  <button data-mobile-menu="nav-toggle" class="c-site-nav_menu-toggle || c-button">
                     <span class="c-button_label">Menu</span>
                   </button>
                 </div>
@@ -81,12 +81,12 @@
                 <div class="c-site-header_aside_inner || o-layout -middle">
                   <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
                     <ul class="c-site-nav_list">
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="./hero-v2.html">hero v2</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-intro">Uvod</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-benefits">Benefiti</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-features">Značajke</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="#goto-testimonials">Riječ korisnika</a></li>
-                      <li class="has-no-gutters@to-small"><a data-scroll-to href="/">shop</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" href="./hero-v2.html">hero v2</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">Uvod</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">Benefiti</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-features">Značajke</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" data-scroll-to href="#goto-testimonials">Riječ korisnika</a></li>
+                      <li class="has-no-gutters@to-small"><a data-mobile-menu="nav-link" href="/">shop</a></li>
                     </ul>
                   </nav>
                   <div class="o-layout_item u-1/2@to-small || u-hidden@from-small">
@@ -163,7 +163,7 @@
 
             <section class="c-section">
               <!-- Slider main container -->
-              <div class="swiper-container">
+              <div data-module-swiper class="swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper || o-layout">
                   <!-- Slides -->
@@ -223,31 +223,5 @@
 
     <script src="sw.js" crossorigin="anonymous"></script>
 
-    <script>
-      function initSlider() {
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: "auto",
-          centeredSlides: true,
-        });
-      }
-
-      window.addEventListener("DOMContentLoaded", function() {
-        initSlider();
-      })
-    </script>
-
-    <script>
-      function toggleSiteNav() {
-        document.documentElement.classList.toggle("has-mobile-menu-open")
-      }
-      function initSiteNavToggle() {
-        var siteNavToggleButton = document.querySelector(".js-site-nav-toggle")
-        siteNavToggleButton.addEventListener("click", toggleSiteNav)
-      }
-
-      window.addEventListener("DOMContentLoaded", function() {
-        initSiteNavToggle();
-      })
-    </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+.c-features {}
+
+.c-features_item {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.c-features_pretitle {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.c-features_heading {
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.c-features_button {
+  letter-spacing: 0.0625em;
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  transition: color $speed * 2 $easing-long;
+
+  &:hover {
+    color: $black;
+  }
+
+  .o-background {
+    background-color: darken($white, 5%);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform $speed * 2 $easing-long;
+  }
+
+  &:hover .o-background {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}

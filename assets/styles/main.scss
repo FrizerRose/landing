@@ -40,7 +40,11 @@
 // @import "objects/table";
 
 @import "objects/transition";
+@import "objects/background";
+@import "objects/front";
+@import "objects/flex";
 @import "objects/icon";
+@import "objects/sticky";
 
 // Vendors
 // ==========================================================================
@@ -52,13 +56,18 @@
 @import "components/heading";
 @import "components/button";
 @import "components/form";
+@import "components/section";
 
 @import "components/site-header";
 @import "components/swiper";
 
 @import "components/hero";
-@import "components/scrollto";
+@import "components/circle";
 @import "components/intro";
+@import "components/scrollto";
+@import "components/features";
+@import "components/benefits";
+// @import "components/horizontal";
 // @import "components/split-section";
 
 // Templates
@@ -67,7 +76,7 @@
 
 // Utilities
 // ==========================================================================
-// @import "utilities/ratio";
+@import "utilities/ratio";
 @import "utilities/widths";
 // @import "utilities/align";
 @import "utilities/helpers";

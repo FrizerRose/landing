@@ -5,6 +5,10 @@
 	width: rem(24px);
 	height: rem(24px);
 
+	&.-features {
+    margin-left: 1.5em;
+  }
+
 	&.-cw90 {
 		transform: rotate(90deg);
 	}
@@ -33,11 +37,11 @@
 	}
 
 	&.-large-icon {
-		@media (max-width: $to-medium) {
-			width: rem(48px);
-			height: rem(48px);
+		@media (max-width: $to-small) {
+			width: rem(24px);
+			height: rem(24px);
 		}
-		@media (min-width: $from-medium) {
+		@media (min-width: $from-small) {
 			width: rem(64px);
 			height: rem(64px);
 		}
