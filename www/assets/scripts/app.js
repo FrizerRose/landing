@@ -3968,6 +3968,8 @@
         });
         this.scroll.on('scroll', function (args) {
           // console.log(args.scroll);
+          // console.log(args.scroll.y);
+          // this.call('toggle', false, 'DisplayButton', '')
           // console.log(this.modules.StickyCtaToggler.fixedSection.el);
           args.scroll.y > 50 ? html.classList.add("has-scrolled") : html.classList.remove("has-scrolled"), "down" == args.direction ? html.classList.add("is-scrolling-down") : html.classList.remove("is-scrolling-down"), args.scroll.y > args.limit - 50 ? html.classList.add("is-scrolling-end") : html.classList.remove("is-scrolling-end");
         });
@@ -4045,38 +4047,17 @@
     function _default(m) {
       _classCallCheck$1(this, _default);
 
-      return _super.call(this, m); // this.events = {
-      // 	click: {
-      // 		'init': 'handleSiteNav',
-      // 		'nav-link': 'closeSiteNav',
-      // 	}
-      // }
+      return _super.call(this, m);
     }
 
     _createClass$1(_default, [{
       key: "init",
-      value: function init() {// console.log("module loaded", this);
-        // const fixedCtaHideTrigger = document.querySelector(".js-hide-fixed-cta")
-        // console.log("fixedCtaHideTrigger", fixedCtaHideTrigger.getClientRects()[0].y);
-        // console.log("window", fixedCtaHideTrigger - window.innerHeight);
-        // this.modules.Scroll.main.scroll.on('scroll', function (args) {
-        // console.log(args.delta.y);
-        // console.log( fixedCtaHideTrigger.getClientRects()[0].y );
-        // if ( fixedCtaHideTrigger - window.innerHeight ) {
-        //   console.log("aaaaa");
-        // }
-        // })
-      }
+      value: function init() {}
     }, {
-      key: "hide",
-      value: function hide() {
-        console.log(this.modules.Scroll.main.scroll); // const fixedCtaHideTrigger = document.querySelector(".js-hide-fixed-cta")
-        // console.log(fixedCtaHideTrigger.getClientRects()[0].y);
-        // if ( fixedCtaHideTrigger.getClientRects()[0].y - window.innerHeight ) {
-        //   console.log("aaaaa");
-        // }
-        // this.el.classList.contains("aaaaaaaaaaaaaaaaaaaa") ? this.el.classList.remove("aaaaaaaaaaaaaaaaaaaa") : this.el.classList.add("aaaaaaaaaaaaaaaaaaaa")
-        // "enter" === t.way ? this.el.classList.add("is-hidden") : this.el.classList.remove("is-hidden")
+      key: "toggle",
+      value: function toggle() {
+        console.log("toggle", this.el);
+        this.el.classList.contains("-show") ? this.el.classList.remove("-show") : this.el.classList.add("-show");
       }
     }]);
 
@@ -4122,7 +4103,7 @@
     Load: _default$3,
     Scroll: _default$5,
     MobileMenu: _default$6,
-    StickyCtaToggler: _default$7,
+    DisplayButton: _default$7,
     Swiper: _default$8
   });
 

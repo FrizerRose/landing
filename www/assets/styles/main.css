@@ -1323,6 +1323,11 @@ html.is-loaded .o-transition {
   right: 1rem;
   z-index: 100;
   width: 4rem; }
+  @media (min-width: 700px) {
+    .c-fixed-cta {
+      bottom: 2rem;
+      right: 2rem;
+      width: 8rem; } }
 
 .c-button-rail {
   width: 4rem;
@@ -1331,7 +1336,16 @@ html.is-loaded .o-transition {
   overflow: hidden;
   z-index: 1;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  transform: scaleX(3) translateX(200%);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: bottom right; }
+  @media (min-width: 700px) {
+    .c-button-rail {
+      width: 8rem; } }
+  .c-button-rail.-show {
+    transform: none;
+    transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1); }
 
 .c-button-rail_label {
   -webkit-animation: buttonRail 3s linear infinite;
@@ -1340,6 +1354,9 @@ html.is-loaded .o-transition {
   font-size: 0.75rem;
   padding-left: 2rem;
   padding-right: 2rem; }
+  @media (min-width: 700px) {
+    .c-button-rail_label {
+      font-size: 1rem; } }
 
 @-webkit-keyframes buttonRail {
   0% {

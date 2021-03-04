@@ -22,6 +22,9 @@ export default class extends module {
 
         this.scroll.on('scroll', (args) => {
             // console.log(args.scroll);
+            // console.log(args.scroll.y);
+            // this.call('toggle', false, 'DisplayButton', '')
+
             // console.log(this.modules.StickyCtaToggler.fixedSection.el);
             args.scroll.y > 50 ? html.classList.add("has-scrolled") : html.classList.remove("has-scrolled"),
             "down" == args.direction ? html.classList.add("is-scrolling-down") : html.classList.remove("is-scrolling-down"),
