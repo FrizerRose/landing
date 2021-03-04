@@ -3934,6 +3934,9 @@
     return _default;
   }();
 
+  var html = document.documentElement;
+  var isDebug = !!html.getAttribute('data-debug');
+
   var _default$5 = /*#__PURE__*/function (_module) {
     _inherits(_default, _module);
 
@@ -3963,7 +3966,10 @@
             obj: obj
           }, func[1], func[2]);
         });
-        this.scroll.on('scroll', function (args) {// console.log(args.scroll);
+        this.scroll.on('scroll', function (args) {
+          // console.log(args.scroll);
+          // console.log(this.modules.StickyCtaToggler.fixedSection.el);
+          args.scroll.y > 50 ? html.classList.add("has-scrolled") : html.classList.remove("has-scrolled"), "down" == args.direction ? html.classList.add("is-scrolling-down") : html.classList.remove("is-scrolling-down"), args.scroll.y > args.limit - 50 ? html.classList.add("is-scrolling-end") : html.classList.remove("is-scrolling-end");
         });
       }
     }, {
@@ -4013,19 +4019,18 @@
 
     _createClass$1(_default, [{
       key: "init",
-      value: function init() {
-        console.log("module loaded", this);
+      value: function init() {// console.log("module loaded", this);
       }
     }, {
       key: "handleSiteNav",
       value: function handleSiteNav() {
         // console.log("handleSiteNav", this);
-        document.documentElement.classList.toggle("has-mobile-menu-open");
+        html.classList.toggle("has-mobile-menu-open");
       }
     }, {
       key: "closeSiteNav",
       value: function closeSiteNav() {
-        document.documentElement.classList.remove("has-mobile-menu-open");
+        html.classList.remove("has-mobile-menu-open");
       }
     }]);
 
@@ -4033,6 +4038,52 @@
   }(_default);
 
   var _default$7 = /*#__PURE__*/function (_module) {
+    _inherits(_default, _module);
+
+    var _super = _createSuper(_default);
+
+    function _default(m) {
+      _classCallCheck$1(this, _default);
+
+      return _super.call(this, m); // this.events = {
+      // 	click: {
+      // 		'init': 'handleSiteNav',
+      // 		'nav-link': 'closeSiteNav',
+      // 	}
+      // }
+    }
+
+    _createClass$1(_default, [{
+      key: "init",
+      value: function init() {// console.log("module loaded", this);
+        // const fixedCtaHideTrigger = document.querySelector(".js-hide-fixed-cta")
+        // console.log("fixedCtaHideTrigger", fixedCtaHideTrigger.getClientRects()[0].y);
+        // console.log("window", fixedCtaHideTrigger - window.innerHeight);
+        // this.modules.Scroll.main.scroll.on('scroll', function (args) {
+        // console.log(args.delta.y);
+        // console.log( fixedCtaHideTrigger.getClientRects()[0].y );
+        // if ( fixedCtaHideTrigger - window.innerHeight ) {
+        //   console.log("aaaaa");
+        // }
+        // })
+      }
+    }, {
+      key: "hide",
+      value: function hide() {
+        console.log(this.modules.Scroll.main.scroll); // const fixedCtaHideTrigger = document.querySelector(".js-hide-fixed-cta")
+        // console.log(fixedCtaHideTrigger.getClientRects()[0].y);
+        // if ( fixedCtaHideTrigger.getClientRects()[0].y - window.innerHeight ) {
+        //   console.log("aaaaa");
+        // }
+        // this.el.classList.contains("aaaaaaaaaaaaaaaaaaaa") ? this.el.classList.remove("aaaaaaaaaaaaaaaaaaaa") : this.el.classList.add("aaaaaaaaaaaaaaaaaaaa")
+        // "enter" === t.way ? this.el.classList.add("is-hidden") : this.el.classList.remove("is-hidden")
+      }
+    }]);
+
+    return _default;
+  }(_default);
+
+  var _default$8 = /*#__PURE__*/function (_module) {
     _inherits(_default, _module);
 
     var _super = _createSuper(_default);
@@ -4054,8 +4105,8 @@
     _createClass$1(_default, [{
       key: "init",
       value: function init() {
-        console.log("module loaded", this); // this.el should be '.swiper-container'
-
+        // console.log("module loaded", this);
+        // this.el should be '.swiper-container'
         var swiper = new Swiper(this.el, {
           slidesPerView: "auto",
           centeredSlides: true
@@ -4071,11 +4122,9 @@
     Load: _default$3,
     Scroll: _default$5,
     MobileMenu: _default$6,
-    Swiper: _default$7
+    StickyCtaToggler: _default$7,
+    Swiper: _default$8
   });
-
-  var html = document.documentElement;
-  var isDebug = !!html.getAttribute('data-debug');
 
   var app = new _default$1({
     modules: modules
@@ -4097,7 +4146,9 @@
     app.init(app);
     globals();
     html.classList.add('is-loaded', 'is-ready');
-    html.classList.remove('is-loading');
+    html.classList.remove('is-loading'); // fix layout jump on mobile when address bar resizes screen by showing up and hiding
+
+    html.style.setProperty('--vh', "".concat(window.innerHeight / 100, "px"));
   }
 
 }());

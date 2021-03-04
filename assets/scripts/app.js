@@ -25,5 +25,7 @@ function init() {
 
     html.classList.add('is-loaded', 'is-ready');
     html.classList.remove('is-loading');
-}
 
+    // fix layout jump on mobile when address bar resizes screen by showing up and hiding
+    html.style.setProperty('--vh', `${window.innerHeight/100}px`);
+}

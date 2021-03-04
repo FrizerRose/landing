@@ -30,8 +30,22 @@
     left: -50%;
   }
 
+  &.-mobile-nav {
+    background-color: $black;
+    transform: translateX(-150%) skewX(-10deg);
+    transform-origin: right;
+    transition: transform $speed * 2 $easing, background-color $speed * 4 $easing;
+    transition-delay: $page-transition-duration * 0.5;
+
+    html.has-mobile-menu-open & {
+      transform: none;
+      background-color: $white;
+      transition-delay: $page-transition-duration * 0.25;
+    }
+  }
+
   &.-hero {
-    background: $white;
+    background-color: $white;
     margin: 0 -2rem;
 
     transform: translateY(6rem) scale(0.75, 0);

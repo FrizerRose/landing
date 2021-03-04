@@ -7,12 +7,12 @@
 }
 
 .has-no-gutters\@to-small {
-  @media (max-width: 699px) {
+  @media (max-width: $to-small) {
     margin-left: -1rem;
     margin-right: -1rem;
   }
   > * {
-    @media (max-width: 699px) {
+    @media (max-width: $to-small) {
       padding-left: 1rem;
       padding-right: 1rem;
     }

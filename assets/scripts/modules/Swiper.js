@@ -14,7 +14,7 @@ export default class extends module {
 	}
 
   init() {
-    console.log("module loaded", this);
+    // console.log("module loaded", this);
     // this.el should be '.swiper-container'
     var swiper = new Swiper(this.el, {
       slidesPerView: "auto",

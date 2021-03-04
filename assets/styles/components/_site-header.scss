@@ -22,7 +22,7 @@
     z-index: 5;
 
     $site-header-mobile-bg: $white;
-    background-color: $site-header-mobile-bg;
+    // background-color: $site-header-mobile-bg;
     // box-shadow: 0 0 10px 0 $black;
   }
 
@@ -43,14 +43,55 @@
   line-height: 1;
 }
 .c-site-header_aside {
-  // background-color: lightskyblue; //dev only
 
   @media (max-width: $to-small) {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: $page-transition-duration * 0.5 + $speed * 4; // _background.scss .-mobile-nav { transition + transition-delay }
+
+    html.has-mobile-menu-open & {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: 0s;
+    }
+
+    // scrollbar-color: currentColor transparent;  /* Firefox */
+    // scrollbar-width: thin;  /* Firefox */
+
+    // &::-webkit-scrollbar {
+    //   width: 12px;
+    // }
+    // &::-webkit-scrollbar-track {
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: currentColor;
+    // }
+
+    // html.has-mobile-menu-open & {
+    //   transform: none;
+    // }
   }
 
   @media (min-width: $from-small) {
     margin-left: 2rem;
+    transform: rotateZ(5deg) translateY(-100%);
+    transform-origin: bottom right;
+    transition: $speed * 8 $easing-long;
+    transition-delay: $page-transition-duration * 3.5;
+
+    background-color: $white;
+
+    html.is-loaded & {
+      transform: none;
+    }
   }
 
   &.is-overflow-swipe\@from-small {
@@ -81,46 +122,37 @@
 }
 
 .c-site-header_aside_inner {
-  $site-header-aside-inner-bg: $black;
 
   @media (max-width: $to-small) {
-    background-color: $site-header-aside-inner-bg;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // height: 100%;
-    padding-top: 4rem; // needs to be the height of the .c-site-header_MAIN_inner
-    overflow: hidden;
-    overflow-y: auto;
-    transform: translateX(-100%);
-    transition: 0.5s ease;
-    transition-delay: 0.5s;
-    transform-origin: right;
-
-    html.has-mobile-menu-open & {
-      transform: none;
-    }
+    position: relative;
   }
+}
 
+// .c-site-header_aside_inner {
+//   $site-header-aside-inner-bg: $theme-main;
+
+//   @media (max-width: $to-small) {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     // height: 100%;
+//     height: 100vh;
+//     overflow: hidden;
+//     overflow-y: auto;
+//   }
+// }
+
+.c-site-nav-wrap {
   @media (max-width: $to-small) {
-    html.t1 & {
-      $site-header-aside-inner-bg: red;
-      @media (max-width: $to-small) {
-        background-color: $site-header-aside-inner-bg;
-      }
-    }
-
-    html.t2 & {
-      $site-header-aside-inner-bg: orange;
-      @media (max-width: $to-small) {
-        background-color: $site-header-aside-inner-bg;
-      }
-    }
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 }
 
 .c-site-nav_list {
+
+  font-size: 0;
 
   .is-overflow-swipe\@from-small & {
     @media (min-width: $from-small) {
@@ -130,6 +162,8 @@
 }
 
 .c-site-nav_list > li {
+  font-size: 1rem;
+
   @media (min-width: $from-small) {
     display: inline-block;
   }
@@ -137,6 +171,9 @@
 
 .c-site-nav_list a {
   line-height: 1;
+  color: $black;
+  font-weight: 700;
+  letter-spacing: 0.03125rem;
 
   @media (max-width: $to-small) {
     display: block;
@@ -147,5 +184,22 @@
   @media (min-width: $from-small) {
     display: inline-block;
     padding: 1rem 2rem;
+  }
+
+  @media (max-width: $to-small) {
+    transform: translateX(-2rem);
+    opacity: 0;
+    transition: opacity $speed $easing-long, transform $speed * 3 $easing-long;
+
+    @for $i from 1 through 8 {
+      &.-delay-#{$i} {
+        transition-delay: 0.33s + $i * 0.04;
+      }
+    }
+
+    html.has-mobile-menu-open & {
+      transform: none;
+      opacity: 1;
+    }
   }
 }

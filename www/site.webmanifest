@@ -1,6 +1,6 @@
 {
-    "name": "Portfolio Marko Ronik",
-    "short_name": "Portfolio Marko Ronik",
+    "name": "NOTEL - zakaži termin preko weba",
+    "short_name": "NOTEL - zakaži termin preko weba",
     "icons": [
         {
             "src": "assets/images/favicons/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
         }
     ],
     "start_url": "./index.html",
-    "theme_color": "#231f21",
-    "background_color": "#231f21",
+    "theme_color": "#fafafa",
+    "background_color": "#fafafa",
     "display": "standalone"
 }

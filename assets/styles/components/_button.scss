@@ -29,12 +29,16 @@
 
 
 .c-round-button {
-  font-size: 2rem;
   width: 100%;
   border-radius: 9999px;
   overflow: hidden;
   position: relative;
+  color: $white;
   background-color: transparent;
+
+  &.-large {
+    font-size: 2rem;
+  }
 
   .o-background-wrap {
     border-radius: 9999px;

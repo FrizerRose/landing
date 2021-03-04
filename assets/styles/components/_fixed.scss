@@ -1,0 +1,28 @@
+
+.c-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+  right: 0;
+  bottom: 0;
+	z-index: 100;
+  width: 100%;
+  height: vh(100);
+  background-color: rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.c-fixed_cta {
+	position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+	width: 8rem;
+  background-color: rgba(255,0,0,0.3);
+  pointer-events: auto;
+
+	@media (min-width: $from-tiny) {
+		// width: 50%;
+	}
+}

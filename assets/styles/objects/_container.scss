@@ -30,4 +30,15 @@
     &.-w-80 {
       max-width: 80%;
     }
+
+    &.-w-80\@to-small {
+      @media (max-width: $to-small) {
+        max-width: 80%;
+      }
+
+      @media (min-width: $from-small) {
+          padding-right: 0;
+          padding-left: 0;
+      }
+    }
 }
