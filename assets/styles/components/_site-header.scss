@@ -4,7 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 100;
 }
 
 .c-site-header_inner {
@@ -27,8 +27,9 @@
   }
 
   @media (min-width: $from-small) {
-    $site-header-mobile-bg: $white;
-    background-color: $site-header-mobile-bg;
+    // $site-header-mobile-bg: $white;
+    // background-color: $site-header-mobile-bg;
+    min-width: 10%;
   }
 }
 .c-site-header_main_inner {
@@ -42,6 +43,17 @@
 .c-site-brand {
   line-height: 1;
 }
+
+.c-site-brand_link {
+  color: #4fa4fb;
+  transition: color $speed $easing-long;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+}
+
 .c-site-header_aside {
 
   @media (max-width: $to-small) {
@@ -105,15 +117,19 @@
 
 .c-site-nav_menu-toggle {
   display: flex;
+  align-items: center;
   // line-height: 1;
-  padding: 1.5rem;
+  padding: 1.25rem 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $black;
 
-  $site-menu-toggle-bg: $link-color;
-  background-color: $site-menu-toggle-bg;
+  background-color: transparent;
 
-  &:hover {
-    $site-menu-toggle-bg: $link-hover-color;
-    background-color: $site-menu-toggle-bg;
+  &:hover,
+  &:focus {
+    color: $black;
+    transform: none;
   }
 
   @media (min-width: $from-small) {
@@ -183,7 +199,7 @@
   }
   @media (min-width: $from-small) {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 3rem 2rem 1rem;
   }
 
   @media (max-width: $to-small) {

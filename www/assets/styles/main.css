@@ -857,6 +857,7 @@ html.is-loaded .o-transition {
     right: -50%;
     left: -50%; }
   .o-background.-mobile-nav {
+    min-height: 100vh;
     background-color: #1f1f1f;
     transform: translateX(-150%) skewX(-10deg);
     transform-origin: right;
@@ -930,6 +931,30 @@ html.is-loaded .o-transition {
   vertical-align: middle;
   width: 1.5rem;
   height: 1.5rem; }
+  .o-icon.-site-logo {
+    width: 3rem;
+    height: 3rem; }
+  @media (max-width: 699px) {
+    .o-icon.-site-nav-icon {
+      margin-left: 0.5rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      transition: transform 1.8s cubic-bezier(0.23, 1, 0.32, 1);
+      transition-delay: 0.45s; }
+      html.has-mobile-menu-open .o-icon.-site-nav-icon {
+        transform: rotateZ(-315deg) scale(0);
+        transition-delay: 0s; } }
+  @media (max-width: 699px) {
+    .o-icon.-close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateZ(-315deg) scale(0);
+      transition-delay: 0s; }
+      html.has-mobile-menu-open .o-icon.-close {
+        transform: rotateZ(0) scale(1);
+        transition-duration: 1.8s;
+        transition-delay: 0.9s; } }
   .o-icon.-features {
     margin-left: 1.5em; }
   .o-icon.-cw90 {
@@ -1040,6 +1065,39 @@ html.is-loaded .o-transition {
   display: inline-block;
   line-height: inherit;
   pointer-events: none; }
+  .c-button_label.-site-nav-label {
+    font-size: 0;
+    display: flex;
+    overflow: hidden; }
+    .c-button_label.-site-nav-label > span {
+      font-size: 1rem;
+      float: left;
+      transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+      transition-delay: 0.3s; }
+      html.has-mobile-menu-open .c-button_label.-site-nav-label > span {
+        transform: translateY(100%); }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(1) {
+          transition-delay: 0.04s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(2) {
+          transition-delay: 0.08s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(3) {
+          transition-delay: 0.12s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(4) {
+          transition-delay: 0.16s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(5) {
+          transition-delay: 0.2s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(6) {
+          transition-delay: 0.24s; }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label > span:nth-child(7) {
+          transition-delay: 0.28s; }
+    .c-button_label.-site-nav-label.-close {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .c-button_label.-site-nav-label.-close > span {
+        transform: translateY(-100%); }
+        html.has-mobile-menu-open .c-button_label.-site-nav-label.-close > span {
+          transform: none; }
 
 .c-button_inner {
   padding: 1em 1.5em;
@@ -1175,7 +1233,7 @@ html.is-loaded .o-transition {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 50; }
+  z-index: 100; }
 
 @media (min-width: 700px) {
   .c-site-header_inner {
@@ -1191,7 +1249,7 @@ html.is-loaded .o-transition {
       z-index: 5; } }
   @media (min-width: 700px) {
     .c-site-header_main {
-      background-color: #fafafa; } }
+      min-width: 10%; } }
 
 @media (max-width: 699px) {
   .c-site-header_main_inner {
@@ -1201,6 +1259,12 @@ html.is-loaded .o-transition {
 
 .c-site-brand {
   line-height: 1; }
+
+.c-site-brand_link {
+  color: #4fa4fb;
+  transition: color 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+  .c-site-brand_link:hover, .c-site-brand_link:focus {
+    color: #1f1f1f; }
 
 @media (max-width: 699px) {
   .c-site-header_aside {
@@ -1237,10 +1301,15 @@ html.is-loaded .o-transition {
 
 .c-site-nav_menu-toggle {
   display: flex;
-  padding: 1.5rem;
-  background-color: #027cac; }
-  .c-site-nav_menu-toggle:hover {
-    background-color: #014560; }
+  align-items: center;
+  padding: 1.25rem 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1f1f1f;
+  background-color: transparent; }
+  .c-site-nav_menu-toggle:hover, .c-site-nav_menu-toggle:focus {
+    color: #1f1f1f;
+    transform: none; }
   @media (min-width: 700px) {
     .c-site-nav_menu-toggle {
       display: none; } }
@@ -1280,7 +1349,7 @@ html.is-loaded .o-transition {
   @media (min-width: 700px) {
     .c-site-nav_list a {
       display: inline-block;
-      padding: 1rem 2rem; } }
+      padding: 3rem 2rem 1rem; } }
   @media (max-width: 699px) {
     .c-site-nav_list a {
       transform: translateX(-2rem);

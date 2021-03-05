@@ -18,6 +18,42 @@
   line-height: inherit;
   pointer-events: none;
   // margin-bottom: 0.125em;
+
+  &.-site-nav-label {
+    font-size: 0;
+    display: flex;
+    overflow: hidden;
+
+    & > span {
+      font-size: 1rem;
+      float: left;
+      transition: transform $speed * 3 $easing-long;
+      transition-delay: $speed;
+
+      html.has-mobile-menu-open & {
+        transform: translateY(100%);
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}){
+            transition-delay: $i*0.04s;
+          }
+        }
+      }
+    }
+
+    &.-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      & > span {
+        transform: translateY(-100%);
+
+        html.has-mobile-menu-open & {
+          transform: none;
+        }
+      }
+    }
+  }
 }
 
 .c-button_inner {
