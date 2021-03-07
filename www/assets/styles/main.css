@@ -1120,6 +1120,12 @@ html.is-loaded .o-transition {
     border-radius: 9999px;
     background-color: #1f1f1f;
     transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+  .c-round-button .o-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
   .c-round-button:focus .o-background, .c-round-button:hover .o-background {
     transform: scale(0.88); }
 

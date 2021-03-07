@@ -3,3 +3,4 @@ export {default as Scroll} from './modules/Scroll';
 export {default as MobileMenu} from './modules/MobileMenu';
 export {default as DisplayButton} from './modules/DisplayButton';
 export {default as Swiper} from './modules/Swiper';
+export {default as GlButton} from './modules/GlButton';

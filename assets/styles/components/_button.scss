@@ -84,6 +84,13 @@
     background-color: $black;
     transition: transform $speed $easing-long;
   }
+  .o-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   @include u-hocus {
     .o-background {
