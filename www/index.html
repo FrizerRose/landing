@@ -64,7 +64,7 @@
       <div class="o-loader">
       </div>
 
-     <register-button-mini></register-button-mini>
+      <register-button-mini></register-button-mini>
 
       <div class="o-scroll" data-module-scroll="main">
         <header class="c-site-header">
@@ -588,8 +588,6 @@
 
           <register-button></register-button>
 
-          <register-modal></register-modal>
-
           <contact-form></contact-form>
         </main>
 
@@ -597,6 +595,10 @@
           footer
         </footer>
       </div>
+
+      <!-- modal ide tu -->
+      <register-modal></register-modal>
+
     </div>
 
     <script>
@@ -698,8 +700,149 @@
       Vue.component('RegisterModal', {
         template:
         ` <div v-if="isModalOpen">
-            <h1>REGISTER MODAL AAAAAAAAAAAAAA</H1>
-              <button @click="closeModal()">X</button>
+          <aside class="c-get-in-touch" data-module-modal-get-in-touch="m13">
+            <div class="c-get-in-touch_wrapper" data-modal-get-in-touch="container">
+              <div class="c-get-in-touch_inner">
+                <div class="c-get-in-touch_container">
+                  <button type="button" class="c-get-in-touch_close" data-modal-get-in-touch="close">
+                    <span class="u-screen-reader-text">Close</span>
+                    <span class="c-get-in-touch_close_line"></span>
+                    <span class="c-get-in-touch_close_line"></span>
+                  </button>
+                  <img class="c-get-in-touch_image" data-load-src="assets/images/Get-in-touch.jpg" alt="" src="assets/images/Get-in-touch.jpg">
+
+                  <div class="o-layout -gutter || c-get-in-touch_heading">
+                    <div class="o-layout_item">
+                      <h2 class="c-heading -h2">
+                        Get in touch with PBSC®
+                      </h2>
+                    </div>
+                    <div class="o-layout_item u-1/2">
+                      <p>
+                        Reach out to us and we’ll get back to you soon!
+                      </p>
+                    </div>
+                  </div>
+
+                  <form class="c-form" method="post" action="api/contact-enquiries" data-module-form="m14" data-form-confirm-message="Your message has been successfully sent!" data-form-error-message="Sorry, there was an error submitting your request.">
+                    <div class="o-layout -gutter">
+
+                      <input class="u-screen-reader-text" type="text" name="location" value="">
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item">
+                          <label for="contactFirstName" class="c-form_label">
+                            First name
+                            <span class="c-form_required"></span>
+                          </label>
+                          <input data-form="input" type="text" id="contactFirstName" name="firstName" class="c-form_input" required="">
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item">
+                          <label for="contactLastName" class="c-form_label">
+                            Last name
+                            <span class="c-form_required"></span>
+                          </label>
+                          <input data-form="input" type="text" id="contactLastName" name="lastName" class="c-form_input" required="">
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item">
+                          <label for="contactTitle" class="c-form_label">
+                            Role / Title
+                          </label>
+                          <input data-form="input" type="text" id="contactTitle" name="title" class="c-form_input">
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item">
+                          <label for="contactOrganization" class="c-form_label">
+                            Company / City
+                            <span class="c-form_required"></span>
+                          </label>
+                          <input data-form="input" type="text" id="contactOrganization" name="organization" class="c-form_input" required="">
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item">
+                        <div class="c-form_item">
+                          <label for="contactEmail" class="c-form_label">
+                            Email
+                            <span class="c-form_required"></span>
+                          </label>
+                          <input data-form="input" type="email" id="contactEmail" name="email" class="c-form_input" required="">
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item">
+                        <div class="c-form_item">
+                          <label for="contactSubject" class="c-form_label">
+                            Tell us more
+                            <span class="c-form_required"></span>
+                          </label>
+                          <div class="c-form_select">
+                            <select data-form="input" name="subject" class="c-form_select_input" id="contactSubject" required="">
+                              <option value="" selected="" disabled=""></option>
+                              <option value="products">I am interested in PBSC products</option>
+                              <option value="app">I’m a PBSC app user</option>
+                              <option value="media">I’m a journalist/media</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item">
+                        <div class="c-form_item">
+                          <label for="contactMessage" class="c-form_label">
+                            Message / Inquiries
+                            <span class="c-form_required"></span>
+                          </label>
+                          <textarea data-form="input" name="message" id="contactMessage" class="c-form_textarea" required=""></textarea>
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item">
+                          <input data-form="input" type="checkbox" id="contactPrivacy" name="privacy" class="c-form_checkbox" required="" value="1">
+                          <label class="c-form_checkboxLabel" for="contactPrivacy">
+                            I agree to the
+                            <a href="https://www.pbsc.com/terms-of-service">
+                              Privacy policy
+                            </a>
+                            <span class="c-form_required"></span>.
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item u-1/2@from-small">
+                        <div class="c-form_item is-invisible" aria-label="Google reCAPTCHA">
+                          <div data-form="recaptcha" id="c-recaptcha" class="g-recaptcha" data-sitekey="6Led0vcUAAAAALOpOWxccHOY89tvSPoboMTeEqjt"></div>
+                        </div>
+                      </div>
+
+                      <div class="o-layout_item">
+                        <input type="hidden" name="lang" value="en">
+                        <div class="c-form_feedback" data-form="feedback"></div>
+                        <button type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
+                          <span class="c-button_label">
+                            Send request
+                          </span>
+                          <span class="c-button_bg"></span>
+                        </button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="c-get-in-touch_overlay" data-modal-get-in-touch="close"></div>
+          </aside>
+            <button @click="closeModal()">X</button>
           </div>`,
         methods: {
           closeModal() {
