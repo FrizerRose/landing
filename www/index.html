@@ -64,18 +64,7 @@
       <div class="o-loader">
       </div>
 
-      <div class="c-fixed-cta">
-        <button class="c-button-rail c-round-button" data-module-display-button>
-          <div class="o-background-wrap o-ratio">
-            <div class="o-background"></div>
-            <div class="c-round-button_inner">
-              <span class="c-button-rail_label">Registracija</span>
-              <span class="c-button-rail_label">Registracija</span>
-              <span class="c-button-rail_label">Registracija</span>
-            </div>
-          </div>
-        </button>
-      </div>
+     <register-button-mini></register-button-mini>
 
       <div class="o-scroll" data-module-scroll="main">
         <header class="c-site-header">
@@ -597,25 +586,9 @@
             </div>
           </section>
 
-          <section id="goto-join" class="c-section">
-            <div class="c-intro">
-              <div class="o-container -w-80">
-                <div id="goto-intro" class="c-intro_container">
-                  <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
-                  <div class="c-intro_cta">
-                    <button class="c-button c-round-button -large">
-                      <div class="o-background-wrap o-ratio">
-                        <div class="o-background"></div>
-                        <div class="c-round-button_inner">
-                          <span class="c-button_label">Registracija</span>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <register-button></register-button>
+
+          <register-modal></register-modal>
 
           <contact-form></contact-form>
         </main>
@@ -658,7 +631,6 @@
           async submitContactForm() {
             try {
               const response = await this.$root.sendContact(this.formData);
-              console.log("🚀 ~ file: index.html ~ line 661 ~ submitContactForm ~ response", response)
 
               if(response.status === 201) {
                 this.requestSent = true;
@@ -674,11 +646,79 @@
         }
       })
 
+      Vue.component('RegisterButton', {
+        template:
+        `<section id="goto-join" class="c-section"  @click="openModal()">
+            <div class="c-intro">
+              <div class="o-container -w-80">
+                <div id="goto-intro" class="c-intro_container">
+                  <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
+                  <div class="c-intro_cta">
+                    <button class="c-button c-round-button -large">
+                      <div class="o-background-wrap o-ratio">
+                        <div class="o-background"></div>
+                        <div class="c-round-button_inner">
+                          <span class="c-button_label">Registracija</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>`,
+        methods: {
+          async openModal() {
+            this.$root.toggleModal();
+          }
+        }
+      })
+
+      Vue.component('RegisterButtonMini', {
+        template:
+        ` <div class="c-fixed-cta">
+            <button class="c-button-rail c-round-button" data-module-display-button>
+              <div class="o-background-wrap o-ratio">
+                <div class="o-background"></div>
+                <div class="c-round-button_inner" @click="openModal()">
+                  <span class="c-button-rail_label">Registracija</span>
+                  <span class="c-button-rail_label">Registracija</span>
+                  <span class="c-button-rail_label">Registracija</span>
+                </div>
+              </div>
+            </button>
+          </div>`,
+        methods: {
+          openModal() {
+            this.$root.toggleModal();
+          }
+        }
+      })
+
+      Vue.component('RegisterModal', {
+        template:
+        ` <div v-if="isModalOpen">
+            <h1>REGISTER MODAL AAAAAAAAAAAAAA</H1>
+              <button @click="closeModal()">X</button>
+          </div>`,
+        methods: {
+          closeModal() {
+            this.$root.toggleModal();
+          }
+        },
+        computed: {
+          isModalOpen() {
+            return this.$root.isModalOpen;
+          },
+        }
+      })
+
       const vueApp = new Vue({
         el: '#app',
         data() {
           return {
             api_url: 'http://frizerrose.juraj.lan/api/',
+            isModalOpen: false,
           }
         },
         methods: {
@@ -691,6 +731,9 @@
               },
               body: JSON.stringify(formData)
             });
+          },
+          toggleModal() {
+            this.isModalOpen = !this.isModalOpen;
           }
         }
       })
