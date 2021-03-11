@@ -52,9 +52,11 @@
       <link id="stylesheet" rel="stylesheet" href="assets/styles/main.css" media="all" onload="this.media='all'; this.onload=null; this.isLoaded=true">
 
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body data-module-load>
-    <div data-load-container>
+    <div data-load-container id="app">
 
       <div class="o-transition">
       </div>
@@ -615,6 +617,7 @@
             </div>
           </section>
 
+          <contact-form></contact-form>
         </main>
 
         <footer data-scroll-section class="c-site-footer">
@@ -622,6 +625,76 @@
         </footer>
       </div>
     </div>
+
+    <script>
+
+      Vue.component('ContactForm', {
+        template:
+        `<div class=\"form\">
+          <div v-if="requestSent">
+            <div v-if="status">Uspjeh!</div>
+            <div v-else>Greška!</div>
+          </div>
+          <span>Ime:</span>
+          <input type="text" name="name" v-model="formData.name">
+          <span>Email:</span>
+          <input type="email" name="email" v-model="formData.email">
+          <span>Poruka:</span>
+          <textarea name="body" v-model="formData.body"></textarea>
+          <button v-on:click=\"submitContactForm()\">Pošalji</button>
+        </div>`,
+        data() {
+          return {
+            formData: {
+              name: '',
+              email: '',
+              body: '',
+            },
+            requestSent: false,
+            status: false,
+          }
+        },
+        methods: {
+          async submitContactForm() {
+            try {
+              const response = await this.$root.sendContact(this.formData);
+              console.log("🚀 ~ file: index.html ~ line 661 ~ submitContactForm ~ response", response)
+
+              if(response.status === 201) {
+                this.requestSent = true;
+                this.status = true;
+              } else {
+                throw new Error("Wrong http code");
+              }
+            } catch {
+              this.requestSent = true;
+              this.status = false;
+            }
+          }
+        }
+      })
+
+      const vueApp = new Vue({
+        el: '#app',
+        data() {
+          return {
+            api_url: 'http://frizerrose.juraj.lan/api/',
+          }
+        },
+        methods: {
+          async sendContact(formData) {
+            return await fetch(this.api_url + 'contact', {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            });
+          }
+        }
+      })
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
 
