@@ -671,6 +671,7 @@
           </section>`,
         methods: {
           async openModal() {
+            document.documentElement.classList.add('has-modal-get-in-touch-open');
             this.$root.toggleModal();
           }
         }
@@ -678,11 +679,11 @@
 
       Vue.component('RegisterButtonMini', {
         template:
-        ` <div class="c-fixed-cta">
+        ` <div class="c-fixed-cta" @click="openModal()">
             <button class="c-button-rail c-round-button" data-module-display-button>
               <div class="o-background-wrap o-ratio">
                 <div class="o-background"></div>
-                <div class="c-round-button_inner" @click="openModal()">
+                <div class="c-round-button_inner"">
                   <span class="c-button-rail_label">Registracija</span>
                   <span class="c-button-rail_label">Registracija</span>
                   <span class="c-button-rail_label">Registracija</span>
@@ -692,6 +693,7 @@
           </div>`,
         methods: {
           openModal() {
+            document.documentElement.classList.add('has-modal-get-in-touch-open');
             this.$root.toggleModal();
           }
         }
@@ -699,12 +701,12 @@
 
       Vue.component('RegisterModal', {
         template:
-        ` <div v-if="isModalOpen">
+        ` <div>
           <aside class="c-get-in-touch" data-module-modal-get-in-touch="m13">
             <div class="c-get-in-touch_wrapper" data-modal-get-in-touch="container">
               <div class="c-get-in-touch_inner">
                 <div class="c-get-in-touch_container">
-                  <button type="button" class="c-get-in-touch_close" data-modal-get-in-touch="close">
+                  <button type="button" class="c-get-in-touch_close" data-modal-get-in-touch="close" @click="closeModal()">
                     <span class="u-screen-reader-text">Close</span>
                     <span class="c-get-in-touch_close_line"></span>
                     <span class="c-get-in-touch_close_line"></span>
@@ -840,12 +842,12 @@
                 </div>
               </div>
             </div>
-            <div class="c-get-in-touch_overlay" data-modal-get-in-touch="close"></div>
+            <div class="c-get-in-touch_overlay" data-modal-get-in-touch="close" @click="closeModal()"></div>
           </aside>
-            <button @click="closeModal()">X</button>
           </div>`,
         methods: {
           closeModal() {
+            document.documentElement.classList.remove('has-modal-get-in-touch-open');
             this.$root.toggleModal();
           }
         },
