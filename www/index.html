@@ -728,113 +728,95 @@
 
                   <form class="c-form" method="post" action="api/contact-enquiries" data-module-form="m14" data-form-confirm-message="Your message has been successfully sent!" data-form-error-message="Sorry, there was an error submitting your request.">
                     <div class="o-layout -gutter">
+                      <div v-if="currentStep === 1">
 
-                      <input class="u-screen-reader-text" type="text" name="location" value="">
-
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item">
-                          <label for="contactFirstName" class="c-form_label">
-                            First name
-                            <span class="c-form_required"></span>
-                          </label>
-                          <input data-form="input" type="text" id="contactFirstName" name="firstName" class="c-form_input" required="">
+                        <div v-if="requestSent && !status">
+                          Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
                         </div>
-                      </div>
 
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item">
-                          <label for="contactLastName" class="c-form_label">
-                            Last name
-                            <span class="c-form_required"></span>
-                          </label>
-                          <input data-form="input" type="text" id="contactLastName" name="lastName" class="c-form_input" required="">
-                        </div>
-                      </div>
-
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item">
-                          <label for="contactTitle" class="c-form_label">
-                            Role / Title
-                          </label>
-                          <input data-form="input" type="text" id="contactTitle" name="title" class="c-form_input">
-                        </div>
-                      </div>
-
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item">
-                          <label for="contactOrganization" class="c-form_label">
-                            Company / City
-                            <span class="c-form_required"></span>
-                          </label>
-                          <input data-form="input" type="text" id="contactOrganization" name="organization" class="c-form_input" required="">
-                        </div>
-                      </div>
-
-                      <div class="o-layout_item">
-                        <div class="c-form_item">
-                          <label for="contactEmail" class="c-form_label">
-                            Email
-                            <span class="c-form_required"></span>
-                          </label>
-                          <input data-form="input" type="email" id="contactEmail" name="email" class="c-form_input" required="">
-                        </div>
-                      </div>
-
-                      <div class="o-layout_item">
-                        <div class="c-form_item">
-                          <label for="contactSubject" class="c-form_label">
-                            Tell us more
-                            <span class="c-form_required"></span>
-                          </label>
-                          <div class="c-form_select">
-                            <select data-form="input" name="subject" class="c-form_select_input" id="contactSubject" required="">
-                              <option value="" selected="" disabled=""></option>
-                              <option value="products">I am interested in PBSC products</option>
-                              <option value="app">I’m a PBSC app user</option>
-                              <option value="media">I’m a journalist/media</option>
-                            </select>
+                        <div class="o-layout_item">
+                          <div class="c-form_item">
+                            <label for="userName" class="c-form_label">
+                              Ime i prezime korisnika
+                              <span class="c-form_required"></span>
+                            </label>
+                            <input v-model="formDataUser.name" data-form="input" type="text" id="userName" name="name" class="c-form_input" required="">
                           </div>
                         </div>
-                      </div>
 
-                      <div class="o-layout_item">
-                        <div class="c-form_item">
-                          <label for="contactMessage" class="c-form_label">
-                            Message / Inquiries
-                            <span class="c-form_required"></span>
-                          </label>
-                          <textarea data-form="input" name="message" id="contactMessage" class="c-form_textarea" required=""></textarea>
+                        <div class="o-layout_item">
+                          <div class="c-form_item">
+                            <label for="contactEmail" class="c-form_label">
+                              Email
+                              <span class="c-form_required"></span>
+                            </label>
+                            <input v-model="formDataUser.email" data-form="input" type="email" id="contactEmail" name="email" class="c-form_input" required="">
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item">
-                          <input data-form="input" type="checkbox" id="contactPrivacy" name="privacy" class="c-form_checkbox" required="" value="1">
-                          <label class="c-form_checkboxLabel" for="contactPrivacy">
-                            I agree to the
-                            <a href="https://www.pbsc.com/terms-of-service">
-                              Privacy policy
-                            </a>
-                            <span class="c-form_required"></span>.
-                          </label>
+                        <div class="o-layout_item">
+                          <div class="c-form_item">
+                            <label for="password" class="c-form_label">
+                              Lozinka
+                              <span class="c-form_required"></span>
+                            </label>
+                            <input v-model="formDataUser.password"  data-form="input" type="password" id="password" name="email" class="c-form_input" required="">
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="c-form_item is-invisible" aria-label="Google reCAPTCHA">
-                          <div data-form="recaptcha" id="c-recaptcha" class="g-recaptcha" data-sitekey="6Led0vcUAAAAALOpOWxccHOY89tvSPoboMTeEqjt"></div>
+                        <div class="o-layout_item">
+                            <input type="hidden" name="lang" value="en">
+                            <div class="c-form_feedback" data-form="feedback"></div>
+                            <button @click.prevent="submitUserForm()" type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
+                              <span class="c-button_label">
+                                Send request
+                              </span>
+                              <span class="c-button_bg"></span>
+                            </button>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="o-layout_item">
-                        <input type="hidden" name="lang" value="en">
-                        <div class="c-form_feedback" data-form="feedback"></div>
-                        <button type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
-                          <span class="c-button_label">
-                            Send request
-                          </span>
-                          <span class="c-button_bg"></span>
-                        </button>
+                      <div v-if="currentStep === 2">
+                        <div class="o-layout_item" v-if="requestSent">
+                          <div class="c-form_item" v-if="status">
+                            Vaša stranica je uspješno kreirana. Za 3 sekunde će te biti prebačeni na vaše adminsko sučelje gdje će te se trebati ulogirati sa unešenim podatcima.
+                          </div>
+                          <div class="c-form_item" v-else>
+                            Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
+                          </div>
+                        </div>
+                        <div v-else>
+                          <div class="o-layout_item">
+                            <div class="c-form_item">
+                              <label for="name" class="c-form_label">
+                                Ime firme
+                                <span class="c-form_required"></span>
+                              </label>
+                              <input  v-model="formDataCompany.name" data-form="input" type="email" id="name" name="name" class="c-form_input" required="">
+                            </div>
+                          </div>
+
+                          <div class="o-layout_item">
+                            <div class="c-form_item">
+                              <label for="slug" class="c-form_label">
+                                Domena
+                                <span class="c-form_required"></span>
+                              </label>
+                              <input v-model="formDataCompany.bookingPageSlug"  data-form="input" type="email" id="slug" name="slug" class="c-form_input" required="">.frizerrose.info
+                            </div>
+                          </div>
+
+                          <div class="o-layout_item">
+                            <input type="hidden" name="lang" value="en">
+                            <div class="c-form_feedback" data-form="feedback"></div>
+                            <button @click.prevent="submitCompanyForm()" type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
+                              <span class="c-button_label">
+                                Send request
+                              </span>
+                              <span class="c-button_bg"></span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
 
                     </div>
@@ -845,10 +827,62 @@
             <div class="c-get-in-touch_overlay" data-modal-get-in-touch="close" @click="closeModal()"></div>
           </aside>
           </div>`,
+        data() {
+          return {
+            currentStep: 1,
+            formDataUser: {
+              name: '',
+              email: '',
+              password: '',
+            },
+            formDataCompany: {
+              name: '',
+              bookingPageSlug: '',
+            },
+            createdUser: -1,
+            requestSent: false,
+            status: false,
+          }
+        },
         methods: {
           closeModal() {
             document.documentElement.classList.remove('has-modal-get-in-touch-open');
             this.$root.toggleModal();
+          },
+          async submitUserForm() {
+            const response = await this.$root.registerUser(this.formDataUser);
+
+            if(response.status === 201) {
+              const responseData = await response.json();
+              this.createdUser = responseData.user;
+              this.requestSent = false;
+              this.status = false;
+              this.currentStep = 2;
+            } else {
+              this.requestSent = true;
+              this.status = false;
+            }
+          },
+          async submitCompanyForm() {
+            const response = await this.$root.createCompany({
+              user: this.createdUser.id,
+              contactEmail: this.createdUser.email,
+              hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
+              ...this.formDataCompany,
+            });
+
+            if(response.status === 201) {
+              this.requestSent = true;
+              this.status = true;
+              const responseData = await response.json();
+
+              setTimeout(() => {
+                window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.frizerrose.info';
+              }, 3000);
+            } else {
+              this.requestSent = true;
+              this.status = false;
+            }
           }
         },
         computed: {
@@ -862,13 +896,33 @@
         el: '#app',
         data() {
           return {
-            api_url: 'http://frizerrose.juraj.lan/api/',
+            api_url: 'https://primrose.agency/api/',
             isModalOpen: false,
           }
         },
         methods: {
           async sendContact(formData) {
             return await fetch(this.api_url + 'contact', {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            });
+          },
+          async registerUser(formData) {
+            return await fetch(this.api_url + 'auth/register', {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            });
+          },
+          async createCompany(formData) {
+            return await fetch(this.api_url + 'company', {
               method: 'POST',
               headers: {
                 'Accept': 'application/json',
