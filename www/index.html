@@ -55,7 +55,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
-  <body data-module-load>
+  <body>
     <div data-load-container id="app">
 
       <div class="o-transition">
@@ -77,9 +77,8 @@
                         <a class="c-site-brand_link" href="#" rel="home">
                           <!-- <img src="logo.png" alt="Site logo"> -->
                           <span class="o-icon -site-logo">
-                            <svg role="img" viewBox="6 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.727A2.727 2.727 0 018.727 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a2.727 2.727 0 110-5.454 4.545 4.545 0 000-9.091A2.727 2.727 0 016 4.727z" />
-                              <circle cx="8.727" cy="12" r="2.727" />
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0H0v24h12zm0-6a6 6 0 100-12 6 6 0 000 12z"></path>
                             </svg>
                           </span>
                           <span class="u-screen-reader-text">dolazim</span>
@@ -593,11 +592,10 @@
 
         <footer data-scroll-section class="c-site-footer">
           footer
+          <a class="-delay-2" href="/privacy-policy.html">Izjava o privatnosti</a>
+          <a class="-delay-3" href="/terms-and-conditions.html">Uvjeti korištenja</a>
         </footer>
       </div>
-
-      <!-- modal ide tu -->
-      <register-modal></register-modal>
 
     </div>
 
@@ -650,13 +648,13 @@
 
       Vue.component('RegisterButton', {
         template:
-        `<section id="goto-join" class="c-section"  @click="openModal()">
+        `<section id="goto-join" class="c-section">
             <div class="c-intro">
               <div class="o-container -w-80">
                 <div id="goto-intro" class="c-intro_container">
                   <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
                   <div class="c-intro_cta">
-                    <button class="c-button c-round-button -large">
+                    <button class="c-button c-round-button -large" @click="openModal()">
                       <div class="o-background-wrap o-ratio">
                         <div class="o-background"></div>
                         <div class="c-round-button_inner">
