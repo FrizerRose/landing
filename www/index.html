@@ -587,6 +587,8 @@
 
           <register-button></register-button>
 
+          <register-modal></register-modal>
+
           <contact-form></contact-form>
         </main>
 
@@ -875,7 +877,7 @@
               const responseData = await response.json();
 
               setTimeout(() => {
-                window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.frizerrose.info';
+                window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
               }, 3000);
             } else {
               this.requestSent = true;
@@ -894,7 +896,7 @@
         el: '#app',
         data() {
           return {
-            api_url: 'https://primrose.agency/api/',
+            api_url: 'https://frizerrose.info/api/',
             isModalOpen: false,
           }
         },
