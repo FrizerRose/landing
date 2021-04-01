@@ -606,6 +606,7 @@
 
       <register-modal></register-modal>
 
+    </div>
       <script type="application/javascript">
 
         Vue.component('ContactForm', {
@@ -757,7 +758,7 @@
                             <div class="o-layout_item">
                               <div class="c-form_item">
                                 <label for="userName" class="c-form_label">Vaše ime i prezime</label>
-                                <input v-model="formDataUser.name" type="text" id="userName" name="name" class="c-form_input" required
+                                <input v-model="formDataUser.name" type="text" id="userName" name="name" class="c-form_input" required>
                               </div>
                               <div class="c-form_item">
                                 <label for="contactEmail" class="c-form_label">E-mail adresa</label>
@@ -776,12 +777,13 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-button_inner">
-                                  <span class="c-button_label">Nastavi</span>
-                                  <span class="o-icon -ccw-90 -features">
-                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                    </svg>
-                                  </span>
+                                    <span class="c-button_label">Nastavi</span>
+                                    <span class="o-icon -ccw-90 -features">
+                                      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                      </svg>
+                                    </span>
+                                  </div>
                                 </div>
                               </button>
                             </div>
@@ -790,7 +792,7 @@
 
                         CURRENT STEP IS: {{ currentStep }}
 
-                        <div v-if="currentStep === 2">
+                        <div v-if="currentStep === 2 && requestSent && status">
                           <div class="o-layout -gutter">
                             <div class="o-layout_item" v-if="requestSent">
                               <div class="c-form_item" v-if="status">
@@ -803,7 +805,7 @@
                           </div>
                         </div>
 
-                        <div v-else>
+                        <div v-if="currentStep === 2">
                           <div class="o-layout -gutter">
                             <div class="o-layout_item">
                               <div class="c-form_item">
@@ -823,19 +825,19 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-button_inner">
-                                  <span class="c-button_label">Pošalji zahtjev</span>
-                                  <span class="o-icon -ccw-90 -features">
-                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                    </svg>
-                                  </span>
+                                    <span class="c-button_label">Pošalji zahtjev</span>
+                                    <span class="o-icon -ccw-90 -features">
+                                      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                      </svg>
+                                    </span>
+                                  </div>
                                 </div>
                               </button>
                             </div>
                           </div>
                         </div>
                       </form>
-
                     </div>
                   </div>
                 </div>
@@ -907,7 +909,7 @@
           }
         })
 
-        const vueApp = new Vue({
+        var vueApp = new Vue({
           el: '#app',
           data() {
             return {
@@ -952,7 +954,6 @@
           }
         })
       </script>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
 
