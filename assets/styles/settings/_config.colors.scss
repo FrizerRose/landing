@@ -184,21 +184,22 @@ Black							#000000			  0   0   0
 // =============================================================================
 $white: #fafafa;
 // $black: #0f060a;
-$black: #1f1f1f;
+$black: #141414;
+$black-off: #1f1f1f;
 $transition-primary: darken($white, 3%);
 $transition-secondary: $white;
 
-$theme-main: #f1c800;
+$theme-main: #16addd;
 
 // Specific
 // =============================================================================
 // Link
-$link-color:       #027cac;
-$link-focus-color: #027cac;
-$link-hover-color: darken(#027cac, 15%);
+$link-color:       $theme-main;
+$link-focus-color: $theme-main;
+$link-hover-color: darken($theme-main, 15%);
 // Selection
 $selection-text-color:       $white;
-$selection-background-color: #027cac;
+$selection-background-color: $theme-main;
 
 // Social Colors
 // =============================================================================

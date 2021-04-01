@@ -22,7 +22,7 @@
   transition: color $speed * 2 $easing-long;
 
   &:hover {
-    color: $black;
+    color: $black-off;
   }
 
   .o-background {

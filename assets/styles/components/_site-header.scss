@@ -23,7 +23,7 @@
 
     $site-header-mobile-bg: $white;
     // background-color: $site-header-mobile-bg;
-    // box-shadow: 0 0 10px 0 $black;
+    // box-shadow: 0 0 10px 0 $black-off;
   }
 
   @media (min-width: $from-small) {
@@ -45,12 +45,12 @@
 }
 
 .c-site-brand_link {
-  color: #4fa4fb;
+  color: $theme-main;
   transition: color $speed $easing-long;
 
   &:hover,
   &:focus {
-    color: $black;
+    color: $black-off;
   }
 }
 
@@ -122,13 +122,13 @@
   padding: 1.25rem 0;
   font-weight: 700;
   letter-spacing: 1px;
-  color: $black;
+  color: $black-off;
 
   background-color: transparent;
 
   &:hover,
   &:focus {
-    color: $black;
+    color: $black-off;
     transform: none;
   }
 
@@ -187,7 +187,7 @@
 
 .c-site-nav_list a {
   line-height: 1;
-  color: $black;
+  color: $black-off;
   font-weight: 700;
   letter-spacing: 0.03125rem;
 

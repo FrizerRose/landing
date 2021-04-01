@@ -2,7 +2,7 @@
 <html class="is-loading" lang="en" data-page="home">
   <head>
       <meta charset="utf-8">
-      <title>dolazim.hr - zakaži termin preko weba</title>
+      <title>Dolazim.hr - zakaži termin preko weba</title>
 
       <meta name="description" content="YOUR_DESCRIPTION_HERE">
       <!--
@@ -31,7 +31,7 @@
       <meta name="theme-color" content="#fafafa">
       <meta name="msapplication-TileColor" content="#1f1f1f">
       <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
-      <link rel="manifest" href="site.webmanifest">
+      <link rel="manifest" href="./site.webmanifest">
       <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-touch-icon.png">
       <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-touch-icon.png">
       <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-touch-icon.png">
@@ -43,7 +43,7 @@
       <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-      <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#4fa4fb">
+      <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#16addd">
       <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
       <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
@@ -56,887 +56,903 @@
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div data-load-container id="app">
+    <div id="app">
+      <div data-load-container>
 
-      <div class="o-transition">
-      </div>
+        <div class="o-transition">
+        </div>
 
-      <div class="o-loader">
-      </div>
+        <div class="o-loader">
+        </div>
 
-      <register-button-mini></register-button-mini>
+        <register-button-mini></register-button-mini>
 
-      <div class="o-scroll" data-module-scroll="main">
-        <header class="c-site-header">
-          <div class="o-container">
-            <div data-module-mobile-menu class="c-site-header_inner">
-              <div class="c-site-header_main || has-no-gutters@to-small">
-                <div class="c-site-header_main_inner">
-                  <div role="banner">
-                    <h1 class="c-site-brand">
-                        <a class="c-site-brand_link" href="#" rel="home">
-                          <!-- <img src="logo.png" alt="Site logo"> -->
-                          <span class="o-icon -site-logo">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0H0v24h12zm0-6a6 6 0 100-12 6 6 0 000 12z"></path>
-                            </svg>
-                          </span>
-                          <span class="u-screen-reader-text">dolazim</span>
-                        </a>
-                    </h1>
-                  </div>
-                  <button data-mobile-menu="nav-toggle" class="c-site-nav_menu-toggle || c-button">
-                    <span class="u-relative">
-                      <span class="c-button_label -site-nav-label">
-                        <span>M</span>
-                        <span>e</span>
-                        <span>n</span>
-                        <span>i</span>
-                      </span>
-                      <span class="c-button_label -site-nav-label -close">
-                        <span>Z</span>
-                        <span>a</span>
-                        <span>t</span>
-                        <span>v</span>
-                        <span>o</span>
-                        <span>r</span>
-                        <span>i</span>
-                      </span>
-                    </span>
-                    <span class="u-relative">
-                      <span class="o-icon -site-nav-icon">
-                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zM4 7a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zM4 17a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" />
-                        </svg>
-                      </span>
-                      <span class="o-icon -site-nav-icon -close">
-                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.707 4.293a1 1 0 010 1.414l-14 14a1 1 0 01-1.414-1.414l14-14a1 1 0 011.414 0z" />
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0l14 14a1 1 0 01-1.414 1.414l-14-14a1 1 0 010-1.414z" />
-                        </svg>
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="c-site-header_aside || is-overflow-swipe@from-small">
-                <div class="c-site-header_aside_inner || o-layout -middle">
-                  <div class="o-background-wrap">
-                    <div class="o-background -mobile-nav"></div>
-                    <div class="o-container -w-80@to-small">
-                      <div class="c-site-nav-wrap">
-                        <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
-                          <ul class="c-site-nav_list">
-                            <li class="-delay-1 XXX-has-no-gutters@to-small"><a class="-delay-1" data-mobile-menu="nav-link" href="/">Home</a></li>
-                            <li class="-delay-2 XXX-has-no-gutters@to-small"><a class="-delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">Uvod</a></li>
-                            <li class="-delay-3 XXX-has-no-gutters@to-small"><a class="-delay-3" data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">Benefiti</a></li>
-                            <li class="-delay-4 XXX-has-no-gutters@to-small"><a class="-delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">Značajke</a></li>
-                          </ul>
-                        </nav>
-                        <!-- <div class="o-layout_item u-1/2@to-small || u-hidden@from-small">
-                          <address class="c-contact_panel_info">
-                              Firma d.o.o.<br>
-                              Masarykova 13<br>
-                              10000 Zagreb<br>
-                              Hrvatska
-                          </address>
-                          <ul class="c-socials">
-                            <li class="c-socials_item">
-                              <a class="c-socials_link" href="https://www.linkedin.com/company/advanced-medical-strategies-llc/" target="_blank" rel="noreferrer noopener" title="LinkedIn">
-                                <span class="c-socials_link_icon">
-                                  <img width="24" height="24" class="o-image_media" src="https://www.mdstrat.com/wp-content/uploads/2020/08/linked-in.svg" alt="LinkedIn Icon">
-                                </span>
-                                <span class="u-screen-reader-text"></span>
-                              </a>
-                            </li>
-                            <li class="c-socials_item">
-                              <a class="c-socials_link" href="https://twitter.com/AMSmdstratcom" target="_blank" rel="noreferrer noopener" title="Twitter">
-                                <span class="c-socials_link_icon">
-                                  <img width="24" height="24" class="o-image_media" src="https://www.mdstrat.com/wp-content/uploads/2020/08/twitter.svg" alt="Twitter Icon">
-                                </span>
-                                <span class="u-screen-reader-text"></span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <main data-scroll-section class="c-site-main">
-          <section class="c-section">
-            <div class="o-background-wrap">
-              <div class="o-background">
-                <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-3" data-scroll-position="top">
-                </div>
-              </div>
-
-              <div class="c-hero">
-                <div class="o-container -w-80">
-                  <div class="o-layout">
-
-                    <div class="o-layout_item u-min-30vh@to-medium">
-                      <div class="o-background-wrap">
-                        <div class="o-background -hero"></div>
-                        <article class="o-front -hero">
-                          <h1 class="c-hero_heading" data-scroll>
-                            <div class="c-hero_heading-row">
-                              <div class="c-hero_heading-row_inner -delay-1">Narudžbe telefonom </div>
-                            </div>
-                            <div class="c-hero_heading-row">
-                              <div class="c-hero_heading-row_inner -delay-2">šaljemo u prošlost</div>
-                            </div>
-                          </h1>
-                          <div class="c-hero_cta">
-                            <div class="c-scrollto-wrap" data-scroll>
-                              <span class="c-scrollto-wrap_inner -from-bottom -delay">
-                                <a href="#goto-intro" data-scroll-to class="c-scrollto || c-button">
-                                  <span class="c-button_label">Saznajte kako</span>
-                                  <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
-                                    <span class="u-screen-reader-text">Vodi me na poglavlje rješenja</span>
-                                    <span data-scroll class="c-scrollto_arrow">
-                                      <span class="o-icon -large-icon">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                        </svg>
-                                      </span>
-                                    </span>
-                                  </span>
-                                </a>
-                              </span>
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="c-section u-bg-white u-relative">
-            <div class="c-intro">
-              <div class="o-container -w-80">
-                <div id="goto-intro" class="c-intro_container">
-                  <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
-                  </div>
-                  <p class="c-intro_paragraph">Zakazivanje termina telefonom je naporno. Neki ljudi više vole tipkati. Ako vaš posao uključuje rezervacije termina preko telefona, ljudi koji ne vole telefonirati će radije zaobići vašu poslovnicu. Pozabavili smo se s tim problemom i na ovoj stranici možete pročitati kakvo rješenje nudimo.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-<div data-scroll data-scroll-repeat data-scroll-call="toggle, DisplayButton">
-          <section class="c-section">
-            <div class="c-features">
-              <div id="goto-features" class="c-features_container">
-                <ul>
-
-                  <li class="c-section">
-                    <div class="o-layout || o-flex -flex-column@to-small">
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                          <div class="o-background -extra">
-                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
-                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
-                            <div class="o-background-wrap">
-                              <div class="o-background"></div>
-                              <div class="c-feature_content">
-                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
-                                <h1 class="c-features_heading">Automatizirano naručivanje</h1>
-                                <p class="">Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
-                                <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
-                                  <div class="o-background-wrap">
-                                    <div class="o-background"></div>
-                                    <div class="c-button_inner">
-                                      <span class="c-button_label">Sljedeća značajka</span>
-                                      <span class="o-icon -features">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                        </svg>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="c-section" id="goto-feature-2">
-                    <div class="o-layout -reverse || o-flex -flex-column@to-small">
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                          <div class="o-background -extra">
-                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
-                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
-                            <div class="o-background-wrap">
-                              <div class="o-background"></div>
-                              <div class="c-feature_content">
-                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
-                                <h1 class="c-features_heading">Preglednost</h1>
-                                <p class="">Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
-                                <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
-                                  <div class="o-background-wrap">
-                                    <div class="o-background"></div>
-                                    <div class="c-button_inner">
-                                      <span class="c-button_label">Sljedeća značajka</span>
-                                      <span class="o-icon -features">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                        </svg>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="c-section" id="goto-feature-3">
-                    <div class="o-layout || o-flex -flex-column@to-small">
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                          <div class="o-background -extra">
-                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
-                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
-                            <div class="o-background-wrap">
-                              <div class="o-background"></div>
-                              <div class="c-feature_content">
-                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
-                                <h1 class="c-features_heading">Bolje upravljanje vlastitim vremenom</h1>
-                                <p class="">Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
-                                <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
-                                  <div class="o-background-wrap">
-                                    <div class="o-background"></div>
-                                    <div class="c-button_inner">
-                                      <span class="c-button_label">Sljedeća značajka</span>
-                                      <span class="o-icon -features">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                        </svg>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="c-section" id="goto-feature-4">
-                    <div class="o-layout -reverse || o-flex -flex-column@to-small">
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                          <div class="o-background -extra">
-                            <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
-                          <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
-                            <div class="o-background-wrap">
-                              <div class="o-background"></div>
-                              <div class="c-feature_content">
-                                <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
-                                <h1 class="c-features_heading">Prilagodljiv izgled</h1>
-                                <p class="">Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
-                                <a href="#goto-benefits" class="c-features_button || c-button" data-scroll-to>
-                                  <div class="o-background-wrap">
-                                    <div class="o-background"></div>
-                                    <div class="c-button_inner">
-                                      <span class="c-button_label">Benefiti za vaše<br>klijente/korisnike</span>
-                                      <span class="o-icon -features">
-                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
-                                        </svg>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <!--
-            <section class="c-section">
-              <div class="o-background-wrap o-ratio u-2:1 u-height-100vh@from-small">
-                <div class="o-background -horizontal">
-                  <div class="o-background_css -zigzag" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"></div>
-                </div>
-              </div>
-            </section>
-
-            <section class="c-section">
-              <div class="c-horizontal">
-                <div class="o-container">
-                  <div class="o-background-wrap">
-                    <div class="o-background"></div>
-                    <article class="c-horizontal_item u-min-30vh@to-medium">
-                      <h1 class="c-horizontal_heading">
-                        <span class="c-horizontal_heading -row-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.5">A kako to izgleda iz perspektive</span>
-                        <span class="c-horizontal_heading -row-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.5">klijenata/korisnika?</span>
+        <div class="o-scroll" data-module-scroll="main">
+          <header class="c-site-header">
+            <div class="o-container">
+              <div data-module-mobile-menu class="c-site-header_inner">
+                <div class="c-site-header_main || has-no-gutters@to-small">
+                  <div class="c-site-header_main_inner">
+                    <div role="banner">
+                      <h1 class="c-site-brand">
+                          <a class="c-site-brand_link" href="/" rel="home">
+                            <!-- <img src="logo.png" alt="Site logo"> -->
+                            <span class="o-icon -site-logo">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0H0v24h12zm0-6a6 6 0 100-12 6 6 0 000 12z"></path>
+                              </svg>
+                            </span>
+                            <span class="u-screen-reader-text">dolazim</span>
+                          </a>
                       </h1>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </section>
-          -->
-
-          <!--
-            <h1>Istaknute značajke iz prespektive obrta/firme</h1>
-            <ul>
-              <li>
-                <article>
-                  <h1>Automatizirano naručivanje</h1>
-                  <p>Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <h1>Preglednost</h1>
-                  <p>Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <h1>Bolje upravljanje vlastitim vremenom</h1>
-                  <p>Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <h1>Prilagodljiv izgled</h1>
-                  <p>Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
-                </article>
-              </li>
-            </ul>
-          -->
-
-          <section class="c-section">
-            <div class="c-intro">
-              <div class="o-container -w-80">
-                <div id="goto-intro" class="c-intro_container">
-                  <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
-                  </div>
-                  <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-</div>
-          <section>
-            <div class="c-benefits">
-              <div class="o-container">
-                <div class="o-sticky-wrap">
-                  <span class="o-sticky" id="stop-sticky-benefits"></span>
-                  <div id="goto-benefits" class="c-benefits_container">
-                    <div class="o-layout">
-                      <div class="o-layout_item u-1/2@from-small u-min-30vh@to-small XXXXXu-height-100vh@from-small">
-                        <article class="c-benefits_heading-wrap">
-                          <div class="c-benefits_heading-padding" data-scroll data-scroll-sticky data-scroll-target="#stop-sticky-benefits">
-                            <h1 class="c-benefits_heading">
-                              Što još trebate znati?
-                              <br>
-                              Ovo su benefiti za vaše klijente/korisnike
-                            </h1>
-                          </div>
-                        </article>
-                      </div>
-                      <div class="o-layout_item u-1/2@from-small">
-                        <div class="o-layout o-flex -flex-wrap">
-                          <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="0.5">
-                            <article class="c-card-benefit">
-                              <div class="o-background-wrap o-ratio u-2:1">
-                                <div class="o-background">
-                                  <div class="c-circle -variable -offset-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
-                                </div>
-                              </div>
-                              <h1 class="c-card-benefit_heading">Brzo i pouzdano</h1>
-                              <p>Naručivanje se provodi na webu u samo nekoliko koraka. Uvid u dostupne termine u stvarnom vremenu.</p>
-                            </article>
-                            <article class="c-card-benefit">
-                              <div class="o-background-wrap o-ratio u-2:1">
-                                <div class="o-background">
-                                  <div class="c-circle -variable -offset-3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5"></div>
-                                </div>
-                              </div>
-                              <h1 class="c-card-benefit_heading">Jednostavno i pregledno sučelje</h1>
-                              <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
-                            </article>
-                          </div>
-                          <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="1">
-                            <article class="c-card-benefit">
-                              <div class="o-background-wrap o-ratio u-2:1">
-                                <div class="o-background">
-                                  <div class="c-circle -variable -offset-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"></div>
-                                </div>
-                              </div>
-                              <h1 class="c-card-benefit_heading">Diskterno</h1>
-                              <p>Na e-mail adresu šaljemo potvrdu narudžbe. Zakazani termin se može poništiti bilo kojem trenutku.</p>
-                            </article>
-                            <article class="c-card-benefit">
-                              <div class="o-background-wrap o-ratio u-2:1">
-                                <div class="o-background">
-                                  <div class="c-circle -variable -offset-4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2.5"></div>
-                                </div>
-                              </div>
-                              <h1 class="c-card-benefit_heading">Privatnost</h1>
-                              <p>Osim e-mail adrese na koju se šalje potvrda narudžbe ništa drugo nije potrebno. Uneseni podatci neće biti korišteni za druge svrhe.</p>
-                            </article>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="c-section">
-            <!-- Slider main container -->
-            <div data-module-swiper class="swiper-container">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper || o-layout">
-                <!-- Slides -->
-                <div class="swiper-slide || o-layout_item u-1/2@from-small">
-                  <figure>
-                    <div class="o-ratio u-4:3">
-                        <img src="//placedog.net/400/300" alt="">
-                    </div>
-                    <figcaption>Slide 1 - placeholder image of a dog</figcaption>
-                  </figure>
-                </div>
-                <div class="swiper-slide || o-layout_item u-1/2@from-small">
-                  <figure>
-                    <div class="o-ratio u-3:4">
-                        <img src="//placedog.net/300/400" alt="">
-                    </div>
-                    <figcaption>Slide 2 - placeholder image of a dog</figcaption>
-                  </figure>
-                </div>
-                <div class="swiper-slide || o-layout_item u-1/2@from-small">
-                  <figure>
-                    <div class="o-ratio">
-                        <img src="//placedog.net/300/300" alt="">
-                    </div>
-                    <figcaption>Slide 3 - placeholder image of a dog</figcaption>
-                  </figure>
-                </div>
-                <!-- ends Slides -->
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </section>
-
-          <register-button></register-button>
-
-          <register-modal></register-modal>
-
-          <contact-form></contact-form>
-        </main>
-
-        <footer data-scroll-section class="c-site-footer">
-          footer
-          <a class="-delay-2" href="/privacy-policy.html">Izjava o privatnosti</a>
-          <a class="-delay-3" href="/terms-and-conditions.html">Uvjeti korištenja</a>
-        </footer>
-      </div>
-
-    </div>
-
-    <script>
-
-      Vue.component('ContactForm', {
-        template:
-        `<div class=\"form\">
-          <div v-if="requestSent">
-            <div v-if="status">Uspjeh!</div>
-            <div v-else>Greška!</div>
-          </div>
-          <span>Ime:</span>
-          <input type="text" name="name" v-model="formData.name">
-          <span>Email:</span>
-          <input type="email" name="email" v-model="formData.email">
-          <span>Poruka:</span>
-          <textarea name="body" v-model="formData.body"></textarea>
-          <button v-on:click=\"submitContactForm()\">Pošalji</button>
-        </div>`,
-        data() {
-          return {
-            formData: {
-              name: '',
-              email: '',
-              body: '',
-            },
-            requestSent: false,
-            status: false,
-          }
-        },
-        methods: {
-          async submitContactForm() {
-            try {
-              const response = await this.$root.sendContact(this.formData);
-
-              if(response.status === 201) {
-                this.requestSent = true;
-                this.status = true;
-              } else {
-                throw new Error("Wrong http code");
-              }
-            } catch {
-              this.requestSent = true;
-              this.status = false;
-            }
-          }
-        }
-      })
-
-      Vue.component('RegisterButton', {
-        template:
-        `<section id="goto-join" class="c-section">
-            <div class="c-intro">
-              <div class="o-container -w-80">
-                <div id="goto-intro" class="c-intro_container">
-                  <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
-                  <div class="c-intro_cta">
-                    <button class="c-button c-round-button -large" @click="openModal()">
-                      <div class="o-background-wrap o-ratio">
-                        <div class="o-background"></div>
-                        <div class="c-round-button_inner">
-                          <span class="c-button_label">Registracija</span>
-                        </div>
-                      </div>
+                    <button data-mobile-menu="nav-toggle" class="c-site-nav_menu-toggle || c-button">
+                      <span class="u-relative">
+                        <span class="c-button_label -site-nav-label">
+                          <span>M</span>
+                          <span>e</span>
+                          <span>n</span>
+                          <span>i</span>
+                        </span>
+                        <span class="c-button_label -site-nav-label -close">
+                          <span>Z</span>
+                          <span>a</span>
+                          <span>t</span>
+                          <span>v</span>
+                          <span>o</span>
+                          <span>r</span>
+                          <span>i</span>
+                        </span>
+                      </span>
+                      <span class="u-relative">
+                        <span class="o-icon -site-nav-icon">
+                          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zM4 7a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zM4 17a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" />
+                          </svg>
+                        </span>
+                        <span class="o-icon -site-nav-icon -close">
+                          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.707 4.293a1 1 0 010 1.414l-14 14a1 1 0 01-1.414-1.414l14-14a1 1 0 011.414 0z" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0l14 14a1 1 0 01-1.414 1.414l-14-14a1 1 0 010-1.414z" />
+                          </svg>
+                        </span>
+                      </span>
                     </button>
                   </div>
                 </div>
+
+                <div class="c-site-header_aside || is-overflow-swipe@from-small">
+                  <div class="c-site-header_aside_inner || o-layout -middle">
+                    <div class="o-background-wrap">
+                      <div class="o-background -mobile-nav"></div>
+                      <div class="o-container -w-80@to-small">
+                        <div class="c-site-nav-wrap">
+                          <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
+                            <ul class="c-site-nav_list">
+                              <li class="-delay-1 XXX-has-no-gutters@to-small"><a class="-delay-1" data-mobile-menu="nav-link" href="/">Home</a></li>
+                              <li class="-delay-2 XXX-has-no-gutters@to-small"><a class="-delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">Uvod</a></li>
+                              <li class="-delay-3 XXX-has-no-gutters@to-small"><a class="-delay-3" data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">Benefiti</a></li>
+                              <li class="-delay-4 XXX-has-no-gutters@to-small"><a class="-delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">Značajke</a></li>
+                            </ul>
+                          </nav>
+                          <!-- <div class="o-layout_item u-1/2@to-small || u-hidden@from-small">
+                            <address class="c-contact_panel_info">
+                                Firma d.o.o.<br>
+                                Masarykova 13<br>
+                                10000 Zagreb<br>
+                                Hrvatska
+                            </address>
+                            <ul class="c-socials">
+                              <li class="c-socials_item">
+                                <a class="c-socials_link" href="https://www.linkedin.com/company/advanced-medical-strategies-llc/" target="_blank" rel="noreferrer noopener" title="LinkedIn">
+                                  <span class="c-socials_link_icon">
+                                    <img width="24" height="24" class="o-image_media" src="https://www.mdstrat.com/wp-content/uploads/2020/08/linked-in.svg" alt="LinkedIn Icon">
+                                  </span>
+                                  <span class="u-screen-reader-text"></span>
+                                </a>
+                              </li>
+                              <li class="c-socials_item">
+                                <a class="c-socials_link" href="https://twitter.com/AMSmdstratcom" target="_blank" rel="noreferrer noopener" title="Twitter">
+                                  <span class="c-socials_link_icon">
+                                    <img width="24" height="24" class="o-image_media" src="https://www.mdstrat.com/wp-content/uploads/2020/08/twitter.svg" alt="Twitter Icon">
+                                  </span>
+                                  <span class="u-screen-reader-text"></span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>`,
-        methods: {
-          async openModal() {
-            document.documentElement.classList.add('has-modal-get-in-touch-open');
-            this.$root.toggleModal();
-          }
-        }
-      })
+          </header>
 
-      Vue.component('RegisterButtonMini', {
-        template:
-        ` <div class="c-fixed-cta" @click="openModal()">
-            <button class="c-button-rail c-round-button" data-module-display-button>
-              <div class="o-background-wrap o-ratio">
+          <main data-scroll-section class="c-site-main">
+            <section class="c-section">
+              <div class="o-background-wrap">
+                <div class="o-background">
+                  <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-3" data-scroll-position="top">
+                  </div>
+                </div>
+
+                <div class="c-hero">
+                  <div class="o-container -w-80">
+                    <div class="o-layout">
+
+                      <div class="o-layout_item u-min-30vh@to-medium">
+                        <div class="o-background-wrap">
+                          <div class="o-background -hero"></div>
+                          <article class="o-front -hero">
+                            <h1 class="c-hero_heading" data-scroll>
+                              <div class="c-hero_heading-row">
+                                <div class="c-hero_heading-row_inner -delay-1">Narudžbe telefonom </div>
+                              </div>
+                              <div class="c-hero_heading-row">
+                                <div class="c-hero_heading-row_inner -delay-2">šaljemo u prošlost</div>
+                              </div>
+                            </h1>
+                            <div class="c-hero_cta">
+                              <div class="c-scrollto-wrap" data-scroll>
+                                <span class="c-scrollto-wrap_inner -from-bottom -delay">
+                                  <a href="#goto-intro" data-scroll-to class="c-scrollto || c-button">
+                                    <span class="c-button_label">Saznajte kako</span>
+                                    <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
+                                      <span class="u-screen-reader-text">Vodi me na poglavlje rješenja</span>
+                                      <span data-scroll class="c-scrollto_arrow">
+                                        <span class="o-icon -large-icon">
+                                          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                          </svg>
+                                        </span>
+                                      </span>
+                                    </span>
+                                  </a>
+                                </span>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="c-section u-bg-white u-relative">
+              <div class="c-intro">
+                <div class="o-container -w-80">
+                  <div id="goto-intro" class="c-intro_container">
+                    <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
+                    </div>
+                    <p class="c-intro_paragraph">Zakazivanje termina telefonom je naporno. Neki ljudi više vole tipkati. Ako vaš posao uključuje rezervacije termina preko telefona, ljudi koji ne vole telefonirati će radije zaobići vašu poslovnicu. Pozabavili smo se s tim problemom i na ovoj stranici možete pročitati kakvo rješenje nudimo.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div data-scroll data-scroll-repeat data-scroll-call="toggle, DisplayButton">
+
+              <section class="c-section">
+                <div class="c-features">
+                  <div id="goto-features" class="c-features_container">
+                    <ul>
+
+                      <li class="c-section">
+                        <div class="o-layout || o-flex -flex-column@to-small">
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                              <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-feature_content">
+                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <h1 class="c-features_heading">Automatizirano naručivanje</h1>
+                                    <p class="">Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
+                                    <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
+                                      <div class="o-background-wrap">
+                                        <div class="o-background"></div>
+                                        <div class="c-button_inner">
+                                          <span class="c-button_label">Sljedeća značajka</span>
+                                          <span class="o-icon -features">
+                                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="c-section" id="goto-feature-2">
+                        <div class="o-layout -reverse || o-flex -flex-column@to-small">
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                              <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-feature_content">
+                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <h1 class="c-features_heading">Preglednost</h1>
+                                    <p class="">Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
+                                    <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
+                                      <div class="o-background-wrap">
+                                        <div class="o-background"></div>
+                                        <div class="c-button_inner">
+                                          <span class="c-button_label">Sljedeća značajka</span>
+                                          <span class="o-icon -features">
+                                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="c-section" id="goto-feature-3">
+                        <div class="o-layout || o-flex -flex-column@to-small">
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                              <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-feature_content">
+                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <h1 class="c-features_heading">Bolje upravljanje vlastitim vremenom</h1>
+                                    <p class="">Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
+                                    <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
+                                      <div class="o-background-wrap">
+                                        <div class="o-background"></div>
+                                        <div class="c-button_inner">
+                                          <span class="c-button_label">Sljedeća značajka</span>
+                                          <span class="o-icon -features">
+                                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="c-section" id="goto-feature-4">
+                        <div class="o-layout -reverse || o-flex -flex-column@to-small">
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="o-layout_item u-1/2@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                              <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-feature_content">
+                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <h1 class="c-features_heading">Prilagodljiv izgled</h1>
+                                    <p class="">Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
+                                    <a href="#goto-benefits" class="c-features_button || c-button" data-scroll-to>
+                                      <div class="o-background-wrap">
+                                        <div class="o-background"></div>
+                                        <div class="c-button_inner">
+                                          <span class="c-button_label">Benefiti za vaše<br>klijente/korisnike</span>
+                                          <span class="o-icon -features">
+                                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!--
+                <section class="c-section">
+                  <div class="o-background-wrap o-ratio u-2:1 u-height-100vh@from-small">
+                    <div class="o-background -horizontal">
+                      <div class="o-background_css -zigzag" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="c-section">
+                  <div class="c-horizontal">
+                    <div class="o-container">
+                      <div class="o-background-wrap">
+                        <div class="o-background"></div>
+                        <article class="c-horizontal_item u-min-30vh@to-medium">
+                          <h1 class="c-horizontal_heading">
+                            <span class="c-horizontal_heading -row-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.5">A kako to izgleda iz perspektive</span>
+                            <span class="c-horizontal_heading -row-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.5">klijenata/korisnika?</span>
+                          </h1>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              -->
+
+              <!--
+                <h1>Istaknute značajke iz prespektive obrta/firme</h1>
+                <ul>
+                  <li>
+                    <article>
+                      <h1>Automatizirano naručivanje</h1>
+                      <p>Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      <h1>Preglednost</h1>
+                      <p>Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      <h1>Bolje upravljanje vlastitim vremenom</h1>
+                      <p>Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      <h1>Prilagodljiv izgled</h1>
+                      <p>Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
+                    </article>
+                  </li>
+                </ul>
+              -->
+
+              <section class="c-section">
+                <div class="c-intro">
+                  <div class="o-container -w-80">
+                    <div id="goto-intro" class="c-intro_container">
+                      <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
+                      </div>
+                      <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+
+            <section>
+              <div class="c-benefits">
+                <div class="o-container">
+                  <div class="o-sticky-wrap">
+                    <span class="o-sticky" id="stop-sticky-benefits"></span>
+                    <div id="goto-benefits" class="c-benefits_container">
+                      <div class="o-layout">
+                        <div class="o-layout_item u-1/2@from-small u-min-30vh@to-small XXXXXu-height-100vh@from-small">
+                          <article class="c-benefits_heading-wrap">
+                            <div class="c-benefits_heading-padding" data-scroll data-scroll-sticky data-scroll-target="#stop-sticky-benefits">
+                              <h1 class="c-benefits_heading">
+                                Što još trebate znati?
+                                <br>
+                                Ovo su benefiti za vaše klijente/korisnike
+                              </h1>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="o-layout_item u-1/2@from-small">
+                          <div class="o-layout o-flex -flex-wrap">
+                            <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="0.5">
+                              <article class="c-card-benefit">
+                                <div class="o-background-wrap o-ratio u-2:1">
+                                  <div class="o-background">
+                                    <div class="c-circle -variable -offset-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
+                                  </div>
+                                </div>
+                                <h1 class="c-card-benefit_heading">Brzo i pouzdano</h1>
+                                <p>Naručivanje se provodi na webu u samo nekoliko koraka. Uvid u dostupne termine u stvarnom vremenu.</p>
+                              </article>
+                              <article class="c-card-benefit">
+                                <div class="o-background-wrap o-ratio u-2:1">
+                                  <div class="o-background">
+                                    <div class="c-circle -variable -offset-3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5"></div>
+                                  </div>
+                                </div>
+                                <h1 class="c-card-benefit_heading">Jednostavno i pregledno sučelje</h1>
+                                <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
+                              </article>
+                            </div>
+                            <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="1">
+                              <article class="c-card-benefit">
+                                <div class="o-background-wrap o-ratio u-2:1">
+                                  <div class="o-background">
+                                    <div class="c-circle -variable -offset-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"></div>
+                                  </div>
+                                </div>
+                                <h1 class="c-card-benefit_heading">Diskterno</h1>
+                                <p>Na e-mail adresu šaljemo potvrdu narudžbe. Zakazani termin se može poništiti bilo kojem trenutku.</p>
+                              </article>
+                              <article class="c-card-benefit">
+                                <div class="o-background-wrap o-ratio u-2:1">
+                                  <div class="o-background">
+                                    <div class="c-circle -variable -offset-4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2.5"></div>
+                                  </div>
+                                </div>
+                                <h1 class="c-card-benefit_heading">Privatnost</h1>
+                                <p>Osim e-mail adrese na koju se šalje potvrda narudžbe ništa drugo nije potrebno. Uneseni podatci neće biti korišteni za druge svrhe.</p>
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="c-section">
+              <!-- Slider main container -->
+              <div data-module-swiper class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper || o-layout">
+                  <!-- Slides -->
+                  <div class="swiper-slide || o-layout_item u-1/2@from-small">
+                    <figure>
+                      <div class="o-ratio u-4:3">
+                          <img src="//placedog.net/400/300" alt="">
+                      </div>
+                      <figcaption>Slide 1 - placeholder image of a dog</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide || o-layout_item u-1/2@from-small">
+                    <figure>
+                      <div class="o-ratio u-3:4">
+                          <img src="//placedog.net/300/400" alt="">
+                      </div>
+                      <figcaption>Slide 2 - placeholder image of a dog</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide || o-layout_item u-1/2@from-small">
+                    <figure>
+                      <div class="o-ratio">
+                          <img src="//placedog.net/300/300" alt="">
+                      </div>
+                      <figcaption>Slide 3 - placeholder image of a dog</figcaption>
+                    </figure>
+                  </div>
+                  <!-- ends Slides -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </section>
+
+            <register-button></register-button>
+
+            <contact-form></contact-form>
+          </main>
+
+          <footer data-scroll-section class="c-site-footer">
+            footer
+            <a class="-delay-2" href="/privacy-policy.html">Izjava o privatnosti</a>
+            <a class="-delay-3" href="/terms-and-conditions.html">Uvjeti korištenja</a>
+          </footer>
+        </div>
+
+      </div>
+
+      <register-modal></register-modal>
+
+      <script type="application/javascript">
+
+        Vue.component('ContactForm', {
+          template:
+          `<div class=\"form\">
+            <div class="c-form_item">
+              <label class="c-form_label" for="id-name">Ime</label>
+              <input class="c-form_input" type="text" id="id-name" name="id-name" v-model="formData.name">
+            </div>
+            <div class="c-form_item">
+              <label class="c-form_label" for="id-email">E-mail</label>
+              <input class="c-form_input" type="email" id="id-email" name="id-email" v-model="formData.email">
+            </div>
+            <div class="c-form_item">
+              <label class="c-form_label" for="id-message">Poruka</label>
+              <textarea class="c-form_textarea" name="id-message" id="id-message" v-model="formData.body"></textarea>
+            </div>
+            <div v-if="requestSent">
+              <div v-if="status" class="c-form_feedback">Uspjeh!</div>
+              <div v-else class="c-form_feedback">Greška!</div>
+            </div>
+            <button class="c-features_button || c-button" v-on:click=\"submitContactForm()\">
+              <div class="o-background-wrap">
                 <div class="o-background"></div>
-                <div class="c-round-button_inner"">
-                  <span class="c-button-rail_label">Registracija</span>
-                  <span class="c-button-rail_label">Registracija</span>
-                  <span class="c-button-rail_label">Registracija</span>
+                <div class="c-button_inner">
+                  <span class="c-button_label">Pošalji</span>
+                  <span class="o-icon -ccw-135 -features">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                    </svg>
+                  </span>
                 </div>
               </div>
             </button>
           </div>`,
-        methods: {
-          openModal() {
-            document.documentElement.classList.add('has-modal-get-in-touch-open');
-            this.$root.toggleModal();
+          data() {
+            return {
+              formData: {
+                name: '',
+                email: '',
+                body: '',
+              },
+              requestSent: false,
+              status: false,
+            }
+          },
+          methods: {
+            async submitContactForm() {
+              try {
+                const response = await this.$root.sendContact(this.formData);
+
+                if(response.status === 201) {
+                  this.requestSent = true;
+                  this.status = true;
+                } else {
+                  throw new Error("Wrong http code");
+                }
+              } catch {
+                this.requestSent = true;
+                this.status = false;
+              }
+            }
           }
-        }
-      })
+        })
 
-      Vue.component('RegisterModal', {
-        template:
-        ` <div>
-          <aside class="c-get-in-touch" data-module-modal-get-in-touch="m13">
-            <div class="c-get-in-touch_wrapper" data-modal-get-in-touch="container">
-              <div class="c-get-in-touch_inner">
-                <div class="c-get-in-touch_container">
-                  <button type="button" class="c-get-in-touch_close" data-modal-get-in-touch="close" @click="closeModal()">
-                    <span class="u-screen-reader-text">Close</span>
-                    <span class="c-get-in-touch_close_line"></span>
-                    <span class="c-get-in-touch_close_line"></span>
-                  </button>
-                  <img class="c-get-in-touch_image" data-load-src="assets/images/Get-in-touch.jpg" alt="" src="assets/images/Get-in-touch.jpg">
-
-                  <div class="o-layout -gutter || c-get-in-touch_heading">
-                    <div class="o-layout_item">
-                      <h2 class="c-heading -h2">
-                        Get in touch with PBSC®
-                      </h2>
-                    </div>
-                    <div class="o-layout_item u-1/2">
-                      <p>
-                        Reach out to us and we’ll get back to you soon!
-                      </p>
+        Vue.component('RegisterButton', {
+          template:
+          `<section id="goto-join" class="c-section">
+              <div class="c-intro">
+                <div class="o-container -w-80">
+                  <div id="goto-intro" class="c-intro_container">
+                    <p class="c-intro_paragraph">Pridružite se!<br>Isprobajte prvih mjesec dana bez obaveza.</p>
+                    <div class="c-intro_cta">
+                      <button class="c-button c-round-button -large" @click="openModal()">
+                        <div class="o-background-wrap o-ratio">
+                          <div class="o-background"></div>
+                          <div class="c-round-button_inner">
+                            <span class="c-button_label">Registracija</span>
+                          </div>
+                        </div>
+                      </button>
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>`,
+          methods: {
+            async openModal() {
+              document.documentElement.classList.add('has-modal-get-in-touch-open');
+              this.$root.toggleModal();
+            }
+          }
+        })
 
-                  <form class="c-form" method="post" action="api/contact-enquiries" data-module-form="m14" data-form-confirm-message="Your message has been successfully sent!" data-form-error-message="Sorry, there was an error submitting your request.">
-                    <div class="o-layout -gutter">
-                      <div v-if="currentStep === 1">
+        Vue.component('RegisterButtonMini', {
+          template:
+          ` <div class="c-fixed-cta" @click="openModal()">
+              <button class="c-button-rail c-round-button" data-module-display-button>
+                <div class="o-background-wrap o-ratio">
+                  <div class="o-background"></div>
+                  <div class="c-round-button_inner"">
+                    <span class="c-button-rail_label">Registracija</span>
+                    <span class="c-button-rail_label">Registracija</span>
+                    <span class="c-button-rail_label">Registracija</span>
+                  </div>
+                </div>
+              </button>
+            </div>`,
+          methods: {
+            openModal() {
+              document.documentElement.classList.add('has-modal-get-in-touch-open');
+              this.$root.toggleModal();
+            }
+          }
+        })
 
-                        <div v-if="requestSent && !status">
-                          Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
-                        </div>
+        Vue.component('RegisterModal', {
+          template:
+          ` <div>
+              <aside class="c-get-in-touch">
+                <div class="c-get-in-touch_wrapper">
+                  <div class="c-get-in-touch_inner">
+                    <div class="c-get-in-touch_container">
+                      <button class="c-get-in-touch_close" @click="closeModal()">
+                        <span class="u-screen-reader-text">Zatvori</span>
+                        <span class="c-get-in-touch_close_line"></span>
+                        <span class="c-get-in-touch_close_line"></span>
+                      </button>
 
+                      <div class="o-layout -gutter || c-get-in-touch_heading">
                         <div class="o-layout_item">
-                          <div class="c-form_item">
-                            <label for="userName" class="c-form_label">
-                              Ime i prezime korisnika
-                              <span class="c-form_required"></span>
-                            </label>
-                            <input v-model="formDataUser.name" data-form="input" type="text" id="userName" name="name" class="c-form_input" required="">
-                          </div>
-                        </div>
-
-                        <div class="o-layout_item">
-                          <div class="c-form_item">
-                            <label for="contactEmail" class="c-form_label">
-                              Email
-                              <span class="c-form_required"></span>
-                            </label>
-                            <input v-model="formDataUser.email" data-form="input" type="email" id="contactEmail" name="email" class="c-form_input" required="">
-                          </div>
-                        </div>
-
-                        <div class="o-layout_item">
-                          <div class="c-form_item">
-                            <label for="password" class="c-form_label">
-                              Lozinka
-                              <span class="c-form_required"></span>
-                            </label>
-                            <input v-model="formDataUser.password"  data-form="input" type="password" id="password" name="email" class="c-form_input" required="">
-                          </div>
-                        </div>
-
-                        <div class="o-layout_item">
-                            <input type="hidden" name="lang" value="en">
-                            <div class="c-form_feedback" data-form="feedback"></div>
-                            <button @click.prevent="submitUserForm()" type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
-                              <span class="c-button_label">
-                                Send request
-                              </span>
-                              <span class="c-button_bg"></span>
-                            </button>
-                          </div>
-                        </div>
-
-                      <div v-if="currentStep === 2">
-                        <div class="o-layout_item" v-if="requestSent">
-                          <div class="c-form_item" v-if="status">
-                            Vaša stranica je uspješno kreirana. Za 3 sekunde će te biti prebačeni na vaše adminsko sučelje gdje će te se trebati ulogirati sa unešenim podatcima.
-                          </div>
-                          <div class="c-form_item" v-else>
-                            Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
-                          </div>
-                        </div>
-                        <div v-else>
-                          <div class="o-layout_item">
-                            <div class="c-form_item">
-                              <label for="name" class="c-form_label">
-                                Ime firme
-                                <span class="c-form_required"></span>
-                              </label>
-                              <input  v-model="formDataCompany.name" data-form="input" type="email" id="name" name="name" class="c-form_input" required="">
-                            </div>
-                          </div>
-
-                          <div class="o-layout_item">
-                            <div class="c-form_item">
-                              <label for="slug" class="c-form_label">
-                                Domena
-                                <span class="c-form_required"></span>
-                              </label>
-                              <input v-model="formDataCompany.bookingPageSlug"  data-form="input" type="email" id="slug" name="slug" class="c-form_input" required="">.frizerrose.info
-                            </div>
-                          </div>
-
-                          <div class="o-layout_item">
-                            <input type="hidden" name="lang" value="en">
-                            <div class="c-form_feedback" data-form="feedback"></div>
-                            <button @click.prevent="submitCompanyForm()" type="submit" class="c-button -white -fullwidth -loader" data-text="Send request">
-                              <span class="c-button_label">
-                                Send request
-                              </span>
-                              <span class="c-button_bg"></span>
-                            </button>
-                          </div>
+                          <h1 class="c-heading -h1">
+                            Imate pitanje?
+                          </h1>
+                          <p>
+                            Obratite nam se kroz ovaj formular. Napraviti ćemo sve da na upit odgovorimo u kratkom i razumnom roku.
+                          </p>
                         </div>
                       </div>
 
+                      <form class="c-form" method="post" action="api/contact-enquiries">
+                        <div v-if="currentStep === 1">
+                          <div class="o-layout -gutter">
+
+                            <div v-if="requestSent && !status">
+                              Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
+                            </div>
+
+                            <div class="o-layout_item">
+                              <div class="c-form_item">
+                                <label for="userName" class="c-form_label">Vaše ime i prezime</label>
+                                <input v-model="formDataUser.name" type="text" id="userName" name="name" class="c-form_input" required
+                              </div>
+                              <div class="c-form_item">
+                                <label for="contactEmail" class="c-form_label">E-mail adresa</label>
+                                <input v-model="formDataUser.email" type="email" id="contactEmail" name="email" class="c-form_input" required>
+                              </div>
+                              <div class="c-form_item">
+                                <label for="password" class="c-form_label">Odaberite lozinku</label>
+                                <input v-model="formDataUser.password"  type="password" id="password" name="password" class="c-form_input" required autocomplete>
+                              </div>
+                            </div>
+
+                            <div class="o-layout_item">
+                              <input type="hidden" name="lang" value="en">
+                              <div class="c-form_feedback"></div>
+                              <button @click.prevent="submitUserForm()" type="submit" class="c-features_button || c-button">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-button_inner">
+                                  <span class="c-button_label">Nastavi</span>
+                                  <span class="o-icon -ccw-90 -features">
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        CURRENT STEP IS: {{ currentStep }}
+
+                        <div v-if="currentStep === 2">
+                          <div class="o-layout -gutter">
+                            <div class="o-layout_item" v-if="requestSent">
+                              <div class="c-form_item" v-if="status">
+                                Vaša stranica je uspješno kreirana. Za 3 sekunde će te biti prebačeni na vaše adminsko sučelje gdje će te se trebati ulogirati sa unešenim podatcima.
+                              </div>
+                              <div class="c-form_item" v-else>
+                                Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div v-else>
+                          <div class="o-layout -gutter">
+                            <div class="o-layout_item">
+                              <div class="c-form_item">
+                                <label for="name" class="c-form_label">Ime poslovnog subjekta</label>
+                                <input  v-model="formDataCompany.name" type="email" id="name" name="name" class="c-form_input" required>
+                              </div>
+                              <div class="c-form_item">
+                                <label for="slug" class="c-form_label">Poddomena</label>
+                                <input v-model="formDataCompany.bookingPageSlug" type="email" id="slug" name="slug" class="c-form_input" required>.dolazim.hr
+                              </div>
+                            </div>
+
+                            <div class="o-layout_item">
+                              <input type="hidden" name="lang" value="en">
+                              <div class="c-form_feedback"></div>
+                              <button @click.prevent="submitCompanyForm()" type="submit" class="c-features_button || c-button">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-button_inner">
+                                  <span class="c-button_label">Pošalji zahtjev</span>
+                                  <span class="o-icon -ccw-90 -features">
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+
                     </div>
-                  </form>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="c-get-in-touch_overlay" data-modal-get-in-touch="close" @click="closeModal()"></div>
-          </aside>
-          </div>`,
-        data() {
-          return {
-            currentStep: 1,
-            formDataUser: {
-              name: '',
-              email: '',
-              password: '',
-            },
-            formDataCompany: {
-              name: '',
-              bookingPageSlug: '',
-            },
-            createdUser: -1,
-            requestSent: false,
-            status: false,
-          }
-        },
-        methods: {
-          closeModal() {
-            document.documentElement.classList.remove('has-modal-get-in-touch-open');
-            this.$root.toggleModal();
-          },
-          async submitUserForm() {
-            const response = await this.$root.registerUser(this.formDataUser);
-
-            if(response.status === 201) {
-              const responseData = await response.json();
-              this.createdUser = responseData.user;
-              this.requestSent = false;
-              this.status = false;
-              this.currentStep = 2;
-            } else {
-              this.requestSent = true;
-              this.status = false;
+                <div class="c-get-in-touch_overlay" @click="closeModal()"></div>
+              </aside>
+            </div>`,
+          data() {
+            return {
+              currentStep: 1,
+              formDataUser: {
+                name: '',
+                email: '',
+                password: '',
+              },
+              formDataCompany: {
+                name: '',
+                bookingPageSlug: '',
+              },
+              createdUser: -1,
+              requestSent: false,
+              status: false,
             }
           },
-          async submitCompanyForm() {
-            const response = await this.$root.createCompany({
-              user: this.createdUser.id,
-              contactEmail: this.createdUser.email,
-              hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
-              ...this.formDataCompany,
-            });
+          methods: {
+            closeModal() {
+              document.documentElement.classList.remove('has-modal-get-in-touch-open');
+              this.$root.toggleModal();
+            },
+            async submitUserForm() {
+              const response = await this.$root.registerUser(this.formDataUser);
 
-            if(response.status === 201) {
-              this.requestSent = true;
-              this.status = true;
-              const responseData = await response.json();
+              if(response.status === 201) {
+                const responseData = await response.json();
+                this.createdUser = responseData.user;
+                this.requestSent = false;
+                this.status = false;
+                this.currentStep = 2;
+              } else {
+                this.requestSent = true;
+                this.status = false;
+              }
+            },
+            async submitCompanyForm() {
+              const response = await this.$root.createCompany({
+                user: this.createdUser.id,
+                contactEmail: this.createdUser.email,
+                hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
+                ...this.formDataCompany,
+              });
 
-              setTimeout(() => {
-                window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
-              }, 3000);
-            } else {
-              this.requestSent = true;
-              this.status = false;
+              if(response.status === 201) {
+                this.requestSent = true;
+                this.status = true;
+                const responseData = await response.json();
+
+                setTimeout(() => {
+                  window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
+                }, 3000);
+              } else {
+                this.requestSent = true;
+                this.status = false;
+              }
+            }
+          },
+          computed: {
+            isModalOpen() {
+              return this.$root.isModalOpen;
+            },
+          }
+        })
+
+        const vueApp = new Vue({
+          el: '#app',
+          data() {
+            return {
+              api_url: 'https://frizerrose.info/api/',
+              isModalOpen: false,
+            }
+          },
+          methods: {
+            async sendContact(formData) {
+              return await fetch(this.api_url + 'contact', {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+              });
+            },
+            async registerUser(formData) {
+              return await fetch(this.api_url + 'auth/register', {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+              });
+            },
+            async createCompany(formData) {
+              return await fetch(this.api_url + 'company', {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+              });
+            },
+            toggleModal() {
+              this.isModalOpen = !this.isModalOpen;
             }
           }
-        },
-        computed: {
-          isModalOpen() {
-            return this.$root.isModalOpen;
-          },
-        }
-      })
-
-      const vueApp = new Vue({
-        el: '#app',
-        data() {
-          return {
-            api_url: 'https://frizerrose.info/api/',
-            isModalOpen: false,
-          }
-        },
-        methods: {
-          async sendContact(formData) {
-            return await fetch(this.api_url + 'contact', {
-              method: 'POST',
-              headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
-            });
-          },
-          async registerUser(formData) {
-            return await fetch(this.api_url + 'auth/register', {
-              method: 'POST',
-              headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
-            });
-          },
-          async createCompany(formData) {
-            return await fetch(this.api_url + 'company', {
-              method: 'POST',
-              headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
-            });
-          },
-          toggleModal() {
-            this.isModalOpen = !this.isModalOpen;
-          }
-        }
-      })
-    </script>
+        })
+      </script>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
 

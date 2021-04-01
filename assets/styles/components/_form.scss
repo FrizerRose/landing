@@ -23,15 +23,16 @@ $input-icon-color: 424242; // No #
 
 .c-form_input {
     padding: rem(10px);
-    border: 1px solid lightgray;
-    background-color: white;
+    border: 1px solid lighten($black-off, 5%);
+    background-color: $black-off;
 
     &:hover {
-        border-color: darkgray;
+        border-color: lighten($black-off, 15%);
     }
 
     &:focus {
-        border-color: dimgray;
+      border-color: lighten($black-off, 25%);
+      background-color: lighten($black-off, 5%);
     }
 
     &::placeholder {

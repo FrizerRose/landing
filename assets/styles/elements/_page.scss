@@ -11,9 +11,9 @@
 //
 html {
     min-height: 100%; /* [2] */
-    // background-color: $black;
+    // background-color: $black-off;
     background-color: $white;
-    color: $black;
+    color: $black-off;
     font-family: $font-family;
     font-weight: $light;
     line-height: $line-height; /* [1] */
@@ -69,8 +69,8 @@ body {
 }
 
 ::selection {
-    background-color: $selection-background-color;
-    color: $selection-text-color;
+    background-color: $black;
+    color: $selection-background-color;
     text-shadow: none;
 }
 

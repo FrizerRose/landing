@@ -1,5 +1,5 @@
 .c-button {
-  background-color: $black;
+  background-color: $black-off;
   color: $white;
   transition: background-color $speed $easing, color $speed $easing;
 
@@ -81,7 +81,7 @@
   }
   .o-background {
     border-radius: 9999px;
-    background-color: $black;
+    background-color: $black-off;
     transition: transform $speed $easing-long;
   }
 
