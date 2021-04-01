@@ -625,8 +625,15 @@
               <textarea class="c-form_textarea" name="id-message" id="id-message" v-model="formData.body"></textarea>
             </div>
             <div v-if="requestSent">
-              <div v-if="status" class="c-form_feedback">Uspjeh!</div>
-              <div v-else class="c-form_feedback">Greška!</div>
+              <div v-if="status">
+                <div class="c-form_feedback -success">
+                  Uspjeh!
+                </div>
+              </div>
+              <div v-else>
+                <div class="c-form_feedback -error">
+                  Greška!
+                </div>
             </div>
             <button class="c-features_button || c-button" v-on:click=\"submitContactForm()\">
               <div class="o-background-wrap">
@@ -738,22 +745,27 @@
 
                       <div class="o-layout -gutter || c-get-in-touch_heading">
                         <div class="o-layout_item">
-                          <h1 class="c-heading -h1">
-                            Imate pitanje?
+                          <h1 class="c-heading -h1 o-title" :class="{'is-active': currentStep === 3 }">
+                            <span class="u-relative o-title_overflow">
+                              <span class="o-title_row -first">
+                                Registrirajte se.
+                              </span>
+                              <span class="o-title_row -last">
+                                Hvala.
+                              </span>
+                            </span>
                           </h1>
-                          <p>
-                            Obratite nam se kroz ovaj formular. Napraviti ćemo sve da na upit odgovorimo u kratkom i razumnom roku.
-                          </p>
+                          <div class="o-layout_item u-2/3@from-small">
+                            <p v-if="currentStep === 1 || currentStep === 2">
+                              Ispunite ovaj formular i kroz samo nekoliko sekundi ćete moći početi koristiti vašu nadzornu stanicu.
+                            </p>
+                          </div>
                         </div>
                       </div>
 
                       <form class="c-form" method="post" action="api/contact-enquiries">
                         <div v-if="currentStep === 1">
                           <div class="o-layout -gutter">
-
-                            <div v-if="requestSent && !status">
-                              Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
-                            </div>
 
                             <div class="o-layout_item">
                               <div class="c-form_item">
@@ -771,8 +783,11 @@
                             </div>
 
                             <div class="o-layout_item">
-                              <input type="hidden" name="lang" value="en">
-                              <div class="c-form_feedback"></div>
+                              <div v-if="requestSent && !status">
+                                <div class="c-form_feedback -error">
+                                  Došlo je do greške. Molimo provjerite upisane podatke i probajte ponovo.
+                                </div>
+                              </div>
                               <button @click.prevent="submitUserForm()" type="submit" class="c-features_button || c-button">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
@@ -790,21 +805,6 @@
                           </div>
                         </div>
 
-                        CURRENT STEP IS: {{ currentStep }}
-
-                        <div v-if="currentStep === 2 && requestSent && status">
-                          <div class="o-layout -gutter">
-                            <div class="o-layout_item" v-if="requestSent">
-                              <div class="c-form_item" v-if="status">
-                                Vaša stranica je uspješno kreirana. Za 3 sekunde će te biti prebačeni na vaše adminsko sučelje gdje će te se trebati ulogirati sa unešenim podatcima.
-                              </div>
-                              <div class="c-form_item" v-else>
-                                Došlo je do greške. Molimo provjerite unešene podatke i probajte ponovo.
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
                         <div v-if="currentStep === 2">
                           <div class="o-layout -gutter">
                             <div class="o-layout_item">
@@ -814,19 +814,78 @@
                               </div>
                               <div class="c-form_item">
                                 <label for="slug" class="c-form_label">Poddomena</label>
-                                <input v-model="formDataCompany.bookingPageSlug" type="email" id="slug" name="slug" class="c-form_input" required>.dolazim.hr
+                                <div class="c-form_input-flex">
+                                  <input v-model="formDataCompany.bookingPageSlug" type="email" id="slug" name="slug" class="c-form_input" required>
+                                  <span class="end-element">.dolazim.hr</span>
+                                </div>
                               </div>
                             </div>
 
                             <div class="o-layout_item">
-                              <input type="hidden" name="lang" value="en">
-                              <div class="c-form_feedback"></div>
+                              <div v-if="requestSent && !status">
+                                <div class="c-form_feedback -error">
+                                  Došlo je do greške. Molimo provjerite upisane podatke i probajte ponovo.
+                                </div>
+                              </div>
+                              <div class="c-form_item">
+                                <input class="c-form_checkbox" type="checkbox" id="checkbox">
+                                <label class="c-form_checkboxLabel" for="checkbox">
+                                  Prihvaćam <a href="#" class="o-link">uvjete korištenja</a>
+                                </label>
+                              </div>
+                              <input
+                                id="id-form-checkbox-sakriveno"
+                                v-model="honeypotChecked"
+                                style="visibility: hidden"
+                                name="adlksjdlaksjdlakjsdaljk"
+                                type="checkbox"
+                                autocomplete="off"
+                              >
+                              <label class="c-form_checkboxLabel u-screen-reader-text" for="id-form-checkbox-sakriveno">
+                                Sakriveno anti-spam polje. Nemojte ga označiti.
+                              </label>
                               <button @click.prevent="submitCompanyForm()" type="submit" class="c-features_button || c-button">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-button_inner">
                                     <span class="c-button_label">Pošalji zahtjev</span>
-                                    <span class="o-icon -ccw-90 -features">
+                                    <span class="o-icon -ccw-135 -features">
+                                      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div v-if="currentStep === 3">
+                          <div class="o-layout -gutter">
+                            <div class="o-layout_item">
+                              <div v-if="requestSent">
+                                <div v-if="status">
+                                  <div class="c-form_feedback -thanks" :class="{'is-active': step3Active }">
+                                    <p>
+                                      Vaša stranica je uspješno kreirana. Za 10 sekundi ćete biti prebačeni na stranicu gdje se trebati prijaviti s upisanim podatcima da bi pristupili nadzornoj stanici.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div v-else>
+                                  <div class="c-form_feedback -error">
+                                    Došlo je do greške. Molimo provjerite upisane podatke i probajte ponovo.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="o-layout_item">
+                              <button @click.prevent="submitCompanyForm()" type="submit" class="c-features_button || c-button">
+                                <div class="o-background-wrap">
+                                  <div class="o-background"></div>
+                                  <div class="c-button_inner">
+                                    <span class="c-button_label">Idemo odmah</span>
+                                    <span class="o-icon -ccw-135 -features">
                                       <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
                                       </svg>
@@ -846,6 +905,7 @@
             </div>`,
           data() {
             return {
+              step3Active: false,
               currentStep: 1,
               formDataUser: {
                 name: '',
@@ -891,11 +951,16 @@
               if(response.status === 201) {
                 this.requestSent = true;
                 this.status = true;
+                this.currentStep = 3;
                 const responseData = await response.json();
 
                 setTimeout(() => {
+                  this.step3Active = true;
+                }, 50);
+
+                setTimeout(() => {
                   window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
-                }, 3000);
+                }, 10000);
               } else {
                 this.requestSent = true;
                 this.status = false;

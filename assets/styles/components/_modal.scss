@@ -55,20 +55,20 @@
   html.has-modal-get-in-touch-open & {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: $speed
+    transition-delay: $speed;
   }
 
-  @media (max-width: $to-medium) {
-    padding:9.375rem 1.25rem 6.25rem
+  @media (max-width: $to-tiny) {
+    padding: 10rem 1.25rem 6rem;
   }
 
-  @media (min-width: $from-medium) {
-    padding:14.0625rem 33.33333% 5rem 11.11111%
+  @media (min-width: $from-tiny) {
+    padding: 8rem 25% 6rem 10%;
   }
 }
 
 .c-get-in-touch_heading {
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
 }
 
 .c-get-in-touch_overlay {

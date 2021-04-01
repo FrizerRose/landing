@@ -1,0 +1,36 @@
+
+.o-title_overflow {
+  display: flex;
+  overflow: hidden;
+}
+
+.o-title_row {
+  transition: transform $speed * 3 $easing-long;
+  transition-delay: $speed;
+  transform: none;
+
+  .is-active & {
+    transform: translateY(-100%);
+  }
+
+  &.-first {
+    transform: none;
+
+    .is-active & {
+      transform: none;
+      transform: translateY(-100%);
+    }
+  }
+
+  &.-last {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition-delay: $speed + 0.075;
+
+    .is-active & {
+      transform: none;
+    }
+  }
+}
