@@ -23,6 +23,19 @@ $input-icon-color: fafafa; // No #
 
 .c-form_input {
     padding: rem(10px);
+    border: 1px solid lightgray;
+    background-color: white;
+
+    &:hover {
+        border-color: darkgray;
+    }
+
+    &:focus {
+        border-color: dimgray;
+    }
+}
+
+.c-form_input.-black {
     border: 1px solid lighten($black-off, 5%);
     background-color: $black-off;
 
@@ -212,5 +225,20 @@ $select-icon-color: $input-icon-color;
       opacity: 1;
       transform: none;
     }
+  }
+}
+
+.animated-button-overflow {
+  overflow: hidden;
+}
+
+.animated-button {
+  opacity: 0;
+  transform: translateY($unit);
+  transition: transform $speed * 3 $easing-long, opacity $speed $easing-long;
+  transition-delay: $speed + 0.215;
+  &.is-active {
+    opacity: 1;
+    transform: none;
   }
 }

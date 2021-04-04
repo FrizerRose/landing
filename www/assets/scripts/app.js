@@ -4070,6 +4070,28 @@
     var _super = _createSuper(_default);
 
     function _default(m) {
+      _classCallCheck$1(this, _default);
+
+      return _super.call(this, m);
+    }
+
+    _createClass$1(_default, [{
+      key: "init",
+      value: function init() {
+        // console.log("currentYear", this.el);
+        this.el.querySelector(".js-year-placeholder").outerHTML = new Date().getFullYear();
+      }
+    }]);
+
+    return _default;
+  }(_default);
+
+  var _default$9 = /*#__PURE__*/function (_module) {
+    _inherits(_default, _module);
+
+    var _super = _createSuper(_default);
+
+    function _default(m) {
       var _this;
 
       _classCallCheck$1(this, _default);
@@ -4104,7 +4126,8 @@
     Scroll: _default$5,
     MobileMenu: _default$6,
     DisplayButton: _default$7,
-    Swiper: _default$8
+    CurrentYear: _default$8,
+    Swiper: _default$9
   });
 
   var app = new _default$1({

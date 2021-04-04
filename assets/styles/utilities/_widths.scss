@@ -22,6 +22,12 @@ $widths-fractions: 1 2 3 4 5 !default;
 // Small
 // ==========================================================================
 
+.u-1\/4\@from-small {
+  @media (min-width: $from-small) {
+      width: span(1/4);
+  }
+}
+
 .u-1\/2\@from-small {
   @media (min-width: $from-small) {
       width: span(1/2);
@@ -31,6 +37,12 @@ $widths-fractions: 1 2 3 4 5 !default;
 .u-2\/3\@from-small {
     @media (min-width: $from-small) {
         width: span(2/3);
+    }
+}
+
+.u-1\/5\@from-small {
+    @media (min-width: $from-small) {
+        width: span(1/5);
     }
 }
 

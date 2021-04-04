@@ -19,6 +19,10 @@
 
 .c-get-in-touch a {
   color: $link-color;
+
+  @include u-hocus {
+      color: $link-hover-color;
+  }
 }
 
 .c-get-in-touch_wrapper {

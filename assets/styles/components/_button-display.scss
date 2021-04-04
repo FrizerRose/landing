@@ -1,0 +1,39 @@
+
+.c-fixed-cta {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  width: 6rem;
+  pointer-events: none;
+
+  @media (min-width: $from-small) {
+    bottom: 2rem;
+    right: 2rem;
+    width: 8rem;
+  }
+}
+
+.c-button.-display {
+	width: 6rem;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 1;
+  pointer-events: auto;
+
+  transform: scaleX(3) translateX(200%);
+  transition: transform $speed $easing-long;
+  transform-origin: bottom right;
+
+	font-size: 0.75rem;
+
+  @media (min-width: $from-small) {
+    width: 8rem;
+    font-size: 1rem;
+  }
+
+  &.-show {
+    transform: none;
+    transition: transform $speed * 4 $easing-long;
+  }
+}
