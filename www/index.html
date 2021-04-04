@@ -840,7 +840,8 @@
                                 </div>
                               </div>
                               <div class="c-form_item">
-                                <input class="c-form_checkbox" type="checkbox" id="checkbox">
+                                <p class="text-danger" v-if="checkboxError">Morate prihvatiti uvjete korištenja</p>
+                                <input v-model="formDataCompany.checkbox" class="c-form_checkbox" type="checkbox" id="checkbox">
                                 <label class="c-form_checkboxLabel" for="checkbox">
                                   Prihvaćam <a href="#" class="o-link">uvjete korištenja</a>
                                 </label>
@@ -928,7 +929,9 @@
               formDataCompany: {
                 name: '',
                 bookingPageSlug: '',
+                checkbox: false,
               },
+              checkboxError: false,
               createdUser: -1,
               requestSent: false,
               status: false,
@@ -957,9 +960,11 @@
               }
             },
             async submitCompanyForm() {
-              if(!this.honeypotChecked) {
+              this.checkboxError = false;
+
+              if(!this.honeypotChecked && this.formDataCompany.checkbox) {
                 const response = await this.$root.createCompany({
-                  user: this.createdUser.id,
+                  users: [{id: this.createdUser.id}],
                   contactEmail: this.createdUser.email,
                   hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
                   ...this.formDataCompany,
@@ -982,6 +987,8 @@
                   this.requestSent = true;
                   this.status = false;
                 }
+              } else {
+                this.checkboxError = true;
               }
             },
             redirect() {
@@ -999,6 +1006,7 @@
           el: '#app',
           data() {
             return {
+              // api_url: 'http://frizerrose.juraj.lan/api/',
               api_url: 'https://frizerrose.info/api/',
               isModalOpen: false,
             }
