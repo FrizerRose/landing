@@ -634,6 +634,7 @@
                 <div class="c-form_feedback -error">
                   Greška!
                 </div>
+              </div>
             </div>
             <button class="c-features_button || c-button" v-on:click=\"submitContactForm()\">
               <div class="o-background-wrap">
@@ -868,7 +869,7 @@
                                 <div v-if="status">
                                   <div class="c-form_feedback -thanks" :class="{'is-active': step3Active }">
                                     <p>
-                                      Vaša stranica je uspješno kreirana. Za 10 sekundi ćete biti prebačeni na stranicu gdje se trebati prijaviti s upisanim podatcima da bi pristupili nadzornoj stanici.
+                                      Vaša stranica je uspješno kreirana. Za 5 sekundi ćete biti prebačeni na stranicu gdje se trebati prijaviti s upisanim podatcima da bi pristupili nadzornoj stanici.
                                     </p>
                                   </div>
                                 </div>
@@ -880,7 +881,7 @@
                               </div>
                             </div>
                             <div class="o-layout_item">
-                              <button @click.prevent="submitCompanyForm()" type="submit" class="c-features_button || c-button">
+                              <button @click.prevent="redirect()" type="submit" class="c-features_button || c-button">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-button_inner">
@@ -911,6 +912,7 @@
                 name: '',
                 email: '',
                 password: '',
+                isAdminAccount: true,
               },
               formDataCompany: {
                 name: '',
@@ -919,6 +921,7 @@
               createdUser: -1,
               requestSent: false,
               status: false,
+              honeypotChecked: false,
             }
           },
           methods: {
@@ -941,30 +944,35 @@
               }
             },
             async submitCompanyForm() {
-              const response = await this.$root.createCompany({
-                user: this.createdUser.id,
-                contactEmail: this.createdUser.email,
-                hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
-                ...this.formDataCompany,
-              });
+              if(!this.honeypotChecked) {
+                const response = await this.$root.createCompany({
+                  user: this.createdUser.id,
+                  contactEmail: this.createdUser.email,
+                  hours: {monday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},tuesday: {active:true, shifts: [{start:"08:00",end:"12:00"},{start:"13:00",end:"17:00"}]},wednesday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},thursday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},friday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},saturday: {active:true, shifts: [{start:"08:00",end:"16:00"}]},sunday: {active:true, shifts: [{start:"08:00",end:"16:00"}]}},
+                  ...this.formDataCompany,
+                });
 
-              if(response.status === 201) {
-                this.requestSent = true;
-                this.status = true;
-                this.currentStep = 3;
-                const responseData = await response.json();
+                if(response.status === 201) {
+                  this.requestSent = true;
+                  this.status = true;
+                  this.currentStep = 3;
+                  const responseData = await response.json();
 
-                setTimeout(() => {
-                  this.step3Active = true;
-                }, 50);
+                  setTimeout(() => {
+                    this.step3Active = true;
+                  }, 50);
 
-                setTimeout(() => {
-                  window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
-                }, 10000);
-              } else {
-                this.requestSent = true;
-                this.status = false;
+                  setTimeout(() => {
+                    window.location.href = 'https://' + responseData.bookingPageSlug + '.admin.dolazim.hr';
+                  }, 5000);
+                } else {
+                  this.requestSent = true;
+                  this.status = false;
+                }
               }
+            },
+            redirect() {
+              window.location.href = 'https://' + this.formDataCompany.bookingPageSlug + '.admin.dolazim.hr';
             }
           },
           computed: {
@@ -978,7 +986,7 @@
           el: '#app',
           data() {
             return {
-              api_url: 'https://frizerrose.info/api/',
+              api_url: 'http://frizerrose.info/api/',
               isModalOpen: false,
             }
           },
