@@ -781,6 +781,17 @@
                                 <label for="password" class="c-form_label">Odaberite lozinku</label>
                                 <input v-model="formDataUser.password"  type="password" id="password" name="password" class="c-form_input" required autocomplete>
                               </div>
+                              <input
+                                id="id-form-checkbox-sakriveno"
+                                v-model="honeypotChecked"
+                                style="visibility: hidden"
+                                name="adlksjdlaksjdlakjsdaljk"
+                                type="checkbox"
+                                autocomplete="off"
+                              >
+                              <label class="c-form_checkboxLabel u-screen-reader-text" for="id-form-checkbox-sakriveno">
+                                Sakriveno anti-spam polje. Nemojte ga označiti.
+                              </label>
                             </div>
 
                             <div class="o-layout_item">
@@ -930,17 +941,19 @@
               this.$root.toggleModal();
             },
             async submitUserForm() {
-              const response = await this.$root.registerUser(this.formDataUser);
+              if(!this.honeypotChecked) {
+                const response = await this.$root.registerUser(this.formDataUser);
 
-              if(response.status === 201) {
-                const responseData = await response.json();
-                this.createdUser = responseData.user;
-                this.requestSent = false;
-                this.status = false;
-                this.currentStep = 2;
-              } else {
-                this.requestSent = true;
-                this.status = false;
+                if(response.status === 201) {
+                  const responseData = await response.json();
+                  this.createdUser = responseData.user;
+                  this.requestSent = false;
+                  this.status = false;
+                  this.currentStep = 2;
+                } else {
+                  this.requestSent = true;
+                  this.status = false;
+                }
               }
             },
             async submitCompanyForm() {
@@ -986,7 +999,7 @@
           el: '#app',
           data() {
             return {
-              api_url: 'http://frizerrose.info/api/',
+              api_url: 'https://frizerrose.info/api/',
               isModalOpen: false,
             }
           },
