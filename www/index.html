@@ -15,13 +15,13 @@
     <meta property="og:url" content="https://xxxxxxxxxxxxxxxxxxxxxxxxxx">
     <meta property="og:site_name" content="dolazim">
     <meta property="og:title" content="dolazim TITLE">
-    <meta property="og:image" content="https://some-image.png">
+    <meta property="og:image" content="./assets/images/favicons/banner.png">
     <meta property="og:description" content="YOUR_DESCRIPTION_HERE">
 
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://xxxxxxxxxxxxxxxxxxxxxxxxxx">
     <meta property="twitter:title" content="dolazim TITLE">
-    <meta property="twitter:image" content="https://some-image.png">
+    <meta property="twitter:image" content="./assets/images/favicons/banner.png">
     <meta property="twitter:description" content="YOUR_DESCRIPTION_HERE">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -129,10 +129,30 @@
                         <div class="c-site-nav-wrap">
                           <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
                             <ul class="c-site-nav_list -is-in-header || has-animation">
-                              <li class="-delay-1 XXX-has-no-gutters@to-small"><a class="-delay-1" data-mobile-menu="nav-link" data-scroll-to href="#goto-inquiry">Pošalji upit</a></li>
-                              <li class="-delay-2 XXX-has-no-gutters@to-small"><a class="-delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">Uvod</a></li>
-                              <li class="-delay-3 XXX-has-no-gutters@to-small"><a class="-delay-3" data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">Benefiti</a></li>
-                              <li class="-delay-4 XXX-has-no-gutters@to-small"><a class="-delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">Značajke</a></li>
+                              <li class="o-links-inside -delay-1 XXX-has-no-gutters@to-small">
+                                <a class="o-links-inside_link -delay-1" data-mobile-menu="nav-link" data-scroll-to href="#goto-inquiry">
+                                  <span class="o-background"></span>
+                                  <span class="c-button_label">Pošalji upit</span>
+                                </a>
+                              </li>
+                              <li class="o-links-inside -delay-2 XXX-has-no-gutters@to-small">
+                                <a class="o-links-inside_link -delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">
+                                  <span class="o-background"></span>
+                                  <span class="c-button_label">Uvod</span>
+                                </a>
+                              </li>
+                              <li class="o-links-inside -delay-3 XXX-has-no-gutters@to-small">
+                                <a class="o-links-inside_link -delay-3" data-mobile-menu="nav-link" data-scroll-to href="#goto-benefits">
+                                  <span class="o-background"></span>
+                                  <span class="c-button_label">Benefiti</span>
+                                </a>
+                              </li>
+                              <li class="o-links-inside -delay-4 XXX-has-no-gutters@to-small">
+                                <a class="o-links-inside_link -delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">
+                                  <span class="o-background"></span>
+                                  <span class="c-button_label">Značajke</span>
+                                </a>
+                              </li>
                             </ul>
                           </nav>
                           <!-- <div class="o-layout_item u-1/2@to-small || u-hidden@from-small">
@@ -174,11 +194,7 @@
             <section class="c-section">
               <div class="o-background-wrap">
                 <div class="o-background">
-                  <!-- <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-3" data-scroll-position="top">
-                  </div> -->
-                  <div class="o-background-wrap o-ratio u-height-100@from-small">
-                    <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-3" data-scroll-position="top" class="o-background -extra is-inview">
-                    </div>
+                  <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-3" data-scroll-position="top">
                   </div>
                 </div>
 
@@ -204,7 +220,7 @@
                                   <a href="#goto-intro" data-scroll-to class="c-scrollto || c-button">
                                     <span class="c-button_label">Saznajte kako</span>
                                     <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
-                                      <span class="u-screen-reader-text">Vodi me na poglavlje rješenja</span>
+                                      <span class="u-screen-reader-text">Vodi me na poglavlje uvod</span>
                                       <span data-scroll class="c-scrollto_arrow">
                                         <span class="o-icon -large-icon">
                                           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -234,6 +250,23 @@
                     <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
                     </div>
                     <p class="c-intro_paragraph">Zakazivanje termina telefonom je naporno. Neki ljudi više vole tipkati. Ako vaš posao uključuje rezervacije termina preko telefona, ljudi koji ne vole telefonirati će radije zaobići vašu poslovnicu. Pozabavili smo se s tim problemom i na ovoj stranici možete pročitati kakvo rješenje nudimo.</p>
+
+                    <div class="c-hero_cta">
+                      <a href="#goto-features" data-scroll-to class="c-scrollto || c-button">
+                        <span class="c-button_label">Što dobijam?</span>
+                        <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
+                          <span class="u-screen-reader-text">Vodi me na poglavlje značajke</span>
+                          <span data-scroll class="c-scrollto_arrow">
+                            <span class="o-icon -large-icon">
+                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                              </svg>
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -249,9 +282,17 @@
                       <li class="c-section">
                         <div class="o-layout || o-flex -flex-column@to-small">
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                            <!-- <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
                               <div class="o-background -extra">
                                 <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background-wrap o-ratio u-height-100@from-small">
+                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -262,7 +303,7 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-feature_content">
-                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Automatizirano naručivanje</h1>
                                     <p class="">Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
                                     <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
@@ -289,9 +330,17 @@
                       <li class="c-section" id="goto-feature-2">
                         <div class="o-layout -reverse || o-flex -flex-column@to-small">
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                            <!-- <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
                               <div class="o-background -extra">
                                 <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background-wrap o-ratio u-height-100@from-small">
+                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -302,7 +351,7 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-feature_content">
-                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Preglednost</h1>
                                     <p class="">Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
                                     <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
@@ -329,9 +378,17 @@
                       <li class="c-section" id="goto-feature-3">
                         <div class="o-layout || o-flex -flex-column@to-small">
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                            <!-- <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
                               <div class="o-background -extra">
                                 <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background-wrap o-ratio u-height-100@from-small">
+                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -342,7 +399,7 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-feature_content">
-                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Bolje upravljanje vlastitim vremenom</h1>
                                     <p class="">Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
                                     <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
@@ -369,9 +426,17 @@
                       <li class="c-section" id="goto-feature-4">
                         <div class="o-layout -reverse || o-flex -flex-column@to-small">
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                            <!-- <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
                               <div class="o-background -extra">
                                 <div class="o-background_css -diagonal" data-scroll data-scroll-speed="-1">
+                                </div>
+                              </div>
+                            </div> -->
+                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div class="o-background -extra">
+                                <div class="o-background-wrap o-ratio u-height-100@from-small">
+                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -382,10 +447,10 @@
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
                                   <div class="c-feature_content">
-                                    <p class="c-features_pretitle">Iz gledišta firme/obrta</p>
+                                    <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Prilagodljiv izgled</h1>
                                     <p class="">Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
-                                    <a href="#goto-benefits" class="c-features_button || c-button" data-scroll-to>
+                                    <a href="#goto-summary-1" class="c-features_button || c-button" data-scroll-to>
                                       <div class="o-background-wrap">
                                         <div class="o-background"></div>
                                         <div class="c-button_inner">
@@ -467,13 +532,30 @@
                 </ul>
               -->
 
-              <section class="c-section">
+              <section class="c-section u-bg-white-darken-5">
                 <div class="c-intro">
                   <div class="o-container -w-80">
-                    <div id="goto-intro" class="c-intro_container">
-                      <div class="c-circle -large -intro" data-scroll data-scroll-speed="3">
+                    <div id="goto-summary-1" class="c-intro_container">
+                      <div class="c-circle -large -intro u-bg-white" data-scroll data-scroll-speed="3">
                       </div>
                       <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
+
+                      <div class="c-hero_cta">
+                        <a href="#goto-benefits" data-scroll-to class="c-scrollto || c-button">
+                          <span class="c-scrollto_inner hover-white" data-scroll data-scroll-repeat>
+                            <span class="u-screen-reader-text">Vodi me na poglavlje benefiti</span>
+                            <span data-scroll class="c-scrollto_arrow">
+                              <span class="o-icon -large-icon">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                </svg>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="c-button_label">Prednosti za moje klijente</span>
+                        </a>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -501,7 +583,7 @@
                         </div>
                         <div class="o-layout_item u-1/2@from-small">
                           <div class="o-layout o-flex -flex-wrap">
-                            <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="0.5">
+                            <div class="o-layout_item xu-1/2@from-small" data-scroll data-scroll-speed="0.5">
                               <article class="c-card-benefit">
                                 <div class="o-background-wrap o-ratio u-2:1">
                                   <div class="o-background">
@@ -521,7 +603,7 @@
                                 <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
                               </article>
                             </div>
-                            <div class="o-layout_item u-1/2@from-small" data-scroll data-scroll-speed="1">
+                            <div class="o-layout_item xu-1/2@from-small" data-scroll data-scroll-speed="1">
                               <article class="c-card-benefit">
                                 <div class="o-background-wrap o-ratio u-2:1">
                                   <div class="o-background">
@@ -619,7 +701,7 @@
           `<div class="c-section" id="goto-inquiry">
             <div class="o-layout || o-flex -flex-column@to-small">
               <div class="o-layout_item u-1/2@from-small">
-                <div class="o-background-wrap o-ratio u-height-100@from-small">
+                <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
                   <div class="o-background -extra"
                     data-load-style="background-image: url('/assets/images/upit.jpg');"
                     data-scroll data-scroll-speed="-1">

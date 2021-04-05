@@ -104,3 +104,7 @@ a {
 //         border-width: em(2px);
 //     }
 // }
+
+a:-webkit-any-link:focus {
+  outline-offset: 1px;
+}

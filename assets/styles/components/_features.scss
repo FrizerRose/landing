@@ -22,7 +22,7 @@
   margin-top: 2rem;
   transition: color $speed * 2 $easing-long;
 
-  &:hover {
+  @include u-hocus {
     color: $black-off;
   }
 
@@ -33,8 +33,10 @@
     transition: transform $speed * 2 $easing-long;
   }
 
-  &:hover .o-background {
-    transform: scaleY(1);
-    transform-origin: top;
+  @include u-hocus {
+    .o-background {
+      transform: scaleY(1);
+      transform-origin: top;
+    }
   }
 }

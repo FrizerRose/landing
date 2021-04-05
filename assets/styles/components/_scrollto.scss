@@ -86,6 +86,10 @@
     transform: scale(0);
 	}
 
+	&.hover-white:after {
+    background-color: $white;
+	}
+
 	.c-scrollto:hover & {
 		transform: scale(1);
 		&:before {

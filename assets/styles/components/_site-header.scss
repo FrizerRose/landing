@@ -246,6 +246,19 @@
   }
 }
 
+// .c-site-nav_list.-is-in-header a {
+//   .o-background {
+//     background-color: silver;
+//     opacity: 0;
+//     transition: opacity $speed $easing-long;
+//   }
+//   @include u-hocus {
+//     .o-background {
+//       opacity: 0.1;
+//     }
+//   }
+// }
+
 .c-site-nav_list.-is-in-footer a {
   color: $white;
   display: inline-block;

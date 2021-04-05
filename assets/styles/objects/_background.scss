@@ -3,6 +3,10 @@
 	position: relative;
   z-index: 0;
 
+  &.-static {
+    position: static;
+  }
+
   &.-h-100vh\@from-small {
     @media (min-width: $from-small) {
       height: 100vh;
