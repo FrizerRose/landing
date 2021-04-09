@@ -25,6 +25,7 @@ $input-icon-color: fafafa; // No #
     padding: rem(10px);
     border: 1px solid lightgray;
     background-color: white;
+    font-weight: $bold;
 
     &:hover {
         border-color: darkgray;

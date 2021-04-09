@@ -51,7 +51,7 @@
 
     <link id="stylesheet" rel="stylesheet" href="assets/styles/main.css" media="all" onload="this.media='all'; this.onload=null; this.isLoaded=true">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
@@ -82,7 +82,7 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0H0v24h12zm0-6a6 6 0 100-12 6 6 0 000 12z"></path>
                               </svg>
                             </span>
-                            <span class="u-screen-reader-text">Dolazim logptip</span>
+                            <span class="c-site-brand_label">Dolazim.hr</span>
                           </a>
                       </h1>
                     </div>
@@ -130,15 +130,15 @@
                           <nav class="c-site-nav || o-layout_item u-1/2@to-small" role="navigation">
                             <ul class="c-site-nav_list -is-in-header || has-animation">
                               <li class="o-links-inside -delay-1 XXX-has-no-gutters@to-small">
-                                <a class="o-links-inside_link -delay-1" data-mobile-menu="nav-link" data-scroll-to href="#goto-inquiry">
+                                <a class="o-links-inside_link -delay-1" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">
                                   <span class="o-background"></span>
-                                  <span class="c-button_label">Pošalji upit</span>
+                                  <span class="c-button_label">Uvod</span>
                                 </a>
                               </li>
                               <li class="o-links-inside -delay-2 XXX-has-no-gutters@to-small">
-                                <a class="o-links-inside_link -delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-intro">
+                                <a class="o-links-inside_link -delay-2" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">
                                   <span class="o-background"></span>
-                                  <span class="c-button_label">Uvod</span>
+                                  <span class="c-button_label">Značajke</span>
                                 </a>
                               </li>
                               <li class="o-links-inside -delay-3 XXX-has-no-gutters@to-small">
@@ -147,10 +147,15 @@
                                   <span class="c-button_label">Benefiti</span>
                                 </a>
                               </li>
-                              <li class="o-links-inside -delay-4 XXX-has-no-gutters@to-small">
-                                <a class="o-links-inside_link -delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-features">
-                                  <span class="o-background"></span>
-                                  <span class="c-button_label">Značajke</span>
+                              <li class="o-links-inside -is-cta -delay-4 XXX-has-no-gutters@to-small">
+                                <a class="c-button -nav-item || c-round-button -delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-inquiry">
+                                  <div class="o-background-wrap o-ratio">
+                                    <div class="o-background"></div>
+                                    <div class="c-round-button_inner">
+                                      <span class="o-background"></span>
+                                      <span class="c-button_label">Pošalji upit</span>
+                                    </div>
+                                  </div>
                                 </a>
                               </li>
                             </ul>
@@ -537,6 +542,7 @@
                   <div class="o-container -w-80">
                     <div id="goto-summary-1" class="c-intro_container">
                       <div class="c-circle -large -intro u-bg-white" data-scroll data-scroll-speed="3">
+                        <span class="c-circle_label">200kn</span>
                       </div>
                       <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
 
@@ -656,10 +662,10 @@
                       <a class="-delay-1" data-scroll-to href="#goto-intro">Uvod</a>
                     </li>
                     <li>
-                      <a class="-delay-2" data-scroll-to href="#goto-benefits">Benefiti</a>
+                      <a class="-delay-3" data-scroll-to href="#goto-features">Značajke</a>
                     </li>
                     <li>
-                      <a class="-delay-3" data-scroll-to href="#goto-features">Značajke</a>
+                      <a class="-delay-2" data-scroll-to href="#goto-benefits">Benefiti</a>
                     </li>
                   </ul>
                 </div>
@@ -698,7 +704,7 @@
 
         Vue.component('ContactForm', {
           template:
-          `<div class="c-section" id="goto-inquiry">
+          `<div class="c-section">
             <div class="o-layout || o-flex -flex-column@to-small">
               <div class="o-layout_item u-1/2@from-small">
                 <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
@@ -712,6 +718,11 @@
                 <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
                   <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                     <div class="o-background-wrap">
+                      <div class="c-get-in-touch_heading" id="goto-inquiry">
+                        <h1 class="c-heading -h1 o-title">
+                        Pitanje?
+                        </h1>
+                      </div>
                       <form class="c-form">
                         <div class="c-form_item">
                           <label for="id-name" class="c-form_label">Ime i prezime</label>

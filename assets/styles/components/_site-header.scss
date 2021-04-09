@@ -30,6 +30,7 @@
     // $site-header-mobile-bg: $white;
     // background-color: $site-header-mobile-bg;
     min-width: 10%;
+    margin-top: 1rem;
   }
 }
 .c-site-header_main_inner {
@@ -48,9 +49,29 @@
   color: $black-off;
   transition: color $speed $easing-long;
 
+  @media (min-width: $from-small) {
+    display: inline-block;
+    font-size: 0;
+    font-weight: $regular;
+  }
+
   &:hover,
   &:focus {
     color: $theme-main;
+  }
+}
+
+.c-site-brand_label {
+  display: inline-block;
+  vertical-align: middle;
+  // visina logotipa ÷ line-height wordmarka × 2 jer je logo u .o-icon 2rem
+  font-size: 1.35rem; // 2400 ÷ 1620 = 0.675 × 2 = 1.35
+  // 972 je širina slova D u logotipu kad je font-weight: regular (400)
+  // za toliko želimo odmaknuti wordmark od logotipa
+  margin-left: 0.6em; // 972 ÷ 1620 = 0.6
+
+  @media (max-width: $to-small) {
+    display: none;
   }
 }
 
@@ -120,7 +141,7 @@
   align-items: center;
   // line-height: 1;
   padding: 1.25rem 0;
-  font-weight: 700;
+  font-weight: $bold;
   letter-spacing: 1px;
   color: $black-off;
 
@@ -204,6 +225,9 @@
 .c-site-nav_list.-is-in-header > li {
   @media (min-width: $from-small) {
     padding: 3rem 2rem 1rem;
+    &.-is-cta {
+      padding: 1rem;
+    }
   }
 }
 
@@ -215,7 +239,7 @@
 
 .c-site-nav_list a {
   line-height: 1;
-  font-weight: 700;
+  font-weight: $bold;
   letter-spacing: 0.03125rem;
 
   @media (max-width: $to-small) {
@@ -229,19 +253,20 @@
 
 .c-site-nav_list.has-animation a {
   @media (max-width: $to-small) {
-    transform: translateX(-2rem);
+    transform: translateX(-$unit);
     opacity: 0;
     transition: opacity $speed $easing-long, transform $speed * 3 $easing-long;
-
-    @for $i from 1 through 8 {
-      &.-delay-#{$i} {
-        transition-delay: 0.33s + $i * 0.04;
-      }
-    }
+    transition-delay: 0.33s;
 
     html.has-mobile-menu-open & {
       transform: none;
       opacity: 1;
+      transition: opacity $speed * 3 $easing-long, transform $speed * 3 $easing-long;
+      @for $i from 1 through 8 {
+        &.-delay-#{$i} {
+          transition-delay: 0.33s + $i * 0.04;
+        }
+      }
     }
   }
 }
