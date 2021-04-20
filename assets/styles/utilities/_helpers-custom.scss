@@ -47,6 +47,12 @@
   }
 }
 
+.u-height-70vh\@from-small {
+  @media (min-width: $from-small) {
+    height: 70vh;
+  }
+}
+
 .u-height-100\@from-small {
   @media (min-width: $from-small) {
     height: 100%;
@@ -67,4 +73,19 @@
     margin-right: auto;
     max-width: 60%;
   }
+}
+
+
+
+.u-bg-white {
+  background-color: white;
+}
+.u-bg-coral {
+  background-color: coral;
+}
+.u-bg-orchid {
+  background-color: orchid;
+}
+.u-bg-goldenrod {
+  background-color: goldenrod;
 }

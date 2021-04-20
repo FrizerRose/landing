@@ -34,18 +34,25 @@
     left: -50%;
   }
 
-  &.-mobile-nav {
-    min-height: 100vh;
-    background-color: $black-off;
-    transform: translateX(-150%) skewX(-10deg);
-    transform-origin: right;
-    transition: transform $speed * 2 $easing, background-color $speed * 4 $easing;
-    transition-delay: $page-transition-duration * 0.5;
+  &.-circle {
+    border-radius: 9999px;
+    overflow: hidden;
+  }
 
-    html.has-mobile-menu-open & {
-      transform: none;
-      background-color: $white;
-      transition-delay: $page-transition-duration * 0.25;
+  &.-mobile-nav {
+    @media (max-width: $to-small) {
+      min-height: 100vh;
+      background-color: $black-off;
+      transform: translateX(-150%) skewX(-10deg);
+      transform-origin: right;
+      transition: transform $speed * 2 $easing, background-color $speed * 4 $easing;
+      transition-delay: $page-transition-duration * 0.5;
+
+      html.has-mobile-menu-open & {
+        transform: none;
+        background-color: $white;
+        transition-delay: $page-transition-duration * 0.25;
+      }
     }
   }
 
@@ -93,6 +100,20 @@
     background-repeat: repeat;
   }
 
+  &.-zigzag-dark {
+    background-image:  linear-gradient(135deg, lighten($black, 5%) 25%, transparent 25%), linear-gradient(225deg, lighten($black, 5%) 25%, transparent 25%), linear-gradient(45deg, lighten($black, 5%) 25%, transparent 25%), linear-gradient(315deg, lighten($black, 5%) 25%, $black 25%);
+    background-position:  2rem 0, 2rem 0, 0 0, 0 0;
+    background-size: 4rem 4rem;
+    background-repeat: repeat;
+  }
+
+  &.-zigzag-theme-main {
+    background-image:  linear-gradient(135deg, darken($theme-main, 5%) 25%, transparent 25%), linear-gradient(225deg, darken($theme-main, 5%) 25%, transparent 25%), linear-gradient(45deg, darken($theme-main, 5%) 25%, transparent 25%), linear-gradient(315deg, darken($theme-main, 5%) 25%, $theme-main 25%);
+    background-position:  2rem 0, 2rem 0, 0 0, 0 0;
+    background-size: 4rem 4rem;
+    background-repeat: repeat;
+  }
+
   &.-diagonal {
     background: repeating-linear-gradient( 45deg, darken($white, 25%), darken($white, 25%) 0.25rem, $white 0.25rem, $white 1rem );
 
@@ -114,4 +135,30 @@
   //     bottom: 0;
   //   }
   // }
+}
+
+.o-background_image {
+  background-size: cover;
+  background-position: 50%;
+  transform: scale(1.5);
+  transition: transform $speed * 4 $easing-long;
+
+  .o-background-wrap.is-inview & {
+    transform: none;
+  }
+}
+
+.o-background_circle {
+  background: $white;
+  border-radius: 9999px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  width: 100%;
+  transition: transform $speed * 4 $easing-long;
+
+  .o-background-wrap.is-inview & {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }

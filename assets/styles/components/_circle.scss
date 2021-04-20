@@ -1,6 +1,7 @@
 
 .c-circle {
 	background-color: darken($white, 5%);
+	background-color: $theme-main;
 	border-radius: 9999px;
 
 	position: absolute;

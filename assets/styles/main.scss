@@ -43,6 +43,7 @@
 
 @import "objects/transition";
 @import "objects/background";
+@import "objects/revealer";
 @import "objects/front";
 @import "objects/flex";
 @import "objects/icon";
@@ -64,7 +65,7 @@
 
 @import "components/site-header";
 @import "components/site-footer";
-@import "components/swiper";
+// @import "components/swiper";
 
 @import "components/modal";
 @import "components/button-display";
@@ -74,6 +75,7 @@
 @import "components/scrollto";
 @import "components/features";
 @import "components/benefits";
+@import "components/benefit-list";
 // @import "components/horizontal";
 // @import "components/split-section";
 

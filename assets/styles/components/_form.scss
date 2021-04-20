@@ -181,7 +181,7 @@ $select-icon-color: $input-icon-color;
 .c-form_textarea {
     @extend .c-form_input;
 
-    min-height: rem(200px);
+    min-height: rem(100px);
 }
 
 // Custom

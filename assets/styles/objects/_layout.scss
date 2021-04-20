@@ -97,6 +97,10 @@
         padding-left: rem($unit/2);
     }
 
+    .o-layout.-gutter-bottom > & {
+        margin-bottom: rem($unit/2);
+    }
+
     // Vertical alignment modifiers
     .o-layout.-middle > & {
         vertical-align: middle;

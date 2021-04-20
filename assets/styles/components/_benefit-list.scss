@@ -1,0 +1,36 @@
+
+.c-benefit_front {
+  position: relative;
+  display: block;
+  padding-bottom: 133.3333%;
+}
+
+.c-benefit_item_content {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-benefit_item_image {
+  display: block;
+  overflow: hidden;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: opacity $speed * 2 $easing-long, transform $speed * 2 $easing-long;
+  margin: rem(-$unit/2);
+
+  .c-benefit_item.is-inview & {
+    opacity: 1;
+    transform: none;
+    transition-delay: $speed;
+    transition-duration: $speed * 3;
+    transition-timing-function: $easing-long;
+  }
+}
+
+.c-benefit_item_image img {
+	width: 100%;
+}

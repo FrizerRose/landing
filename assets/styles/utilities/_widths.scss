@@ -34,15 +34,21 @@ $widths-fractions: 1 2 3 4 5 !default;
   }
 }
 
-.u-2\/3\@from-small {
-    @media (min-width: $from-small) {
-        width: span(2/3);
-    }
-}
-
 .u-1\/5\@from-small {
     @media (min-width: $from-small) {
         width: span(1/5);
+    }
+}
+
+.u-2\/5\@from-small {
+    @media (min-width: $from-small) {
+        width: span(2/5);
+    }
+}
+
+.u-3\/5\@from-small {
+    @media (min-width: $from-small) {
+        width: span(3/5);
     }
 }
 

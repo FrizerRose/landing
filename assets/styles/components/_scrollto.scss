@@ -43,6 +43,15 @@
 	&:hover, &:focus {
     color: $black-off;
   }
+
+  &.-small {
+    font-size: 1rem;
+    font-weight: 500;
+
+    @media (min-width: $from-small) {
+      font-size: 1rem;
+    }
+  }
 }
 
 .c-scrollto {
@@ -83,14 +92,26 @@
 
 	&:after {
     background-color: darken($white, 5%);
+    background-color: $theme-main;
     transform: scale(0);
 	}
+
+  &.-small-blob {
+    width: 1rem;
+    height: 1rem;
+
+    @media (min-width: $from-small) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 
 	&.hover-white:after {
     background-color: $white;
 	}
 
-	.c-scrollto:hover & {
+	.c-scrollto:hover &,
+	.c-scrollto:focus & {
 		transform: scale(1);
 		&:before {
 			transform: scale(0);

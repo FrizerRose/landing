@@ -121,7 +121,7 @@
                   </div>
                 </div>
 
-                <div class="c-site-header_aside || is-overflow-swipe@from-small">
+                <div class="c-site-header_aside || |-is-overflow-swipe@from-small">
                   <div class="c-site-header_aside_inner || o-layout -middle">
                     <div class="o-background-wrap">
                       <div class="o-background -mobile-nav"></div>
@@ -147,7 +147,7 @@
                                   <span class="c-button_label">Benefiti</span>
                                 </a>
                               </li>
-                              <li class="o-links-inside -is-cta -delay-4 XXX-has-no-gutters@to-small">
+                              <li class="c-site-nav_inquiry -is-cta -delay-4 XXX-has-no-gutters@to-small">
                                 <a class="c-button -nav-item || c-round-button -delay-4" data-mobile-menu="nav-link" data-scroll-to href="#goto-inquiry">
                                   <div class="o-background-wrap o-ratio">
                                     <div class="o-background"></div>
@@ -258,7 +258,6 @@
 
                     <div class="c-hero_cta">
                       <a href="#goto-features" data-scroll-to class="c-scrollto || c-button">
-                        <span class="c-button_label">Što dobijam?</span>
                         <span class="c-scrollto_inner" data-scroll data-scroll-repeat>
                           <span class="u-screen-reader-text">Vodi me na poglavlje značajke</span>
                           <span data-scroll class="c-scrollto_arrow">
@@ -269,6 +268,7 @@
                             </span>
                           </span>
                         </span>
+                        <span class="c-button_label">Što dobijam?</span>
                       </a>
                     </div>
 
@@ -276,6 +276,90 @@
                 </div>
               </div>
             </section>
+
+            <!-- <section class="c-section">
+              <div class="o-container -w-80">
+                <div class="o-layout -reverse">
+                  <div class="o-layout_item u-1/2@from-small">
+                    <div class="o-layout -middle -gutter -gutter-bottom">
+                      <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                        <div class="o-background-wrap">
+                          <div class="o-background">
+                            <div class="o-background_css -zigzag" data-scroll data-scroll-speed="0.5">
+                            </div>
+                          </div>
+                          <div class="c-benefit_front">
+                            <span class="c-benefit_item_content">
+                              <span class="c-benefit_item_image">
+                                <img src="/assets/images/benefiti/termini-1336x1782.png">
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-benefit_item || o-layout_item u-2/5@from-small" data-scroll data-scroll-speed="0.5">
+                        <div class="o-background-wrap">
+                          <div class="o-background">
+                            <div class="o-background_css -zigzag-dark" data-scroll data-scroll-speed="0.5">
+                            </div>
+                          </div>
+                          <div class="c-benefit_front">
+                            <span class="c-benefit_item_content">
+                              <span class="c-benefit_item_image">
+                                <img src="/assets/images/benefiti/termini-dark-1336x1782.png">
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="o-layout -middle -gutter -gutter-bottom">
+                      <div class="c-benefit_item || o-layout_item u-2/5@from-small" data-scroll data-scroll-speed="0.5">
+                        <div class="o-background-wrap">
+                          <div class="o-background u-bg-orchid" data-scroll data-scroll-speed="0.5">
+                          </div>
+                          <div class="c-benefit_front">
+                            <span class="c-benefit_item_content">
+                              <span class="c-benefit_item_image">
+                                <img src="/assets/images/benefiti/termini-orchid-1336x1782.png">
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                        <div class="o-background-wrap">
+                          <div class="o-background u-bg-coral" data-scroll data-scroll-speed="0.5">
+                          </div>
+                          <div class="c-benefit_front">
+                            <span class="c-benefit_item_content">
+                              <span class="c-benefit_item_image">
+                                <img src="/assets/images/benefiti/termini-coral-1336x1782.png">
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="o-layout -middle -gutter -gutter-bottom">
+                      <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                        <div class="o-background-wrap">
+                          <div class="o-background u-bg-goldenrod" data-scroll data-scroll-speed="0.5">
+                          </div>
+                          <div class="c-benefit_front">
+                            <span class="c-benefit_item_content">
+                              <span class="c-benefit_item_image">
+                                <img src="/assets/images/benefiti/termini-goldenrod-1336x1782.png">
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section> -->
 
             <div data-scroll data-scroll-repeat data-scroll-call="toggle, DisplayButton">
 
@@ -293,17 +377,24 @@
                                 </div>
                               </div>
                             </div> -->
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                              <div class="o-background -extra">
+                            <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div data-load-style="background-image: url('/assets/images/automatizirano-narucivanje.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
+                              </div>
+                              <!-- <div class="o-background -extra">
                                 <div class="o-background-wrap o-ratio u-height-100@from-small">
-                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  <div data-load-style="background-image: url('/assets/images/automatizirano-narucivanje.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
+                              <!-- <div class="o-background">
+                                <div class="o-ratio o-background_circle">
+                                </div>
+                              </div> -->
+                              <span class="o-revealer"></span>
                             </div>
                           </div>
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small |-u-height-100vh@from-small u-height-70vh@from-small">
                               <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
@@ -311,7 +402,7 @@
                                     <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Automatizirano naručivanje</h1>
                                     <p class="">Smanjite broj narudžbi koje vodite telefonom. Vaši klijenti se sami mogu naručiti jer imaju uvid u slobodne termine.</p>
-                                    <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
+                                    <!-- <a href="#goto-feature-2" class="c-features_button || c-button" data-scroll-to>
                                       <div class="o-background-wrap">
                                         <div class="o-background"></div>
                                         <div class="c-button_inner">
@@ -323,7 +414,22 @@
                                           </span>
                                         </div>
                                       </div>
-                                    </a>
+                                    </a> -->
+                                    <div class="u-margin-top-unit">
+                                      <a href="#goto-feature-2" data-scroll-to class="c-scrollto -small || c-button">
+                                        <span class="c-button_label">Sljedeća značajka</span>
+                                        <span class="c-scrollto_inner -small-blob" data-scroll data-scroll-repeat>
+                                          <span class="u-screen-reader-text">Vodi me na sljedeću značajku</span>
+                                          <span data-scroll class="c-scrollto_arrow">
+                                            <span class="o-icon |-large-icon">
+                                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                              </svg>
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </article>
@@ -341,17 +447,24 @@
                                 </div>
                               </div>
                             </div> -->
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                              <div class="o-background -extra">
+                            <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div data-load-style="background-image: url('/assets/images/preglednost.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
+                              </div>
+                              <!-- <div class="o-background -extra">
                                 <div class="o-background-wrap o-ratio u-height-100@from-small">
-                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  <div data-load-style="background-image: url('/assets/images/preglednost.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
+                              <!-- <div class="o-background">
+                                <div class="o-ratio o-background_circle">
+                                </div>
+                              </div> -->
+                              <span class="o-revealer"></span>
                             </div>
                           </div>
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small |-u-height-100vh@from-small u-height-70vh@from-small">
                               <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
@@ -359,7 +472,7 @@
                                     <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Preglednost</h1>
                                     <p class="">Sučelje nudi uvid u popunjenost termina kroz dan za svakog od radnika što vam omogućuje da bolje raspodjelite radnu snagu.</p>
-                                    <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
+                                    <!-- <a href="#goto-feature-3" class="c-features_button || c-button" data-scroll-to>
                                       <div class="o-background-wrap">
                                         <div class="o-background"></div>
                                         <div class="c-button_inner">
@@ -371,7 +484,22 @@
                                           </span>
                                         </div>
                                       </div>
-                                    </a>
+                                    </a> -->
+                                    <div class="u-margin-top-unit">
+                                      <a href="#goto-feature-3" data-scroll-to class="c-scrollto -small || c-button">
+                                        <span class="c-button_label">Sljedeća značajka</span>
+                                        <span class="c-scrollto_inner -small-blob" data-scroll data-scroll-repeat>
+                                          <span class="u-screen-reader-text">Vodi me na sljedeću značajku</span>
+                                          <span data-scroll class="c-scrollto_arrow">
+                                            <span class="o-icon |-large-icon">
+                                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                              </svg>
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </article>
@@ -389,17 +517,24 @@
                                 </div>
                               </div>
                             </div> -->
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                              <div class="o-background -extra">
+                            <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div data-load-style="background-image: url('/assets/images/bolje-upravljanje-vlastitim-vremenom.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
+                              </div>
+                              <!-- <div class="o-background -extra">
                                 <div class="o-background-wrap o-ratio u-height-100@from-small">
-                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  <div data-load-style="background-image: url('/assets/images/bolje-upravljanje-vlastitim-vremenom.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
+                              <!-- <div class="o-background">
+                                <div class="o-ratio o-background_circle">
+                                </div>
+                              </div> -->
+                              <span class="o-revealer"></span>
                             </div>
                           </div>
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small |-u-height-100vh@from-small u-height-70vh@from-small">
                               <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
@@ -407,7 +542,7 @@
                                     <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Bolje upravljanje vlastitim vremenom</h1>
                                     <p class="">Radnici mogu označiti vrijeme za svoje potrebe i rezervirati vrijeme kada neće biti dostupni. Npr. za vrijeme godišnjih odmora, kada se razbole ili kad nešto moraju obaviti.</p>
-                                    <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
+                                    <!-- <a href="#goto-feature-4" class="c-features_button || c-button" data-scroll-to>
                                       <div class="o-background-wrap">
                                         <div class="o-background"></div>
                                         <div class="c-button_inner">
@@ -419,7 +554,22 @@
                                           </span>
                                         </div>
                                       </div>
-                                    </a>
+                                    </a> -->
+                                    <div class="u-margin-top-unit">
+                                      <a href="#goto-feature-4" data-scroll-to class="c-scrollto -small || c-button">
+                                        <span class="c-button_label">Sljedeća značajka</span>
+                                        <span class="c-scrollto_inner -small-blob" data-scroll data-scroll-repeat>
+                                          <span class="u-screen-reader-text">Vodi me na sljedeću značajku</span>
+                                          <span data-scroll class="c-scrollto_arrow">
+                                            <span class="o-icon |-large-icon">
+                                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                              </svg>
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </article>
@@ -437,17 +587,24 @@
                                 </div>
                               </div>
                             </div> -->
-                            <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                              <div class="o-background -extra">
+                            <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1 u-height-100@from-small">
+                              <div data-load-style="background-image: url('/assets/images/prilagodljiv-izgled.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
+                              </div>
+                              <!-- <div class="o-background -extra">
                                 <div class="o-background-wrap o-ratio u-height-100@from-small">
-                                  <div data-load-style="background-image: url('/assets/images/upit.jpg');" data-scroll data-scroll-speed="-1.5" class="o-background -extra">
+                                  <div data-load-style="background-image: url('/assets/images/prilagodljiv-izgled.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
+                              <!-- <div class="o-background">
+                                <div class="o-ratio o-background_circle">
+                                </div>
+                              </div> -->
+                              <span class="o-revealer"></span>
                             </div>
                           </div>
                           <div class="o-layout_item u-1/2@from-small">
-                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                            <div class="o-flex -flex-column -justify-center u-min-30vh@to-small |-u-height-100vh@from-small u-height-70vh@from-small">
                               <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                                 <div class="o-background-wrap">
                                   <div class="o-background"></div>
@@ -455,7 +612,7 @@
                                     <p class="c-features_pretitle">Istaknute značajke</p>
                                     <h1 class="c-features_heading">Prilagodljiv izgled</h1>
                                     <p class="">Vrlo jednostavno prilagodite izgled web sučelja koje će vaši korisnici vidjeti kad se naručuju.</p>
-                                    <a href="#goto-summary-1" class="c-features_button || c-button" data-scroll-to>
+                                    <!-- <a href="#goto-summary-1" class="c-features_button || c-button" data-scroll-to>
                                       <div class="o-background-wrap">
                                         <div class="o-background"></div>
                                         <div class="c-button_inner">
@@ -467,7 +624,22 @@
                                           </span>
                                         </div>
                                       </div>
-                                    </a>
+                                    </a> -->
+                                    <div class="u-margin-top-unit">
+                                      <a href="#goto-summary-1" data-scroll-to class="c-scrollto -small || c-button">
+                                        <span class="c-button_label">Sljedeća značajka</span>
+                                        <span class="c-scrollto_inner -small-blob" data-scroll data-scroll-repeat>
+                                          <span class="u-screen-reader-text">Vodi me na sljedeću značajku</span>
+                                          <span data-scroll class="c-scrollto_arrow">
+                                            <span class="o-icon |-large-icon">
+                                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.976 2v16.263l6.143-6.144L20.5 13.5 12 22l-8.5-8.5 1.38-1.38 6.144 6.143V2h1.952z"/>
+                                              </svg>
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                               </article>
@@ -483,7 +655,7 @@
 
               <!--
                 <section class="c-section">
-                  <div class="o-background-wrap o-ratio u-2:1 u-height-100vh@from-small">
+                  <div class="o-background-wrap o-ratio u-2:1 |-u-height-100vh@from-small u-height-70vh@from-small">
                     <div class="o-background -horizontal">
                       <div class="o-background_css -zigzag" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"></div>
                     </div>
@@ -537,18 +709,17 @@
                 </ul>
               -->
 
-              <section class="c-section u-bg-white-darken-5">
+              <section class="c-section u-bg-white">
                 <div class="c-intro">
                   <div class="o-container -w-80">
                     <div id="goto-summary-1" class="c-intro_container">
-                      <div class="c-circle -large -intro u-bg-white" data-scroll data-scroll-speed="3">
-                        <span class="c-circle_label">200kn</span>
+                      <div class="c-circle -large -intro |-u-bg-white" data-scroll data-scroll-speed="3">
                       </div>
                       <p class="c-intro_paragraph">Pojednostavljeno, automatizirano naručivanje olakšava poslovanje obrtnicima i malim tvrtkama. No, benefiti će se također prenijeti na vaše klijente i korisnike vaših usluga.</p>
 
                       <div class="c-hero_cta">
                         <a href="#goto-benefits" data-scroll-to class="c-scrollto || c-button">
-                          <span class="c-scrollto_inner hover-white" data-scroll data-scroll-repeat>
+                          <span class="c-scrollto_inner |-hover-white" data-scroll data-scroll-repeat>
                             <span class="u-screen-reader-text">Vodi me na poglavlje benefiti</span>
                             <span data-scroll class="c-scrollto_arrow">
                               <span class="o-icon -large-icon">
@@ -591,19 +762,25 @@
                           <div class="o-layout o-flex -flex-wrap">
                             <div class="o-layout_item xu-1/2@from-small" data-scroll data-scroll-speed="0.5">
                               <article class="c-card-benefit">
-                                <div class="o-background-wrap o-ratio u-2:1">
-                                  <div class="o-background">
-                                    <div class="c-circle -variable -offset-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
+                                <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1">
+                                  <div data-load-style="background-image: url('/assets/images/znacajke-01.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
+                                  <span class="o-revealer"></span>
+                                  <!-- <div class="o-background">
+                                    <div class="c-circle -variable -offset-1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
+                                  </div> -->
                                 </div>
                                 <h1 class="c-card-benefit_heading">Brzo i pouzdano</h1>
                                 <p>Naručivanje se provodi na webu u samo nekoliko koraka. Uvid u dostupne termine u stvarnom vremenu.</p>
                               </article>
                               <article class="c-card-benefit">
-                                <div class="o-background-wrap o-ratio u-2:1">
-                                  <div class="o-background">
-                                    <div class="c-circle -variable -offset-3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5"></div>
+                                <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1">
+                                  <div data-load-style="background-image: url('/assets/images/znacajke-01.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
+                                  <span class="o-revealer"></span>
+                                  <!-- <div class="o-background">
+                                    <div class="c-circle -variable -offset-3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5"></div>
+                                  </div> -->
                                 </div>
                                 <h1 class="c-card-benefit_heading">Jednostavno i pregledno sučelje</h1>
                                 <p>Lagano za korištenje, web sučelje koje korisnici koriste napravljeno je s ciljem da ništa ne odvlači pažnju s narudžbe.</p>
@@ -611,19 +788,25 @@
                             </div>
                             <div class="o-layout_item xu-1/2@from-small" data-scroll data-scroll-speed="1">
                               <article class="c-card-benefit">
-                                <div class="o-background-wrap o-ratio u-2:1">
-                                  <div class="o-background">
-                                    <div class="c-circle -variable -offset-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"></div>
+                                <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1">
+                                  <div data-load-style="background-image: url('/assets/images/znacajke-01.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
+                                  <span class="o-revealer"></span>
+                                  <!-- <div class="o-background">
+                                    <div class="c-circle -variable -offset-2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"></div>
+                                  </div> -->
                                 </div>
                                 <h1 class="c-card-benefit_heading">Diskterno</h1>
                                 <p>Na e-mail adresu šaljemo potvrdu narudžbe. Zakazani termin se može poništiti bilo kojem trenutku.</p>
                               </article>
                               <article class="c-card-benefit">
-                                <div class="o-background-wrap o-ratio u-2:1">
-                                  <div class="o-background">
-                                    <div class="c-circle -variable -offset-4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2.5"></div>
+                                <div data-scroll x-data-scroll-repeat data-scroll-offset="25%" class="o-revealer-wrap o-background-wrap o-ratio u-2:1">
+                                  <div data-load-style="background-image: url('/assets/images/znacajke-01.png');" data-scroll data-scroll-speed="-0.5" class="o-background -extra || o-background_image">
                                   </div>
+                                  <span class="o-revealer"></span>
+                                  <!-- <div class="o-background">
+                                    <div class="c-circle -variable -offset-4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2.5"></div>
+                                  </div> -->
                                 </div>
                                 <h1 class="c-card-benefit_heading">Privatnost</h1>
                                 <p>Osim e-mail adrese na koju se šalje potvrda narudžbe ništa drugo nije potrebno. Uneseni podatci neće biti korišteni za druge svrhe.</p>
@@ -632,6 +815,90 @@
                           </div>
                         </div>
                       </div>
+
+                      <section class="c-section">
+                        <div class="o-container -w-80">
+                          <div class="o-layout -reverse">
+                            <div class="o-layout_item u-1/2@from-small">
+                              <div class="o-layout -middle -gutter -gutter-bottom">
+                                <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                                  <div class="o-background-wrap">
+                                    <div class="o-background">
+                                      <div class="o-background_css -zigzag" data-scroll data-scroll-speed="0.5">
+                                      </div>
+                                    </div>
+                                    <div class="c-benefit_front">
+                                      <span class="c-benefit_item_content">
+                                        <span class="c-benefit_item_image">
+                                          <img src="/assets/images/benefiti/termini-1336x1782.png">
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c-benefit_item || o-layout_item u-2/5@from-small" data-scroll data-scroll-speed="0.5">
+                                  <div class="o-background-wrap">
+                                    <div class="o-background">
+                                      <div class="o-background_css -zigzag-dark" data-scroll data-scroll-speed="0.5">
+                                      </div>
+                                    </div>
+                                    <div class="c-benefit_front">
+                                      <span class="c-benefit_item_content">
+                                        <span class="c-benefit_item_image">
+                                          <img src="/assets/images/benefiti/termini-dark-1336x1782.png">
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="o-layout -middle -gutter -gutter-bottom">
+                                <div class="c-benefit_item || o-layout_item u-2/5@from-small" data-scroll data-scroll-speed="0.5">
+                                  <div class="o-background-wrap">
+                                    <div class="o-background u-bg-orchid" data-scroll data-scroll-speed="0.5">
+                                    </div>
+                                    <div class="c-benefit_front">
+                                      <span class="c-benefit_item_content">
+                                        <span class="c-benefit_item_image">
+                                          <img src="/assets/images/benefiti/termini-orchid-1336x1782.png">
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                                  <div class="o-background-wrap">
+                                    <div class="o-background u-bg-coral" data-scroll data-scroll-speed="0.5">
+                                    </div>
+                                    <div class="c-benefit_front">
+                                      <span class="c-benefit_item_content">
+                                        <span class="c-benefit_item_image">
+                                          <img src="/assets/images/benefiti/termini-coral-1336x1782.png">
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="o-layout -middle -gutter -gutter-bottom">
+                                <div class="c-benefit_item || o-layout_item u-3/5@from-small" data-scroll data-scroll-speed="0.5">
+                                  <div class="o-background-wrap">
+                                    <div class="o-background u-bg-goldenrod" data-scroll data-scroll-speed="0.5">
+                                    </div>
+                                    <div class="c-benefit_front">
+                                      <span class="c-benefit_item_content">
+                                        <span class="c-benefit_item_image">
+                                          <img src="/assets/images/benefiti/termini-goldenrod-1336x1782.png">
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
                     </div>
                   </div>
                 </div>
@@ -675,13 +942,13 @@
                 <div class="o-layout_item u-1/4@from-small">
                   <ul class="c-site-footer_legal">
                     <li>
-                      <a class="-delay-6" href="/privacy-policy.html" target="_blank" rel="noreferrer noopener">Izjava o privatnosti</a>
+                      <a class="-delay-6" href="/privacy-policy.html">Izjava o privatnosti</a>
                     </li>
                     <li>
-                      <a class="-delay-7" href="/terms-and-conditions.html" target="_blank" rel="noreferrer noopener">Uvjeti korištenja</a>
+                      <a class="-delay-7" href="/terms-and-conditions.html">Uvjeti korištenja</a>
                     </li>
                     <li>
-                      <a class="-delay-7" href="mailto:podrska@dolazim.hr">podrska@dolazim.hr</a>
+                      <a class="-delay-8" href="mailto:podrska@dolazim.hr">podrska@dolazim.hr</a>
                     </li>
                   </ul>
                 </div>
@@ -707,15 +974,15 @@
           `<div class="c-section">
             <div class="o-layout || o-flex -flex-column@to-small">
               <div class="o-layout_item u-1/2@from-small">
-                <div class="o-background-wrap o-ratio u-2:1 u-height-100@from-small">
-                  <div class="o-background -extra"
-                    data-load-style="background-image: url('/assets/images/upit.jpg');"
-                    data-scroll data-scroll-speed="-1">
+                <div class="o-background-wrap u-min-30vh@to-small u-height-100@from-small">
+                  <div class="o-background">
+                    <div class="o-background_css -zigzag" data-scroll data-scroll-speed="-1">
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="o-layout_item u-1/2@from-small">
-                <div class="o-flex -flex-column -justify-center u-min-30vh@to-small u-height-100vh@from-small">
+                <div class="o-flex -flex-column -justify-center u-min-30vh@to-small">
                   <article class="c-features_item || u-max-w-75@to-large u-max-w-60@from-large">
                     <div class="o-background-wrap">
                       <div class="c-get-in-touch_heading" id="goto-inquiry">
@@ -1131,8 +1398,8 @@
           el: '#app',
           data() {
             return {
-              // api_url: 'http://frizerrose.juraj.lan/api/',
-              api_url: 'https://dolazim.hr/api/',
+              api_url: 'http://frizerrose.marko.lan/api/',
+              // api_url: 'https://dolazim.hr/api/',
               isModalOpen: false,
             }
           },

@@ -1,0 +1,20 @@
+
+.o-revealer-wrap {
+  position: relative;
+}
+
+.o-revealer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $white;
+  transform: scaleY(1);
+  transition: transform $speed * 4 $easing-long;
+  transform-origin: bottom;
+
+  .o-revealer-wrap.is-inview & {
+    transform: scaleY(0);
+  }
+}
