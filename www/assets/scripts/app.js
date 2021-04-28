@@ -4079,7 +4079,9 @@
       key: "init",
       value: function init() {
         // console.log("currentYear", this.el);
-        this.el.querySelector(".js-year-placeholder").outerHTML = new Date().getFullYear();
+        if (this.el.querySelector(".js-year-placeholder") !== null) {
+          this.el.querySelector(".js-year-placeholder").outerHTML = new Date().getFullYear();
+        }
       }
     }]);
 
