@@ -4153,6 +4153,9 @@
     html.classList.remove('is-loading'); // fix layout jump on mobile when address bar resizes screen by showing up and hiding
 
     html.style.setProperty('--vh', "".concat(window.innerHeight / 100, "px"));
+    setTimeout(function () {
+      html.classList.add('is-hero-animate');
+    }, 4000);
   }
 
 }());
