@@ -1116,10 +1116,9 @@ html.is-loaded .o-transition {
   cursor: grab; }
   .c-scrollbar_thumb:before {
     content: "";
-    background-color: #1f1f1f;
+    background-color: #16addd;
     width: 100%;
     height: 100%;
-    border-radius: 9999px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -1737,7 +1736,7 @@ html.is-loaded .o-transition {
 
 .c-button.-nav-item {
   font-size: 0.75rem;
-  width: 3.5rem;
+  width: 6rem;
   font-weight: 400;
   white-space: initial;
   letter-spacing: normal;
@@ -2046,7 +2045,7 @@ html.is-loaded .o-transition {
 
 @media (min-width: 700px) {
   .c-benefits_heading-wrap {
-    min-height: 200vh; } }
+    min-height: 120vh; } }
 
 .c-benefits_heading-padding {
   padding-top: 10rem;
@@ -2153,6 +2152,18 @@ html.is-loaded .o-transition {
 
 .u-5\/5 {
   width: 100% !important; }
+
+@media (min-width: 700px) {
+  .u-1\/6\@from-small {
+    width: 16.66667%; } }
+
+@media (min-width: 700px) {
+  .u-1\/3\@from-small {
+    width: 33.33333%; } }
+
+@media (min-width: 700px) {
+  .u-2\/3\@from-small {
+    width: 66.66667%; } }
 
 @media (min-width: 700px) {
   .u-1\/4\@from-small {
