@@ -492,7 +492,7 @@
                   <div class="c-intro">
                     <div class="o-container -w-80">
                       <div id="goto-summary-1" class="c-intro_container">
-                        <p class="c-intro_paragraph">Umjesto izrade <strong>skupocjene</strong> web stranice, svoju stranicu izradite putem <strong>Dolazim.hr</strong> i pružite klijentima sve informacije na <strong>jednom mjestu</strong>.</p>
+                        <p class="c-intro_paragraph">Umjesto izrade <strong>skupocjene</strong> web stranice, svoju stranicu izradite putem <strong>Dolazim.hr</strong> i pružite klijentima sve informacije na <strong>jednom mjestu</strong>. </p>
                       </div>
                     </div>
                   </div>
@@ -615,7 +615,7 @@
 
                 <section>
                   <div class="c-benefits">
-                    <div class="o-container">
+                    <div class="o-container -w-80">
                       <ul>
                         <li>
                           <div class="o-sticky-wrap">
@@ -754,7 +754,7 @@
                         <a class="-delay-6" target="_blank" rel="noopener noreferrer" href="/izjava-o-privatnosti">Izjava o privatnosti</a>
                       </li>
                       <li>
-                        <a class="-delay-7" target="_blank" rel="noopener noreferrer" href="/uvjeti-poslovanja">Uvjeti korištenja</a>
+                        <a class="-delay-7" target="_blank" rel="noopener noreferrer" href="/uvjeti-poslovanja">Uvjeti poslovanja</a>
                       </li>
                       <li>
                         <a class="-delay-8" href="mailto:podrska@dolazim.hr">podrska@dolazim.hr</a>
@@ -880,13 +880,13 @@
 
       Vue.component('RegisterButton', {
         template:
-        `<section id="goto-join" class="c-section">
+        `<section class="c-section">
             <div class="c-intro">
               <div class="o-container -w-80">
-                <div id="goto-intro" class="c-intro_container">
+                <div id="goto-join" class="c-intro_container">
                   <p class="c-intro_paragraph">
                     <strong>Pridružite se!</strong>
-                    <br>Prvih mjesec dana besplatno i bez obaveza.
+                    <br>Prvih mjesec dana besplatno i bez obaveza. Nakon toga pretplata iznosi 200 kn mjesečno.
                   </p>
                   <div class="c-intro_cta">
                     <button class="c-button c-round-button -large" @click="openModal()">
@@ -958,6 +958,7 @@
                         <div class="o-layout_item u-2/3@from-small">
                           <p v-if="currentStep === 1 || currentStep === 2">
                             Ispunite ovaj formular i kroz samo nekoliko sekundi ćete moći početi koristiti vašu nadzornu stanicu.
+                            <br><br>Nakon probnog roka od mjesec dana pretplata na uslugu iznosi 200 kn mjesečno.
                           </p>
                         </div>
                       </div>
@@ -1040,13 +1041,13 @@
                             </div>
                             <div v-if="checkboxError">
                               <div class="c-form_feedback -error">
-                                Morate prihvatiti uvjete korištenja
+                                Morate prihvatiti uvjete poslovanja
                               </div>
                             </div>
                             <div class="c-form_item">
                               <input v-model="formDataCompany.checkbox" class="c-form_checkbox" type="checkbox" id="checkbox">
                               <label class="c-form_checkboxLabel" for="checkbox">
-                                Prihvaćam <a href="#" class="o-link" target="_blank" rel="noreferrer noopener">uvjete korištenja</a>
+                                Prihvaćam <a href="#" class="o-link" target="_blank" rel="noreferrer noopener">uvjete poslovanja</a>
                               </label>
                             </div>
                             <input

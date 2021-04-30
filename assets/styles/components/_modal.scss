@@ -135,3 +135,34 @@
   transform: rotate(-45deg);
   transition-delay: .1s;
 }
+
+
+.c-get-in-touch_price {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  display: block;
+  -webkit-animation: priceRotate 24s linear infinite;
+  animation: priceRotate 24s linear infinite;
+
+  @media (max-width: $to-small) {
+    width: 30px;
+    height: 30px;
+    left: 1.25rem;
+  }
+
+  @media (min-width: $from-small) {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
+@keyframes priceRotate {
+  0% {
+      transform: rotate(0deg)
+  }
+
+  to {
+      transform: rotate(-1turn)
+  }
+}

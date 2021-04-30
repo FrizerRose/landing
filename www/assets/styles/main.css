@@ -1721,6 +1721,35 @@ html.is-loaded .o-transition {
   transform: rotate(-45deg);
   transition-delay: .1s; }
 
+.c-get-in-touch_price {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  display: block;
+  -webkit-animation: priceRotate 24s linear infinite;
+  animation: priceRotate 24s linear infinite; }
+  @media (max-width: 699px) {
+    .c-get-in-touch_price {
+      width: 30px;
+      height: 30px;
+      left: 1.25rem; } }
+  @media (min-width: 700px) {
+    .c-get-in-touch_price {
+      width: 7.5rem;
+      height: 7.5rem; } }
+
+@-webkit-keyframes priceRotate {
+  0% {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-1turn); } }
+
+@keyframes priceRotate {
+  0% {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-1turn); } }
+
 .c-fixed-cta {
   position: fixed;
   bottom: 1rem;
@@ -2043,10 +2072,6 @@ html.is-loaded .o-transition {
     transform: scaleY(1);
     transform-origin: top; }
 
-@media (min-width: 700px) {
-  .c-benefits_heading-wrap {
-    min-height: 120vh; } }
-
 .c-benefits_heading-padding {
   padding-top: 10rem;
   padding-bottom: 5rem; }
@@ -2057,10 +2082,12 @@ html.is-loaded .o-transition {
   padding-bottom: 2rem; }
 
 .c-card-benefit {
-  border: 1px solid #e1e1e1;
-  padding: 2rem;
   margin-left: -1px;
   margin-top: -1px; }
+  @media (min-width: 700px) {
+    .c-card-benefit {
+      padding-top: 12rem;
+      padding-bottom: 12rem; } }
 
 .c-card-benefit_heading {
   line-height: 1.25;
