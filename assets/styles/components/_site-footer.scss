@@ -3,12 +3,19 @@
   color: $white;
   padding-top: 4rem;
   padding-bottom: 2rem;
+  a {
+    color: $white;
+
+    @include u-hocus {
+      color: $theme-main;
+    }
+  }
 }
 
 .c-site-footer_legal {
   font-size: 0.75rem;
 }
 
-.c-site-footer_legal a {
-  color: $white;
-}
+// .c-site-footer_legal a {
+//   color: $white;
+// }

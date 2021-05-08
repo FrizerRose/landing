@@ -304,7 +304,6 @@
 // }
 
 .c-site-nav_list.-is-in-footer a {
-  color: $white;
   display: inline-block;
 
   transform: translate(2rem, -1rem) rotateZ(-5deg);
@@ -314,7 +313,7 @@
 
   @for $i from 1 through 8 {
     &.-delay-#{$i} {
-      transition-delay: 0.33s + $i * 0.04;
+      transition-delay: 0.33s + $i * 0.1;
     }
   }
 }

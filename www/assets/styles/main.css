@@ -715,7 +715,8 @@ a:-webkit-any-link:focus {
 .o-container {
   margin-right: auto;
   margin-left: auto;
-  max-width: 132.5rem; }
+  max-width: 132.5rem;
+  width: 100%; }
   @media (max-width: 699px) {
     .o-container {
       padding-right: 1rem;
@@ -1572,28 +1573,27 @@ html.is-loaded .o-transition {
         transition-delay: 0.65s; } }
 
 .c-site-nav_list.-is-in-footer a {
-  color: #fafafa;
   display: inline-block;
   transform: translate(2rem, -1rem) rotateZ(-5deg);
   opacity: 0;
   transition: opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1), transform 1.8s cubic-bezier(0.23, 1, 0.32, 1);
   transform-origin: top right; }
   .c-site-nav_list.-is-in-footer a.-delay-1 {
-    transition-delay: 0.37s; }
+    transition-delay: 0.43s; }
   .c-site-nav_list.-is-in-footer a.-delay-2 {
-    transition-delay: 0.41s; }
-  .c-site-nav_list.-is-in-footer a.-delay-3 {
-    transition-delay: 0.45s; }
-  .c-site-nav_list.-is-in-footer a.-delay-4 {
-    transition-delay: 0.49s; }
-  .c-site-nav_list.-is-in-footer a.-delay-5 {
     transition-delay: 0.53s; }
+  .c-site-nav_list.-is-in-footer a.-delay-3 {
+    transition-delay: 0.63s; }
+  .c-site-nav_list.-is-in-footer a.-delay-4 {
+    transition-delay: 0.73s; }
+  .c-site-nav_list.-is-in-footer a.-delay-5 {
+    transition-delay: 0.83s; }
   .c-site-nav_list.-is-in-footer a.-delay-6 {
-    transition-delay: 0.57s; }
+    transition-delay: 0.93s; }
   .c-site-nav_list.-is-in-footer a.-delay-7 {
-    transition-delay: 0.61s; }
+    transition-delay: 1.03s; }
   .c-site-nav_list.-is-in-footer a.-delay-8 {
-    transition-delay: 0.65s; }
+    transition-delay: 1.13s; }
 
 .c-site-nav_list.-is-in-footer.is-inview a {
   transform: none;
@@ -1604,12 +1604,13 @@ html.is-loaded .o-transition {
   color: #fafafa;
   padding-top: 4rem;
   padding-bottom: 2rem; }
+  .c-site-footer a {
+    color: #fafafa; }
+    .c-site-footer a:focus, .c-site-footer a:hover {
+      color: #16addd; }
 
 .c-site-footer_legal {
   font-size: 0.75rem; }
-
-.c-site-footer_legal a {
-  color: #fafafa; }
 
 .c-get-in-touch {
   position: fixed;
@@ -1790,7 +1791,11 @@ html.is-loaded .o-transition {
     transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1); }
 
 .c-hero {
-  padding: 9rem 0 10rem; }
+  padding: 9rem 0 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
   @media (max-width: 699px) {
     .c-hero {
       padding-top: 20vh; } }

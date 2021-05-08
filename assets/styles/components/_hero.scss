@@ -2,6 +2,11 @@
 .c-hero {
   padding: 9rem 0 10rem;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
   @media (max-width: $to-small) {
     padding-top: 20vh;
   }
