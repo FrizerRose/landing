@@ -775,6 +775,12 @@
 
     <script type="application/javascript">
 
+      function avoidSpace(event) {
+          var k = event ? event.which : window.event.keyCode;
+          if (k == 32) return false;
+      }
+
+
       Vue.component('ContactForm', {
         template:
         `<div class="c-section">
@@ -1022,7 +1028,7 @@
                             <div class="c-form_item">
                               <label for="slug" class="c-form_label">Poddomena</label>
                               <div class="c-form_input-flex">
-                                <input v-model="formDataCompany.bookingPageSlug" type="email" id="slug" name="slug" class="c-form_input -black" required>
+                                <input v-model="formDataCompany.bookingPageSlug" onkeypress="return avoidSpace(event)" type="email" id="slug" name="slug" class="c-form_input -black" required>
                                 <span class="end-element">.dolazim.hr</span>
                               </div>
                             </div>
